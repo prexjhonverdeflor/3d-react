@@ -18,6 +18,7 @@ const Nav = styled.div`
 `;
 
 const NavbarContainer = styled.div`
+  color: ${({ theme }) => theme.black};
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
@@ -56,7 +57,7 @@ const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.gray};
   }
 `;
 
@@ -78,7 +79,7 @@ const GithubButton = styled.a`
   justify-content: center;
   display: flex;
   align-items: center;
-  border-radius: 20px;
+  border-radius: 50px;
   cursor: pointer;
   padding: 10px 20px;
   font-size: 16px;
@@ -87,7 +88,7 @@ const GithubButton = styled.a`
   text-decoration: none;
   &:hover {
     background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.text_primary};
+    color: ${({ theme }) => theme.bg};
   }
   
 `;

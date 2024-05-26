@@ -1,5 +1,6 @@
 import React from 'react';
 import { Div } from './HeroBgAnimationStyle';
+
 const HeroBgAnimation = () => (
   <Div>
     <svg
@@ -33,7 +34,7 @@ const HeroBgAnimation = () => (
         transform="translate(-295.027 -193.118)"
         rx="1.07306"
         ry="1.07433"
-        fill="#945DD6"
+        fill="#A9A9A9"
       >
         <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_2" />
@@ -54,14 +55,9 @@ const HeroBgAnimation = () => (
         transform="translate(-295.027 -193.118)"
         rx="1.07306"
         ry="1.07433"
-        fill="#46737"
+        fill="#808080"
       >
-        <animateMotion
-          dur="5s"
-          begin="1"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="5s" begin="1" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_2" />
         </animateMotion>
       </ellipse>
@@ -70,12 +66,7 @@ const HeroBgAnimation = () => (
         transform="translate(-294.685 -193.474) rotate(45 294.685 193.474)"
         stroke="url(#paint7_linear)"
       >
-        <animateMotion
-          dur="5s"
-          begin="1"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="5s" begin="1" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_2" />
         </animateMotion>
       </path>
@@ -85,7 +76,7 @@ const HeroBgAnimation = () => (
         rx="1.07433"
         ry="1.07306"
         transform="translate(-476.525 -363.313) rotate(90 476.525 363.313)"
-        fill="#945DD6"
+        fill="#A9A9A9"
       >
         <animateMotion dur="10s" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_0" />
@@ -106,14 +97,9 @@ const HeroBgAnimation = () => (
         rx="1.07433"
         ry="1.07306"
         transform="translate(-382.164 -155.029) rotate(90 382.164 155.029)"
-        fill="#F46737"
+        fill="#696969"
       >
-        <animateMotion
-          dur="10s"
-          begin="1"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="10s" begin="1" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_0" />
         </animateMotion>
       </ellipse>
@@ -122,12 +108,7 @@ const HeroBgAnimation = () => (
         transform="translate(-381.81 -154.669) rotate(-45 381.81 154.669)"
         stroke="url(#paint5_linear)"
       >
-        <animateMotion
-          dur="10s"
-          begin="1"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="10s" begin="1" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_0" />
         </animateMotion>
       </path>
@@ -137,14 +118,9 @@ const HeroBgAnimation = () => (
         rx="1.07306"
         ry="1.07433"
         transform="translate(-333.324 -382.691) rotate(-180 333.324 382.691)"
-        fill="#F46737"
+        fill="#696969"
       >
-        <animateMotion
-          dur="5s"
-          begin="0"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="5s" begin="0" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_1" />
         </animateMotion>
       </ellipse>
@@ -153,12 +129,7 @@ const HeroBgAnimation = () => (
         transform="scale(-1 1) translate(-333.667 -382.335) rotate(45 333.667 382.335)"
         stroke="url(#paint6_linear)"
       >
-        <animateMotion
-          dur="5s"
-          begin="0"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="5s" begin="0" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_1" />
         </animateMotion>
       </path>
@@ -168,59 +139,18 @@ const HeroBgAnimation = () => (
         rx="1.07306"
         ry="1.07433"
         transform="translate(-165.524 -93.9596)"
-        fill="#F46737"
+        fill="#696969"
       >
-        <animateMotion
-          dur="10s"
-          begin="3"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="10s" begin="3" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_0" />
         </animateMotion>
       </ellipse>
       <path
         d="M165.182 94.3159L139.429 120.1"
         transform="translate(-165.182 -94.3159) rotate(45 165.182 94.3159)"
-        stroke="url(#paint7_linear)"
+        stroke="url(#paint8_linear)"
       >
-        <animateMotion
-          dur="10s"
-          begin="3"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
-          <mpath xlinkHref="#path_0" />
-        </animateMotion>
-      </path>
-      <ellipse
-        cx="476.525"
-        cy="363.313"
-        rx="1.07433"
-        ry="1.07306"
-        transform="translate(-476.525 -363.313) rotate(90 476.525 363.313)"
-        fill="#13ADC7"
-      >
-        <animateMotion
-          dur="12s"
-          begin="4"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
-          <mpath xlinkHref="#path_0" />
-        </animateMotion>
-      </ellipse>
-      <path
-        d="M476.171 362.952L450.417 337.168"
-        transform="translate(-476.525 -363.313) rotate(-45 476.171 362.952)"
-        stroke="url(#paint11_linear)"
-      >
-        <animateMotion
-          dur="12s"
-          begin="4"
-          repeatCount="indefinite"
-          rotate="auto"
-        >
+        <animateMotion dur="10s" begin="3" repeatCount="indefinite" rotate="auto">
           <mpath xlinkHref="#path_0" />
         </animateMotion>
       </path>
@@ -231,10 +161,10 @@ const HeroBgAnimation = () => (
           cy="0"
           r="1"
           gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(301 301) rotate(90) scale(300)"
+          gradientTransform="translate(301 301) rotate(90) scale(301)"
         >
-          <stop offset="0.333333" stopColor="#FBFBFB" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
+          <stop offset="0.145833" stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint1_radial"
@@ -242,10 +172,10 @@ const HeroBgAnimation = () => (
           cy="0"
           r="1"
           gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(301 301) rotate(90) scale(300)"
+          gradientTransform="translate(301 301) rotate(90) scale(301)"
         >
-          <stop offset="0.333333" stopColor="#FBFBFB" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
+          <stop offset="0.145833" stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </radialGradient>
         <radialGradient
           id="paint2_radial"
@@ -253,109 +183,76 @@ const HeroBgAnimation = () => (
           cy="0"
           r="1"
           gradientUnits="userSpaceOnUse"
-          gradientTransform="translate(301 301) rotate(90) scale(300)"
+          gradientTransform="translate(301 301) rotate(90) scale(301)"
         >
-          <stop offset="0.333333" stopColor="#FBFBFB" />
-          <stop offset="1" stopColor="white" stopOpacity="0" />
+          <stop offset="0.145833" stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </radialGradient>
         <linearGradient
           id="paint3_linear"
-          x1="295.043"
-          y1="193.116"
-          x2="269.975"
-          y2="218.154"
+          x1="294.685"
+          y1="193.474"
+          x2="268.932"
+          y2="219.258"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#945DD6" />
-          <stop offset="1" stopColor="#945DD6" stopOpacity="0" />
+          <stop stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint4_linear"
-          x1="476.529"
-          y1="363.31"
-          x2="451.461"
-          y2="338.272"
+          x1="476.171"
+          y1="362.952"
+          x2="450.417"
+          y2="337.168"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#945DD6" />
-          <stop offset="1" stopColor="#945DD6" stopOpacity="0" />
+          <stop stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear"
-          x1="382.168"
-          y1="155.027"
-          x2="357.1"
-          y2="129.989"
+          x1="381.81"
+          y1="154.669"
+          x2="356.057"
+          y2="128.885"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F46737" />
-          <stop offset="1" stopColor="#F46737" stopOpacity="0" />
+          <stop stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint6_linear"
-          x1="333.309"
-          y1="382.693"
-          x2="358.376"
-          y2="357.655"
+          x1="333.667"
+          y1="382.335"
+          x2="359.42"
+          y2="356.551"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F46737" />
-          <stop offset="1" stopColor="#F46737" stopOpacity="0" />
+          <stop stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear"
-          x1="165.54"
-          y1="93.9578"
-          x2="140.472"
-          y2="118.996"
+          x1="294.685"
+          y1="193.474"
+          x2="268.932"
+          y2="219.258"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#F46737" />
-          <stop offset="1" stopColor="#F46737" stopOpacity="0" />
+          <stop stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint8_linear"
-          x1="414.367"
-          y1="301.156"
-          x2="439.435"
-          y2="276.118"
+          x1="165.182"
+          y1="94.3159"
+          x2="139.429"
+          y2="120.1"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stopColor="#13ADC7" />
-          <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient
-          id="paint9_linear"
-          x1="515.943"
-          y1="288.238"
-          x2="541.339"
-          y2="291.454"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#13ADC7" />
-          <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient
-          id="paint10_linear"
-          x1="117.001"
-          y1="230.619"
-          x2="117.36"
-          y2="258.193"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#945DD6" />
-          <stop offset="1" stopColor="#945DD6" stopOpacity="0" />
-        </linearGradient>
-        <linearGradient
-          id="paint11_linear"
-          x1="476.529"
-          y1="363.31"
-          x2="451.461"
-          y2="338.272"
-          gradientUnits="userSpaceOnUse"
-        >
-          <stop stopColor="#13ADC7" />
-          <stop offset="1" stopColor="#13ADC7" stopOpacity="0" />
+          <stop stopColor="#A9A9A9" />
+          <stop offset="1" stopColor="#696969" stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

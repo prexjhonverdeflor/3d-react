@@ -2,8 +2,11 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/Hero.jpeg";
-import HeroBgAnimation from "../HeroBgAnimation"
+import HeroImg from "../../images/HeroImg.png";
+import HeroBgAnimation from "../HeroBgAnimation";
+import { Tilt } from "react-tilt";
+import {motion } from "framer-motion";
+import { headContainerAnimation, headContentAnimation, headTextAnimation} from "../../utils/motion";
 
 
 
@@ -52,6 +55,8 @@ const HeroLeftContainer = styled.div`
 const HeroRightContainer = styled.div`
   width: 100%;
   order: 2;
+  display: flex;
+  justify-content:end;
   @media (max-width: 960px) {
     order: 1;
     display: flex;
@@ -83,74 +88,55 @@ const TextLoop = styled.div`
 
 const Span = styled.div`
   cursor: pointer;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.gray};
 `;
 
 const SubTitle = styled.div`
   font-size: 16px;
   line-height: 32px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.gray};
+
+  @media (max-width: 940px) {
+    padding: 0 50px 0 50px;
+  }
+
+  @media (max-width: 640px) {
+    padding: 0 50px 0 50px;
+  }
 `;
 
 
 const ResumeButton = styled.a`
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  text-decoration: none;
-
-  width: 65%;
-  height:40px;
-  max-width: 150px;
-  text-align: center;
-  padding: 5px 0;
-
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  box-shadow: 20px 20px 60px #1f2634, -20px -20px 60px #1f2634;
+  margin-top:20px;
+  width:150px;
+  border: 1px solid ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.primary};
+  justify-content: center;
+  display: flex;
+  align-items: center;
   border-radius: 50px;
-  font-weight: 600;
-  font-size: 20px;
-
-     &:hover {
-        transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
-    }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 5px 0;
-        font-size: 18px;
-    } 
-    color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  transition: all 0.6s ease-in-out;
+  text-decoration: none;
+  &:hover {
+    background: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.bg};
+  }
 `;
 
 const Img = styled.img`
     border-radius: 50%;
     width: 100%;
     height:100%;
-    max-width: 300px;
-    max-height: 300px;
-    border: 2px solid ${({ theme }) => theme.primary};
+    max-width: 400px;
+    max-height: 400px;
+    
     @media (max-width: 640px) {
-        max-width: 200px;
-        max-height: 200px;
+        max-width: 300px;
+        max-height: 300px;
     } 
 
 `;
@@ -160,12 +146,13 @@ const HeroBg = styled.div`
     position: absolute;
     display: flex;
     top:0;
-    right:0;
-    bottom:0;
-    left:0;
-    width:100%;
-    height:100%;
-    max-width: 1360px;
+    right:150px;
+
+
+    @media (max-width: 640px) {
+      right:-50px;
+  } 
+
 `;
 
 
@@ -176,13 +163,16 @@ const Hero = () => {
         <HeroBg>
             <HeroBgAnimation/>
         </HeroBg>
+        <motion.div {...headContainerAnimation}>
         <HeroInnerContainer>
           <HeroLeftContainer>
+          <motion.div {...headTextAnimation}>
             <Title>
               Hi, I am <br /> {Bio.name}
             </Title>
+            
             <TextLoop>
-              I am a
+              
               <Span>
                 <Typewriter
                   options={{
@@ -193,13 +183,24 @@ const Hero = () => {
                 />
               </Span>
             </TextLoop>
+            </motion.div>
+
+          <motion.div {...headContentAnimation}>
             <SubTitle>{Bio.description}</SubTitle>
+            </motion.div>
             <ResumeButton>Resume</ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
-            <Img src={HeroImg}/>
+            
+          <motion.div {...headContainerAnimation}>
+          <Tilt>
+          <Img src={HeroImg}/>
+          </Tilt>
+          </motion.div>
+
           </HeroRightContainer>
         </HeroInnerContainer>
+        </motion.div>
       </HeroContainer>
     </div>
   );
