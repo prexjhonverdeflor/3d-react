@@ -4,7 +4,6 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImg.png";
 import HeroBgAnimation from "../HeroBgAnimation";
-import { Tilt } from "react-tilt";
 import {motion } from "framer-motion";
 import { headContainerAnimation, headContentAnimation, headTextAnimation} from "../../utils/motion";
 
@@ -74,7 +73,8 @@ const Title = styled.div`
   font-weight: 700;
   font-size: 50px;
   line-height: 68px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.primary};
+  
 `;
 
 const TextLoop = styled.div`
@@ -88,13 +88,13 @@ const TextLoop = styled.div`
 
 const Span = styled.div`
   cursor: pointer;
-  color: ${({ theme }) => theme.gray};
+  color: ${({ theme }) => theme.primary};
 `;
 
 const SubTitle = styled.div`
   font-size: 16px;
   line-height: 32px;
-  color: ${({ theme }) => theme.gray};
+  color: ${({ theme }) => theme.primary};
 
   @media (max-width: 940px) {
     padding: 0 50px 0 50px;
@@ -146,7 +146,7 @@ const HeroBg = styled.div`
     position: absolute;
     display: flex;
     top:0;
-    right:150px;
+    right:0;
 
 
     @media (max-width: 640px) {
@@ -160,7 +160,7 @@ const Hero = () => {
   return (
     <div id="about">
       <HeroContainer>
-        <HeroBg>
+        <HeroBg>     
             <HeroBgAnimation/>
         </HeroBg>
         <motion.div {...headContainerAnimation}>
@@ -193,9 +193,9 @@ const Hero = () => {
           <HeroRightContainer>
             
           <motion.div {...headContainerAnimation}>
-          <Tilt>
+          
           <Img src={HeroImg}/>
-          </Tilt>
+          
           </motion.div>
 
           </HeroRightContainer>
