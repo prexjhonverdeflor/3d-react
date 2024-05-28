@@ -2,6 +2,9 @@ import React from 'react'
 import styled from "styled-components"
 import { skills } from "../../data/constants";
 import { Tilt } from "react-tilt";
+import { motion } from "framer-motion";
+import { headContainerAnimation, headContentAnimation, headTextAnimation} from "../../utils/motion";
+
 
 const tiltOptions = {
     max: 30,           
@@ -28,7 +31,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     position: relative;
-    align-items: cemter;
+    align-items: center;
     width: 100%;
     max-width: 100%;
     gap: 12px;
@@ -82,8 +85,8 @@ const Skill = styled.div`
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid rgba(255, 255, 25, 0.125);
     box-shadow: 
-        rgba(0, 0, 0, 0.12) 0px 3px 15px, 
-        rgba(0, 0, 0, 0.06) 0px 6px 20px; 
+        rgba(0, 0, 0, 0.1) 0px 4px 12px, 
+        rgba(0, 0, 0, 0.05) 0px 2px 4px; 
     border-radius: 16px;
     padding: 18px 36px;
 
@@ -147,22 +150,25 @@ const SkillImage = styled.img`
 
 
 
-
-
-
-  
-
   const Skills = () => {
     return (
       <Container id="Skills">
         <Wrapper>
           <Title>Skills</Title>
           <Desc style={{ marginBottom: '40px' }}>Here's my current Tech Stack</Desc>
+          
           <SkillsContainer>
             {skills.map((skills, index) => (
               <Tilt options={tiltOptions} key={`tilt-${index}`}>
                 <Skill key={`skill-${index}`}>
                   <SkillTitle>{skills.title}</SkillTitle>
+                  
+                  <motion.div 
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true}}
+                  {...headContentAnimation}>
+
                   <SkillList>
                     {skills.skills.map((item, index_x) => (
                       <SkillItem key={`skill-x-${index_x}`}>
@@ -171,10 +177,12 @@ const SkillImage = styled.img`
                       </SkillItem>
                     ))}
                   </SkillList>
+                  </motion.div>
                 </Skill>
               </Tilt>
             ))}
           </SkillsContainer>
+          
         </Wrapper>
       </Container>
     );

@@ -4,7 +4,7 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/HeroImg.png";
 import HeroBgAnimation from "../HeroBgAnimation";
-import {motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { headContainerAnimation, headContentAnimation, headTextAnimation} from "../../utils/motion";
 
 

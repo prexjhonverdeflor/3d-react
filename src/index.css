@@ -4,6 +4,8 @@
 /* font San Fransico Pro Text) */
 /* add staggered ani yt */  
 
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -43,3 +45,4 @@ body {
 ::-webkit-backdrop-filter {
   blur: 3px saturate(106%);
 }
+
