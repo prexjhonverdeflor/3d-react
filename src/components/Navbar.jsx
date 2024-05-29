@@ -33,7 +33,7 @@ const NavLogo = styled(LinkR)`
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
-  color: inherit;
+  color: ${({ theme }) => theme.text_primary};
 `;
 
 const NavItems = styled.ul`
@@ -57,7 +57,7 @@ const NavLink = styled.a`
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   &:hover {
-    color: ${({ theme }) => theme.gray};
+    color: ${({ theme }) => theme.primary};
   }
 `;
 

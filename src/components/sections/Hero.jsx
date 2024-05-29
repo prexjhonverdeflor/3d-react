@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/HeroImg.png";
+import HeroImg from "../../images/Hero1.png";
 import HeroBgAnimation from "../HeroBgAnimation";
 import { motion } from "framer-motion";
 import { headContainerAnimation, headContentAnimation, headTextAnimation} from "../../utils/motion";
@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
   position: relative;
   padding: 80px 30px;
   z-index: 1;
-  @media (max-width: 960px) {
+  @media (max-width: 960px) { 
     padding: 66px 16px;
   }
   @media (max-width: 640px) {
@@ -73,7 +73,7 @@ const Title = styled.div`
   font-weight: 700;
   font-size: 50px;
   line-height: 68px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
   
 `;
 
@@ -94,7 +94,7 @@ const Span = styled.div`
 const SubTitle = styled.div`
   font-size: 16px;
   line-height: 32px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
 
   @media (max-width: 940px) {
     padding: 0 50px 0 50px;
