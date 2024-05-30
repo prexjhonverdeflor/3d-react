@@ -13,6 +13,7 @@ const Container = styled.div`
   position: rlative;
   z-index: 1;
   align-items: center;
+  
 `;
 
 const Wrapper = styled.div`

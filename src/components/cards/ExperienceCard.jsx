@@ -7,6 +7,7 @@ const Top = styled.div`
   display: flex;
   max-width: 100%;
   gap: 12px;
+  
 `;
 const Image = styled.img`
   height: 50px;
@@ -20,6 +21,7 @@ const Body = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
+  
 `;
 const Role = styled.div`
   font-size: 18px;
@@ -81,6 +83,7 @@ const ItemWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  
 `;
 
 const ExperienceCard = ({ experience }) => {

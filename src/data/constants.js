@@ -10,11 +10,11 @@ export const Bio = {
     "I'm a creative Front-End Developer with a knack for transforming ideas into engaging and intuitive user interfaces. My passion for design and innovation drives me to stay ahead of industry trends and continuously improve my skills.",
   github: "https://github.com/prexjhonverdeflor",
   resume:
-    "https://drive.google.com/file/d/1txFKZD3LNIXMc329jD9c995AU8LItOXK/view?usp=drive_link",
-  linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-  twitter: "https://twitter.com/RishavChanda",
-  insta: "https://www.instagram.com/rishav_chanda/",
-  facebook: "https://www.facebook.com/rishav.chanda.165/",
+    "https://drive.google.com/file/d/1h2SsgiQbNPxg5SJcWIk7rR53khBu4P22/view?usp=sharing",
+  linkedin: "https://www.linkedin.com/in/prex-verdeflor-586a46200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
+  twitter: "https://twitter.com",
+  insta: "https://www.instagram.com/prexverdeflor?igsh=MTdqNDJ6NTVwYmo4bw%3D%3D&utm_source=qr",
+  facebook: "https://www.facebook.com/preksdyan",
 };
 
 export const skills = [
@@ -236,7 +236,6 @@ export const education = [
 ];
 
 export const projects = [
-  
   {
     id: 9,
     title: "3D Portfolio",
@@ -259,7 +258,7 @@ export const projects = [
       "Redux",
     ],
     category: "web app",
-    github: "",
+    github: "https://github.com/prexjhonverdeflor",
 
   },
   {
@@ -272,7 +271,7 @@ export const projects = [
       "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/cb.PNG",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
-    github: "",
+    github: "https://github.com/prexjhonverdeflor",
    
   },
   {
@@ -292,7 +291,7 @@ export const projects = [
       "React Flow",
     ],
     category: "web app",
-    github: "",
+    github: "https://github.com/prexjhonverdeflor",
 
   },
   
@@ -318,8 +317,8 @@ export const projects = [
       "Redux",
     ],
     category: "web app",
-    github: "",
-    webapp: "https://trackify-management.netlify.app/",
+    github: "https://github.com/prexjhonverdeflor",
+
   },
 ];
 

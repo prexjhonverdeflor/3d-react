@@ -7,6 +7,8 @@ import Skills from "./components/sections/Skills";
 import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 import Project from "./components/sections/Project";
+import Contact from "./components/sections/Contact";
+import Footer from "./components/sections/Footer";
 
 
 const Body = styled.div`
@@ -49,7 +51,9 @@ function App() {
               <Project/>
             <Wrapper>
               <Education/>
+              <Contact/>
             </Wrapper>
+            <Footer/>
             
         </Body>
       </BrowserRouter>

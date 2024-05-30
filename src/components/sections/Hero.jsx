@@ -143,16 +143,27 @@ const Img = styled.img`
 
 
 const HeroBg = styled.div`
-    position: absolute;
-    display: flex;
-    top:0;
-    right:0;
+  position: absolute;
+  display: flex;
+  justify-content: end;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: 1360px;
+  overflow: hidden;
+  padding: 0 30px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
 
-
-    @media (max-width: 640px) {
-      right:-50px;
-  } 
-
+  @media (max-width: 960px) {
+    justify-content: center;
+    padding: 0 0px;
+  }
 `;
 
 
@@ -188,7 +199,7 @@ const Hero = () => {
           <motion.div {...headContentAnimation}>
             <SubTitle>{Bio.description}</SubTitle>
             </motion.div>
-            <ResumeButton>Resume</ResumeButton>
+            <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
           </HeroLeftContainer>
           <HeroRightContainer>
             
