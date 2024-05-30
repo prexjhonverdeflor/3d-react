@@ -236,6 +236,45 @@ export const education = [
 ];
 
 export const projects = [
+  
+  {
+    id: 9,
+    title: "3D Portfolio",
+    date: "2024",
+    description:
+      "This project is a 3D portfolio website built using React, Three.js, and Framer Motion. It showcases the power of modern web technologies to create an interactive and visually stunning presentation of your work and skills.",
+    image:
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/3d.PNG",
+    tags: [
+      "Docker",
+      "AWS",
+      "DuckDNS",
+      "Eslint",
+      "Husky",
+      "CI/CD",
+      "React Js",
+      "MongoDb",
+      "Node Js",
+      "Express Js",
+      "Redux",
+    ],
+    category: "web app",
+    github: "",
+
+  },
+  {
+    id: 0,
+    title: "Payment Portal",
+    date: "2024",
+    description:
+      "Developed a full-stack payment portal, integrating a user-friendly frontend interface with a secure backend system to facilitate seamless and secure financial transactions.",
+    image:
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/cb.PNG",
+    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
+    category: "web app",
+    github: "",
+   
+  },
   {
     id: 11,
     title: "Church Management System ",
@@ -243,7 +282,7 @@ export const projects = [
     description:
       "CMS helps church leaders and staff to efficiently manage church activities, enhance member engagement, and focus more on ministry and community outreach.",
     image:
-      "https://private-user-images.githubusercontent.com/169749120/335021344-c78f12c6-7ee1-4d5a-9b1e-9a8500087ed9.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTcwMzY4NzYsIm5iZiI6MTcxNzAzNjU3NiwicGF0aCI6Ii8xNjk3NDkxMjAvMzM1MDIxMzQ0LWM3OGYxMmM2LTdlZTEtNGQ1YS05YjFlLTlhODUwMDA4N2VkOS5QTkc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUzMFQwMjM2MTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1hYzM5ZDk0OGNhYWQ5NjM0OTFhMmVlZTgzNWJmZTYwYjYwYzhkOWFiODZiYWRjOTNlMGFhMzMxMmZkNGY4Mjc4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.nL5oF089lf5tivKD94dw8_wXt-wP_FXa_qvDe-7w1Ak",
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/church.png",
     tags: [
       "React Js",
       "PostgressSQL",
@@ -253,48 +292,10 @@ export const projects = [
       "React Flow",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    github: "",
+
   },
-  {
-    id: 9,
-    title: "3D Portfolio",
-    date: "2024",
-    description:
-      "This project is a 3D portfolio website built using React, Three.js, and Framer Motion. It showcases the power of modern web technologies to create an interactive and visually stunning presentation of your work and skills.",
-    image:
-      "https://private-user-images.githubusercontent.com/169749120/335023996-22a7b2c9-8227-4e98-ba22-d5e5ccfe3b0e.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTcwMzc3MTcsIm5iZiI6MTcxNzAzNzQxNywicGF0aCI6Ii8xNjk3NDkxMjAvMzM1MDIzOTk2LTIyYTdiMmM5LTgyMjctNGU5OC1iYTIyLWQ1ZTVjY2ZlM2IwZS5QTkc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUzMFQwMjUwMTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1jMzYzZmVhYjIyY2UyYTdmM2M1MTRhYjE1MTMxYmE2NWI5NmY2MzJkYjc3ZDc5ZDBkZGI1NzFhM2QyY2RjZWQ4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.9-TehZ0fxNE5Q06inVuTYuRWAswCDNnB_g4Tx4-_BCk",
-    tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
-      "React Js",
-      "MongoDb",
-      "Node Js",
-      "Express Js",
-      "Redux",
-    ],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify-management.netlify.app/",
-  },
-  {
-    id: 0,
-    title: "Payment Portal",
-    date: "2024",
-    description:
-      "Developed a full-stack payment portal, integrating a user-friendly frontend interface with a secure backend system to facilitate seamless and secure financial transactions.",
-    image:
-      "https://private-user-images.githubusercontent.com/169749120/335025376-7f1d5749-4957-442e-b21e-4c3edafd589c.PNG?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTcwMzgxODAsIm5iZiI6MTcxNzAzNzg4MCwicGF0aCI6Ii8xNjk3NDkxMjAvMzM1MDI1Mzc2LTdmMWQ1NzQ5LTQ5NTctNDQyZS1iMjFlLTRjM2VkYWZkNTg5Yy5QTkc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUzMFQwMjU4MDBaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04MGY4M2ZjZmZkM2ZkY2QzMzlmZmQ4OWY3ZjU2NzQzMmVkYjY4NDE4NmU2NDNkNzljNWM2YTQ2ZWQ3ZjNmOGRkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.Q4UZxBZ1SaNUkBlDrdLJAT65yMBOnDM_o08gJOFC2fY",
-    tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
-    category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
-   
-  },
+  
   {
     id: 10,
     title: "Inventory System",
@@ -302,7 +303,7 @@ export const projects = [
     description:
       "A simple inventory management system for a small business, enabling efficient tracking of stock levels, orders, sales.",
     image:
-      "https://private-user-images.githubusercontent.com/169749120/335026765-eef2d541-fe2a-4de1-ad07-d174d13f9550.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTcwMzg2MzMsIm5iZiI6MTcxNzAzODMzMywicGF0aCI6Ii8xNjk3NDkxMjAvMzM1MDI2NzY1LWVlZjJkNTQxLWZlMmEtNGRlMS1hZDA3LWQxNzRkMTNmOTU1MC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNTMwJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDUzMFQwMzA1MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03NGNlYTI2ZDkzNGJlMDBiNzE0ZTZlZWI1ZmZmNTU0N2M2MWIwNDU1OTliY2MwN2E5NGIxYjU2NjAxYTU5ZGJkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.ddq5hw4N73Mz1DclVq_R0TXftcPDRch7spkKuAjM9j0",
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/inventory.png",
     tags: [
       "Docker",
       "AWS",
@@ -317,7 +318,7 @@ export const projects = [
       "Redux",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
+    github: "",
     webapp: "https://trackify-management.netlify.app/",
   },
 ];

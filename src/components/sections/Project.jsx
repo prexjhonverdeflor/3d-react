@@ -12,7 +12,7 @@ const Container = styled.div`
   justify-contnet: center;
   margin-top: 50px;
   padding: 0 16px;
-  position: rlative;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -56,7 +56,7 @@ const CardContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 28px;
+  gap: 48px;
   flex-wrap: wrap;
 `;
 
