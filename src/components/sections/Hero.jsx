@@ -94,7 +94,7 @@ const Span = styled.div`
 const SubTitle = styled.div`
   font-size: 16px;
   line-height: 32px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_secondary};
 
   @media (max-width: 940px) {
     padding: 0 50px 0 50px;

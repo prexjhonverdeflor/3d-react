@@ -4,7 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { education } from "../../data/constants";
 import EducationCard from "../cards/EducationCard";
-
+import EarthCanvas from "../canvas/Earth";
 
 
 const Container = styled.div`
@@ -35,7 +35,7 @@ const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -45,7 +45,7 @@ const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   font-weight: 600;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     font-size: 16px;
   }
@@ -55,6 +55,7 @@ const Education = () => {
   return (
     <Container id="Education">
       <Wrapper>
+        
         <Title
         style={{
             marginTop: "40px",
@@ -76,6 +77,7 @@ const Education = () => {
             />
           ))}
         </VerticalTimeline>
+        <EarthCanvas/>
       </Wrapper>
     </Container>
   );

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useState } from 'react';
+import ProjectCard from '../cards/ProjectCard';
+import { projects } from "../../data/constants";
 
 
 
@@ -33,7 +35,7 @@ const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
     margin-top: 12px;
     font-size: 32px;
@@ -43,53 +45,24 @@ const Desc = styled.div`
   font-size: 18px;
   text-align: center;
   font-weight: 600;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_secondary};
   @media (max-width: 768px) {
     font-size: 16px;
   }
 `;
 
-const TogggleButtonGroup = styled.div`
+
+const CardContainer = styled.div`
   display: flex;
-  border: 1.5px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
-  font-size: 16px;
-  border-radius: 12px;
-  font-weight: 500;
-  margin: 22px 0;
-  @media (max-width: 768px) {
-    font-size: 12px;
-  }
-
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
 `;
-
-const ToggleButton = styled.div`
-  padding: 8px 18px;
-  border-radius: 6px;
-  cursor: pointer;
-  &:hover {
-    background: ${({ theme }) => theme.primary};
-  }
-  @media (max-width: 768px) {
-    padding: 6px 8px;
-    border-radius: 4px;
-  }
-  ${({ active, theme}) =>
-    active &&` 
-  background: ${theme.primary + 20};
-  `}
-`;
-
-
-const Divider = styled.div`
-    width: 1.5px;
-    background: ${({ theme }) => theme.primary};
-`;
-
 
 
 const Project = () => {
-    const [toggle, setToggle] = useState("all");
+  const [toggle] = useState("all");
   return (
     <Container id="Projects">
         <Wrapper>
@@ -101,17 +74,11 @@ const Project = () => {
         >
         This is the projects i created so far
         </Desc>
-        <TogggleButtonGroup>
-            <ToggleButton active={toggle==="all"}
-            onClick={() => setToggle("all")}>
-                ALL
-            </ToggleButton>
-            <Divider/>
-            <ToggleButton active={toggle==="web app"}
-            onClick={() => setToggle("web app")}>
-                WEBAPP
-            </ToggleButton>
-        </TogggleButtonGroup>
+       
+
+        <CardContainer>
+          {toggle === "all" && projects.map((project) => <ProjectCard project={project}/> )}
+        </CardContainer>
         </Wrapper>
     </Container>
   )
