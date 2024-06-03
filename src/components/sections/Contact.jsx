@@ -1,12 +1,15 @@
 import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
+import CarCanvas from "../canvas/Car";
+
+
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
-  position: rlative;
+  justify-content: center;
+  position: relative;
   z-index: 1;
   align-items: center;
 `;
@@ -24,6 +27,7 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 `;
+
 const Title = styled.div`
   font-size: 52px;
   text-align: center;
@@ -35,6 +39,7 @@ const Title = styled.div`
     font-size: 32px;
   }
 `;
+
 const Desc = styled.div`
   font-size: 18px;
   text-align: center;
@@ -45,9 +50,9 @@ const Desc = styled.div`
   }
 `;
 
-const ContactForm = styled.div`
+const ContactForm = styled.form`
   width: 95%;
-  max-width: 600px;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   background-color: rgba(17, 25, 40, 0.83);
@@ -58,18 +63,20 @@ const ContactForm = styled.div`
   margin-top: 28px;
   gap: 12px;
 `;
+
 const ContactTitle = styled.div`
   font-size: 28px;
   margin-bottom: 6px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
 `;
+
 const ContactInput = styled.input`
   flex: 1;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.text_secondary + 50};
   outline: none;
-  font-size: 18px;
+  font-size: 14px;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
@@ -77,12 +84,13 @@ const ContactInput = styled.input`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
+
 const ContactInputMessage = styled.textarea`
   flex: 1;
   background-color: transparent;
   border: 1px solid ${({ theme }) => theme.text_secondary + 50};
   outline: none;
-  font-size: 18px;
+  font-size: 14px;
   color: ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
@@ -90,6 +98,7 @@ const ContactInputMessage = styled.textarea`
     border: 1px solid ${({ theme }) => theme.primary};
   }
 `;
+
 const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
@@ -100,50 +109,119 @@ const ContactButton = styled.input`
   border-radius: 12px;
   border: none;
   color: ${({ theme }) => theme.text_primary};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  &:hover {
+
+    background: ${({ theme }) => theme.bg};
+    color: ${({ theme }) => theme.text_primary};
+    transition: 0.5s;
+  }
 `;
+
+
+const HeroInnerContainer = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1100px;
+  @media (max-width: 960px) {
+    flex-direction: column;
+  }
+`;
+
+const HeroLeftContainer = styled.div`
+  color: ${({ theme }) => theme.primary};
+  font-size: 30px;
+  margin-left: 60px;
+  width: 100%;
+  order: 1;
+  @media (max-width: 960px) {
+    margin-left:0;
+    order: 1;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+`;
+
+const HeroRightContainer = styled.div`
+  width: 150%;
+  height: 500px;
+  order: 2;
+  display: flex;
+  justify-content:end;
+  @media (max-width: 960px) {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
+  }
+  @media (max-width: 640px) {
+    height: 400px;
+    margin:0;
+  }
+`;
+
+
 
 const Contact = () => {
   const form = useRef();
-  const handelSubmit = (e) => {
+
+  const handleSubmit = (e) => {
     e.preventDefault();
     emailjs
       .sendForm(
-        "service_tox7kqs",
-        "template_nv7k7mj",
+        "service_w2btw3c",
+        "template_bmxddch",
         form.current,
-        "SybVGsYS52j2TfLbi"
+        "r10gd19b0vwVLR_b5"
       )
       .then(
         (result) => {
           alert("Message Sent");
-          form.current.result();
+          form.current.reset();
         },
         (error) => {
-          alert(error);
+          alert(error.text);
         }
       );
   };
+
   return (
     <Container id="Education">
       <Wrapper>
-        <Title>Contact</Title>
+      <Title
+       style={{
+        marginTop: "100px",
+      }}
+      >Contact</Title>
         <Desc
-          style={{
-            marginBottom: "40px",
-          }}
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
-        <ContactForm onSubmit={handelSubmit}>
+      <HeroInnerContainer>
+          <HeroLeftContainer>
+        
+        <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
           <ContactInput placeholder="Your Name" name="from_name" />
           <ContactInputMessage placeholder="Message" name="message" rows={4} />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
+        </HeroLeftContainer>
+          
+          <HeroRightContainer>
+            <CarCanvas/>
+          </HeroRightContainer>
+        </HeroInnerContainer>
       </Wrapper>
     </Container>
   );

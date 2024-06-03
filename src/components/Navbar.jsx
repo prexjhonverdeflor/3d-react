@@ -31,9 +31,10 @@ const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
-  color: ${({ theme }) => theme.text_primary};
+  font-weight: 900;
+  color: ${({ theme }) => theme.primary};
 `;
 
 const NavItems = styled.ul`
@@ -135,14 +136,14 @@ const Navbar = () => {
   return (
     <Nav>
       <NavbarContainer>
-        <NavLogo to="/">Prex</NavLogo>
+        <NavLogo href="" >Prex</NavLogo>
 
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
 
         <NavItems>
-          <NavLink href="#About">About</NavLink>
+          <NavLink href="">Home</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#Projects">Projects</NavLink>

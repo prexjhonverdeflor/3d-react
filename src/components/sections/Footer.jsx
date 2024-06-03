@@ -86,7 +86,7 @@ const Footer = () => {
       <FooterWrapper>
         <Logo>Prex Verdeflor</Logo>
         <Nav>
-          <NavLink href="#About">About</NavLink>
+          <NavLink href="">Home</NavLink>
           <NavLink href="#Skills">Skills</NavLink>
           <NavLink href="#Experience">Experience</NavLink>
           <NavLink href="#Projects">Projects</NavLink>

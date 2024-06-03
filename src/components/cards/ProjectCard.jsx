@@ -1,5 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Bio } from "../../data/constants";
+import GitHubIcon from '@mui/icons-material/GitHub';
+
+
+
 
 const Card = styled.div`
   width: 350px;
@@ -75,11 +80,20 @@ const Description = styled.div`
   text-overflow: ellipsis;
 `;
 
-const Button = styled.a`
-  color: ${({ theme }) => theme.primary};
-  text-decoration: none;
-  font-weight: 600;
-  text-align: center;
+
+
+const SocialMediaIcons = styled.div`
+  display: flex;
+`;
+const SocialMediaIcon = styled.a`
+  display: inline-block;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
 `;
 
 const ProjectCard = ({ project }) => {
@@ -93,9 +107,12 @@ const ProjectCard = ({ project }) => {
         <Description>{project.description}</Description>
       </Details>
       
-      <Button href={project.github} target="_blank">
-        View Code
-      </Button>
+      <SocialMediaIcons>
+          <SocialMediaIcon href={Bio.github} target="display">
+            <GitHubIcon />
+          </SocialMediaIcon>
+      </SocialMediaIcons>
+      
     </Card>
   );
 };
