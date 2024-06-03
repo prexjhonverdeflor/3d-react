@@ -161,11 +161,10 @@ const HeroRightContainer = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
+
   }
   @media (max-width: 640px) {
     height: 400px;
-    margin:0;
   }
 `;
 

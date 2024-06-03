@@ -4,6 +4,9 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { experiences } from "../../data/constants";
 import ExperienceCard from "../cards/ExperienceCard";
+import { Reveal } from "../../utils/Reveal";
+
+
 
 const Container = styled.div`
   display: flex;
@@ -54,7 +57,14 @@ const Experience = () => {
   return (
     <Container id="Experience">
       <Wrapper>
-        <Title>Experience</Title>
+        <Reveal>
+        <Title
+        style={{
+          marginTop: "70px",
+        }}
+        >Experience</Title>
+        </Reveal>
+        <Reveal>
         <Desc
           style={{
             marginBottom: "40px",
@@ -63,6 +73,7 @@ const Experience = () => {
           My work experience as a software engineer and working on different
           companies and projects.
         </Desc>
+        </Reveal>
 
         <VerticalTimeline>
           {experiences.map((experience, index) => (

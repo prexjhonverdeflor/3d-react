@@ -4,8 +4,8 @@ import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
 import HeroImg from "../../images/Hero1.png";
 import HeroBgAnimation from "../HeroBgAnimation";
-import { motion } from "framer-motion";
-import { headContainerAnimation, headContentAnimation, headTextAnimation} from "../../utils/motion";
+import { Reveal } from "../../utils/Reveal";
+import gsap from 'gsap';
 
 
 
@@ -171,19 +171,21 @@ const Hero = () => {
   return (
     <div id="about">
       <HeroContainer>
+       
         <HeroBg>     
             <HeroBgAnimation/>
         </HeroBg>
-        <motion.div {...headContainerAnimation}>
+        
+       
         <HeroInnerContainer>
           <HeroLeftContainer>
-          <motion.div {...headTextAnimation}>
+          <Reveal>
             <Title>
               Hi, I am <br /> {Bio.name}
             </Title>
-            
+            </Reveal>
             <TextLoop>
-              
+              <Reveal>
               <Span>
                 <Typewriter
                   options={{
@@ -193,25 +195,23 @@ const Hero = () => {
                   }}
                 />
               </Span>
+              </Reveal>
             </TextLoop>
-            </motion.div>
+          
 
-          <motion.div {...headContentAnimation}>
+            <Reveal>
             <SubTitle>{Bio.description}</SubTitle>
-            </motion.div>
+            </Reveal>
+            <Reveal>
             <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
+            </Reveal>
           </HeroLeftContainer>
+          
           <HeroRightContainer>
-            
-          <motion.div {...headContainerAnimation}>
-          
-          <Img src={HeroImg}/>
-          
-          </motion.div>
-
+              <Img src={HeroImg}/>
           </HeroRightContainer>
         </HeroInnerContainer>
-        </motion.div>
+      
       </HeroContainer>
     </div>
   );

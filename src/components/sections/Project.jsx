@@ -3,6 +3,9 @@ import styled from 'styled-components'
 import { useState } from 'react';
 import ProjectCard from '../cards/ProjectCard';
 import { projects } from "../../data/constants";
+import { Reveal } from "../../utils/Reveal";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 
 
@@ -63,22 +66,36 @@ const CardContainer = styled.div`
 
 const Project = () => {
   const [toggle] = useState("all");
+  const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
   return (
     <Container id="Projects">
         <Wrapper>
+          <Reveal>
             <Title>Projects</Title>
+          </Reveal>
+          <Reveal>
             <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-        This is the projects i created so far
-        </Desc>
+              style={{
+                marginBottom: "40px",
+              }}
+            >
+            This is the projects i created so far
+            </Desc>
+          </Reveal>
        
-
+        <motion.div
+          ref={ref}
+          initial={{ y: 50, opacity: 0 }}
+          animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+          transition={{ staggerChildren: 0.1 }}
+        >
         <CardContainer>
-          {toggle === "all" && projects.map((project) => <ProjectCard project={project}/> )}
+       
+          {toggle === "all" && projects.map((project) => 
+          <ProjectCard project={project}/> )}
+         
         </CardContainer>
+        </motion.div>
         </Wrapper>
     </Container>
   )

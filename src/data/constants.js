@@ -75,7 +75,7 @@ export const skills = [
       {
         name: "PHP",
         image:
-          "https://static-00.iconduck.com/assets.00/php-icon-256x256-oq5bc0bt.png",
+          "https://seeklogo.com/images/P/php-logo-91EFDB12E1-seeklogo.com.png",
       },
 
       {
@@ -164,7 +164,7 @@ export const skills = [
       {
         name: "Postman",
         image:
-          "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
+          "https://cdn.iconscout.com/icon/free/png-256/free-postman-3521648-2945092.png?f=webp",
       },
       
     ],
