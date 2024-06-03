@@ -5,7 +5,7 @@ export const Bio = {
     "Web Developer",
     "UI/UX Designer",
     "Programmer",
-  ],
+  ],   
   description:
     "I'm a creative Front-End Developer with a knack for transforming ideas into engaging and intuitive user interfaces. My passion for design and innovation drives me to stay ahead of industry trends and continuously improve my skills.",
   github: "https://github.com/prexjhonverdeflor",
