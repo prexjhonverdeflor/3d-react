@@ -121,12 +121,16 @@ const SkillImage = styled.img`
 `;
 
 const Skills = () => {
-  const [ref, inView] = useInView({ threshold: 0.05, triggerOnce: true });
+  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
   return (
     <Container id="Skills">
       <Wrapper>
         <Reveal>
-        <Title>Skills</Title>
+        <Title
+          style={{
+            marginTop: "40px",
+          }}
+        >Skills</Title>
         </Reveal>
         <Reveal>
         <Desc
@@ -140,37 +144,35 @@ const Skills = () => {
         </Reveal>
 
         <motion.div
-          ref={ref}
-          initial={{ y: 50, opacity: 0 }}
-          animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ staggerChildren: 0.1 }}
-        >
-        <SkillsContainer>
-          {skills.map((skill, index) => (
-           
-            <Tilt>
-              <Skill key={`skill-${index}`}>
+      ref={ref}
+      initial={{ y: 50, opacity: 0 }}
+      animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+      transition={{ duration: 0.8, ease: 'easeOut', staggerChildren: 0.1 }}
+    >
+      <SkillsContainer>
+        {skills.map((skill, index) => (
+          <Tilt key={`tilt-${index}`}>
+            <Skill>
               <motion.div
-                  ref={ref}
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-                >
+                initial={{ y: 50, opacity: 0 }}
+                animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+              >
                 <SkillTitle>{skill.title}</SkillTitle>
                 <SkillList>
                   {skill.skills.map((item, index_x) => (
                     <SkillItem key={`skill-x-${index_x}`}>
-                      <SkillImage src={item.image} />
+                      <SkillImage src={item.image} alt={item.name} />
                       {item.name}
                     </SkillItem>
                   ))}
                 </SkillList>
-                </motion.div>
-              </Skill>
-            </Tilt>
-           
-          ))}
-        </SkillsContainer>
-        </motion.div>
+              </motion.div>
+            </Skill>
+          </Tilt>
+        ))}
+      </SkillsContainer>
+    </motion.div>
       </Wrapper>
     </Container>
   );

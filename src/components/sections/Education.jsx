@@ -4,6 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 import styled from "styled-components";
 import { education } from "../../data/constants";
 import EducationCard from "../cards/EducationCard";
+import {Reveal} from "../../utils/Reveal";
 
 
 
@@ -55,12 +56,14 @@ const Education = () => {
   return (
     <Container id="Education">
       <Wrapper>
-        
+        <Reveal>
         <Title
         style={{
             marginTop: "40px",
           }}
           >Education</Title>
+          </Reveal>
+        <Reveal>
         <Desc
           style={{
             marginBottom: "40px",
@@ -68,7 +71,7 @@ const Education = () => {
         >
         My journey of self-discovery and educational details
         </Desc>
-
+        </Reveal>
         <VerticalTimeline lineColor="rgb(59, 61, 65)">
           {education.map((item, index) => (
             <EducationCard

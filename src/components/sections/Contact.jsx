@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import CarCanvas from "../canvas/Car";
-
+import {Reveal} from "../../utils/Reveal";
 
 
 const Container = styled.div`
@@ -51,8 +51,6 @@ const Desc = styled.div`
 `;
 
 const ContactForm = styled.form`
-  width: 95%;
-  max-width: 450px;
   display: flex;
   flex-direction: column;
   background-color: rgba(17, 25, 40, 0.83);
@@ -62,6 +60,8 @@ const ContactForm = styled.form`
   box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
   margin-top: 28px;
   gap: 12px;
+  width: 100%;
+  max-width: 600px; /* Ensure it doesn’t get too wide */
 `;
 
 const ContactTitle = styled.div`
@@ -113,13 +113,11 @@ const ContactButton = styled.input`
   font-weight: 600;
   cursor: pointer;
   &:hover {
-
     background: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.text_primary};
     transition: 0.5s;
   }
 `;
-
 
 const HeroInnerContainer = styled.div`
   position: relative;
@@ -128,6 +126,7 @@ const HeroInnerContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1100px;
+  margin: 0 auto; /* Center the container */
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -136,11 +135,9 @@ const HeroInnerContainer = styled.div`
 const HeroLeftContainer = styled.div`
   color: ${({ theme }) => theme.primary};
   font-size: 30px;
-  margin-left: 60px;
-  width: 100%;
+  width: 80%;
   order: 1;
   @media (max-width: 960px) {
-    margin-left:0;
     order: 1;
     margin-bottom: 30px;
     display: flex;
@@ -150,23 +147,23 @@ const HeroLeftContainer = styled.div`
 `;
 
 const HeroRightContainer = styled.div`
-  width: 150%;
+  width: 100%;
   height: 500px;
   order: 2;
   display: flex;
-  justify-content:end;
+  justify-content: end;
   @media (max-width: 960px) {
     order: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
   }
   @media (max-width: 640px) {
     height: 400px;
   }
 `;
+
 
 
 
@@ -196,18 +193,22 @@ const Contact = () => {
   return (
     <Container id="Education">
       <Wrapper>
+      <Reveal>
       <Title
        style={{
         marginTop: "100px",
       }}
       >Contact</Title>
+      </Reveal>
+      <Reveal>
         <Desc
         >
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
+      </Reveal>
+      
       <HeroInnerContainer>
           <HeroLeftContainer>
-        
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Email Me 🚀</ContactTitle>
           <ContactInput placeholder="Your Email" name="from_email" />
