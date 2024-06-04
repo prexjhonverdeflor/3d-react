@@ -49,8 +49,9 @@ const CarCanvas = () => {
       <ambientLight intensity={0.5} />
       <directionalLight
         castShadow
-        intensity={1}
+        intensity={4}
         position={[10, 10, 10]}
+        color="orange"
         shadow-mapSize-width={1024}
         shadow-mapSize-height={1024}
         shadow-camera-far={50}

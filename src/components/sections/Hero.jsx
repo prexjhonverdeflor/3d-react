@@ -2,10 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-import HeroImg from "../../images/Hero1.png";
-import HeroBgAnimation from "../HeroBgAnimation";
+//import HeroImg from "../../images/Hero1.png";
+//import HeroBgAnimation from "../HeroBgAnimation";
+//import gsap from 'gsap';
 import { Reveal } from "../../utils/Reveal";
-import gsap from 'gsap';
+import HaloCanvas from "../canvas/Halo";
+
 
 
 
@@ -53,19 +55,20 @@ const HeroLeftContainer = styled.div`
 
 const HeroRightContainer = styled.div`
   width: 100%;
-  order: 2;
+  height: 450px;
+  order: 1;
   display: flex;
-  justify-content:end;
+  justify-content: end;
   @media (max-width: 960px) {
-    order: 1;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 80px;
   }
   @media (max-width: 640px) {
-    margin-bottom: 30px;
+    order: 2;
+    height: 400px;
   }
 `;
 
@@ -171,12 +174,7 @@ const Hero = () => {
   return (
     <div id="about">
       <HeroContainer>
-       
-        <HeroBg>     
-            <HeroBgAnimation/>
-        </HeroBg>
-        
-       
+
         <HeroInnerContainer>
           <HeroLeftContainer>
           <Reveal>
@@ -208,7 +206,7 @@ const Hero = () => {
           </HeroLeftContainer>
           
           <HeroRightContainer>
-              <Img src={HeroImg}/>
+              <HaloCanvas/>
           </HeroRightContainer>
         </HeroInnerContainer>
       

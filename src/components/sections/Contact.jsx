@@ -149,17 +149,18 @@ const HeroLeftContainer = styled.div`
 const HeroRightContainer = styled.div`
   width: 100%;
   height: 500px;
-  order: 2;
+  order: 1;
   display: flex;
   justify-content: end;
   @media (max-width: 960px) {
-    order: 1;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   @media (max-width: 640px) {
+    order: 2;
     height: 400px;
   }
 `;
@@ -209,7 +210,7 @@ const Contact = () => {
       <HeroInnerContainer>
         <HeroLeftContainer>
           <ContactForm ref={form} onSubmit={handleSubmit}>
-            <ContactTitle>Email Me 🚀</ContactTitle>
+            <ContactTitle>Email Me</ContactTitle>
             <ContactInput placeholder="Your Email" name="from_email" />
             <ContactInput placeholder="Your Name" name="from_name" />
             <ContactInputMessage placeholder="Message" name="message" rows={4} />
