@@ -87,7 +87,7 @@ const Project = () => {
           ref={ref}
           initial={{ y: 50, opacity: 0 }}
           animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-          transition={{ staggerChildren: 0.1 }}
+          transition={{ duration: 0.8, ease: 'easeOut', staggerChildren: 0.1 }}
         >
         <CardContainer>
        

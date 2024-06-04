@@ -206,18 +206,16 @@ const Contact = () => {
           Feel free to reach out to me for any questions or opportunities!
         </Desc>
       </Reveal>
-      
       <HeroInnerContainer>
-          <HeroLeftContainer>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInputMessage placeholder="Message" name="message" rows={4} />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
+        <HeroLeftContainer>
+          <ContactForm ref={form} onSubmit={handleSubmit}>
+            <ContactTitle>Email Me 🚀</ContactTitle>
+            <ContactInput placeholder="Your Email" name="from_email" />
+            <ContactInput placeholder="Your Name" name="from_name" />
+            <ContactInputMessage placeholder="Message" name="message" rows={4} />
+            <ContactButton type="submit" value="Send" />
+          </ContactForm>
         </HeroLeftContainer>
-          
           <HeroRightContainer>
             <CarCanvas/>
           </HeroRightContainer>

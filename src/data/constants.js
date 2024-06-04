@@ -243,7 +243,7 @@ export const projects = [
     description:
       "This project is a 3D portfolio website built using React, Three.js, and Framer Motion. It showcases the power of modern web technologies to create an interactive and visually stunning presentation of your work and skills.",
     image:
-      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/3d.PNG",
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG",
     tags: [
       "Docker",
       "AWS",
@@ -268,7 +268,7 @@ export const projects = [
     description:
       "Developed a full-stack payment portal, integrating a user-friendly frontend interface with a secure backend system to facilitate seamless and secure financial transactions.",
     image:
-      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/cb.PNG",
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG",
     tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
     category: "web app",
     github: "https://github.com/prexjhonverdeflor",
@@ -281,7 +281,7 @@ export const projects = [
     description:
       "CMS helps church leaders and staff to efficiently manage church activities, enhance member engagement, and focus more on ministry and community outreach.",
     image:
-      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/church.png",
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church.png",
     tags: [
       "React Js",
       "PostgressSQL",
@@ -302,7 +302,7 @@ export const projects = [
     description:
       "A simple inventory management system for a small business, enabling efficient tracking of stock levels, orders, sales.",
     image:
-      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-portfolio/master/src/images/inventory.png",
+      "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png",
     tags: [
       "Docker",
       "AWS",
