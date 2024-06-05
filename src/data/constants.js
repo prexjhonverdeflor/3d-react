@@ -34,7 +34,7 @@ export const skills = [
       {
         name: "CSS",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png",
       },
       {
         name: "JavaScript",
@@ -99,7 +99,7 @@ export const skills = [
       {
         name: "MongoDB",
         image:
-          "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-3521676-2945120.png?f=webp",
+          "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png",
       },
 
     ],
@@ -112,7 +112,7 @@ export const skills = [
       {
         name: "Figma",
         image:
-          "https://s3-alpha.figma.com/hub/file/1481185752/fa4cd070-6a79-4e1b-b079-8b9b76408595-cover.png",
+          "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
       },
       {
         name: "Adobe XD",
@@ -130,11 +130,7 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1200px-Sketch_Logo.svg.png",
       },
-      {
-        name: "User Testing",
-        image:
-          "https://seeklogo.com/images/U/usertesting-logo-B7E00528C4-seeklogo.com.png",
-      },
+
     
     ],
   },
@@ -151,21 +147,13 @@ export const skills = [
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png",
       },
-      {
-        name: "Netlify",
-        image:
-          "https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png",
-      },
+
       {
         name: "VS Code",
         image:
           "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png",
       },
-      {
-        name: "Postman",
-        image:
-          "https://cdn.iconscout.com/icon/free/png-256/free-postman-3521648-2945092.png?f=webp",
-      },
+
       
     ],
   },

@@ -1,10 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
-import { Tilt } from "react-tilt";
 import { Reveal } from "../../utils/Reveal";
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import Marquee from 'react-fast-marquee'
+import { Tilt } from "react-tilt";
 
 
 
@@ -119,60 +118,49 @@ const SkillImage = styled.img`
   width: 24px;
   height: 24px;
 `;
+const ImageContainer = styled.div`
+  position: relative;
+  width: 110px; /* Adjust this according to your image size */
+  height: auto; /* Adjust this according to your image size */
+  pointer-events: none; /* Allows cursor events to pass through the container */
+
+`;
+
+
+
 
 const Skills = () => {
-  const [ref, inView] = useInView({ threshold: 0.3, triggerOnce: true });
   return (
-    <Container id="Skills">
+    <Container id="Skills"
+      style={{
+        marginBottom: "100px",
+        marginTop: "50px",
+      }}
+      >
       <Wrapper>
         <Reveal>
-        <Title
-          style={{
-            marginTop: "40px",
-          }}
-        >Skills</Title>
+        <Title style={{ marginTop: "40px" }}>Skills</Title>
         </Reveal>
         <Reveal>
-        <Desc
-          style={{
-            marginBottom: "40px",
-          }}
-        >
-          Here are some of my skills on which I have been working on for the
-          past 4 years.
+        <Desc style={{ marginBottom: "40px" }}>
+          Here are some of my skills on which I have been working on for the past 4 years.
         </Desc>
         </Reveal>
+        <Marquee pauseOnHover gradient={true} gradientColor={[9, 9, 23]} gradientWidth={100}>
+          {skills.map(category => 
+            category.skills.map(skill => (
+              <div key={skill.name} style={{ margin: '0 40px' }}>
+                <Tilt options={{ max : 50 }}>
+                  <ImageContainer>
+                    <img src={skill.image} alt={skill.name} style={{ width: '110px', height: 'auto'}} />
+                  </ImageContainer>
+                </Tilt>
+              </div>
+            ))
+          )}
+        </Marquee>
 
-        <motion.div
-      ref={ref}
-      initial={{ y: 50, opacity: 0 }}
-      animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-      transition={{ duration: 0.8, ease: 'easeOut', staggerChildren: 0.1 }}
-    >
-      <SkillsContainer>
-        {skills.map((skill, index) => (
-          <Tilt key={`tilt-${index}`}>
-            <Skill>
-              <motion.div
-                initial={{ y: 50, opacity: 0 }}
-                animate={inView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
-              >
-                <SkillTitle>{skill.title}</SkillTitle>
-                <SkillList>
-                  {skill.skills.map((item, index_x) => (
-                    <SkillItem key={`skill-x-${index_x}`}>
-                      <SkillImage src={item.image} alt={item.name} />
-                      {item.name}
-                    </SkillItem>
-                  ))}
-                </SkillList>
-              </motion.div>
-            </Skill>
-          </Tilt>
-        ))}
-      </SkillsContainer>
-    </motion.div>
+
       </Wrapper>
     </Container>
   );
