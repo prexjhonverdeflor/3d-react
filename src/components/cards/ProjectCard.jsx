@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import GitHubIcon from '@mui/icons-material/GitHub';
-
+import { Tilt } from "react-tilt";
 
 
 
@@ -19,11 +19,7 @@ const Card = styled.div`
   flex-direction: column;
   gap: 14px;
   transition: all 0.4s ease-in-out;
-  &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
-    filter: brightness(1.1);
-  }
+
 `;
 const Image = styled.img`
   width: 300px;
@@ -98,6 +94,7 @@ const SocialMediaIcon = styled.a`
 
 const ProjectCard = ({ project }) => {
   return (
+    <Tilt options={{ max : 25, scale: 1}}>
     <Card>
       <Image src={project.image} />
       <Tags></Tags>
@@ -114,6 +111,7 @@ const ProjectCard = ({ project }) => {
       </SocialMediaIcons>
       
     </Card>
+    </Tilt>
   );
 };
 

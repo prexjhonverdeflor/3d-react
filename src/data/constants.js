@@ -81,7 +81,7 @@ export const skills = [
       {
         name: "C#",
         image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Logo_C_sharp.svg/1200px-Logo_C_sharp.svg.png",
+          "https://assets-global.website-files.com/6047a9e35e5dc54ac86ddd90/63065002cd563e1cd1cead28_eaadfe64.png",
       },
 
       {

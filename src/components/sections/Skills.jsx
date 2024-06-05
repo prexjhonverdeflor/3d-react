@@ -118,13 +118,8 @@ const SkillImage = styled.img`
   width: 24px;
   height: 24px;
 `;
-const ImageContainer = styled.div`
-  position: relative;
-  width: 110px; /* Adjust this according to your image size */
-  height: auto; /* Adjust this according to your image size */
-  pointer-events: none; /* Allows cursor events to pass through the container */
 
-`;
+
 
 
 
@@ -139,27 +134,24 @@ const Skills = () => {
       >
       <Wrapper>
         <Reveal>
-        <Title style={{ marginTop: "40px" }}>Skills</Title>
+        <Title style={{ marginTop: "70px" }}>Skills</Title>
         </Reveal>
         <Reveal>
         <Desc style={{ marginBottom: "40px" }}>
           Here are some of my skills on which I have been working on for the past 4 years.
         </Desc>
         </Reveal>
-        <Marquee pauseOnHover gradient={true} gradientColor={[9, 9, 23]} gradientWidth={100}>
-          {skills.map(category => 
+        <Marquee style={{ height: '200px' }} gradientWidth={100} >
+          {skills.map(category =>
             category.skills.map(skill => (
-              <div key={skill.name} style={{ margin: '0 40px' }}>
-                <Tilt options={{ max : 50 }}>
-                  <ImageContainer>
-                    <img src={skill.image} alt={skill.name} style={{ width: '110px', height: 'auto'}} />
-                  </ImageContainer>
+              <div key={skill.name} style={{ margin: '0 40px', display: 'inline-block' }}>
+                <Tilt>
+                    <img src={skill.image} alt={skill.name} style={{ width: '120px', height: 'auto' }} />
                 </Tilt>
               </div>
             ))
           )}
         </Marquee>
-
 
       </Wrapper>
     </Container>

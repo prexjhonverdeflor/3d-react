@@ -141,7 +141,7 @@ const Navbar = () => {
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
           <MenuRounded style={{ color: "inherit" }} />
         </MobileIcon>
-
+        
         <NavItems>
           <NavLink href="">Home</NavLink>
           <NavLink href="#Skills">Skills</NavLink>

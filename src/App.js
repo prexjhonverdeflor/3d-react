@@ -9,6 +9,7 @@ import Education from "./components/sections/Education";
 import Project from "./components/sections/Project";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
+import Preloader from "./components/Preloader";
 
 
 const Body = styled.div`
@@ -54,6 +55,9 @@ const WrapperFooter = styled.div`
 
 function App() {
   return (
+    <>
+    <Preloader/>
+    
     <ThemeProvider theme={darkTheme} >
       <BrowserRouter>
         <Navbar />
@@ -75,6 +79,7 @@ function App() {
       </BrowserRouter>
      
     </ThemeProvider>
+    </>
   );
 }
 
