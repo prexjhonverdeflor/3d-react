@@ -7,7 +7,12 @@ import Typewriter from "typewriter-effect";
 //import gsap from 'gsap';
 import { Reveal } from "../../utils/Reveal";
 import HaloCanvas from "../canvas/Halo";
-
+import {
+  headContainerAnimation,
+  headContentAnimation,
+  headTextAnimation,
+} from "../../utils/motion";
+import {motion} from "framer-motion";
 
 
 
@@ -174,32 +179,30 @@ const Hero = () => {
   return (
     <div id="about">
       <HeroContainer>
+      <motion.div {...headContainerAnimation}>
+          <HeroInnerContainer>
+            <HeroLeftContainer>
+              <motion.div {...headTextAnimation}>
+                <Title>
+                  Hi, I am <br /> {Bio.name}
+                </Title>
+                <TextLoop>
+                  I am a
+                  <Span>
+                    <Typewriter
+                      options={{
+                        strings: Bio.roles,
+                        autoStart: true,
+                        loop: true,
+                      }}
+                    />
+                  </Span>
+                </TextLoop>
+              </motion.div>
 
-        <HeroInnerContainer>
-          <HeroLeftContainer>
-          <Reveal>
-            <Title>
-              Hi, I am <br /> {Bio.name}
-            </Title>
-            </Reveal>
-            <TextLoop>
-              <Reveal>
-              <Span>
-                <Typewriter
-                  options={{
-                    strings: Bio.roles,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </Span>
-              </Reveal>
-            </TextLoop>
-          
-
-            <Reveal>
-            <SubTitle>{Bio.description}</SubTitle>
-            </Reveal>
+              <motion.div {...headContentAnimation}>
+                <SubTitle>{Bio.description}</SubTitle>
+              </motion.div>
             <Reveal>
             <ResumeButton href={Bio.resume} target="_blank">Resume</ResumeButton>
             </Reveal>
@@ -209,7 +212,7 @@ const Hero = () => {
               <HaloCanvas/>
           </HeroRightContainer>
         </HeroInnerContainer>
-      
+        </motion.div>
       </HeroContainer>
     </div>
   );
