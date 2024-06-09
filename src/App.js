@@ -56,7 +56,7 @@ const WrapperFooter = styled.div`
 function App() {
   return (
     <>
- 
+  <Preloader/>
     <ThemeProvider theme={lightTheme} >
       <BrowserRouter>
         <Navbar />
