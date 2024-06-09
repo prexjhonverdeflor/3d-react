@@ -54,7 +54,7 @@ const Desc = styled.div`
 
 const Education = () => {
   return (
-    <Container id="Education">
+    <Container>
       <Wrapper>
         <Reveal>
         <Title

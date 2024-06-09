@@ -60,7 +60,7 @@ const Experience = () => {
         <Reveal>
         <Title
         style={{
-          marginTop: "70px",
+          marginTop: "150px",
         }}
         >Experience</Title>
         </Reveal>

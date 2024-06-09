@@ -1,5 +1,5 @@
 import styled, { ThemeProvider } from "styled-components";
-import { darkTheme } from "./utils/Themes"
+import { lightTheme } from "./utils/Themes"
 import Navbar from './components/Navbar';
 import { BrowserRouter} from "react-router-dom";
 import Hero from "./components/sections/Hero";
@@ -56,9 +56,8 @@ const WrapperFooter = styled.div`
 function App() {
   return (
     <>
-    <Preloader/>
-    
-    <ThemeProvider theme={darkTheme} >
+ 
+    <ThemeProvider theme={lightTheme} >
       <BrowserRouter>
         <Navbar />
         <Body>

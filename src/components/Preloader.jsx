@@ -12,9 +12,9 @@ const Preloader = () => {
   return (
     <div className='preloader'>
         <div className='texts-container'>
-            <span>Prex</span>
-            <span>Jhon</span>
-            <span>Verdeflor</span>
+            <span>Design,</span>
+            <span>Align,</span>
+            <span>Refine.</span>
         </div>
     </div>
   )

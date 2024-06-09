@@ -7,7 +7,7 @@ export const Bio = {
     "Programmer",
   ],   
   description:
-    "I'm a creative Front-End Developer with a knack for transforming ideas into engaging and intuitive user interfaces. My passion for design and innovation drives me to stay ahead of industry trends and continuously improve my skills.",
+    "Designing Tomorrow's Experiences: Front-End Developer Fusing Creativity with Code ",
   github: "https://github.com/prexjhonverdeflor",
   resume:
     "https://drive.google.com/file/d/1h2SsgiQbNPxg5SJcWIk7rR53khBu4P22/view?usp=sharing",

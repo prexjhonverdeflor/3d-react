@@ -134,14 +134,19 @@ const Skills = () => {
       >
       <Wrapper>
         <Reveal>
-        <Title style={{ marginTop: "70px" }}>Skills</Title>
+        <Title style={{ marginTop: "200px" }}>Skills</Title>
         </Reveal>
         <Reveal>
         <Desc style={{ marginBottom: "40px" }}>
           Here are some of my skills on which I have been working on for the past 4 years.
         </Desc>
         </Reveal>
-        <Marquee style={{ height: '200px' }} gradientWidth={100} >
+        
+        <Marquee style={{ width: '120%', height: '200px', display: 'flex',alignItems: 'center',justifyContent: 'center', }} 
+          gradientWidth={100} 
+          gradient={true} 
+          gradientColor={[245,240,236]} 
+          >
           {skills.map(category =>
             category.skills.map(skill => (
               <div key={skill.name} style={{ margin: '0 40px', display: 'inline-block' }}>
