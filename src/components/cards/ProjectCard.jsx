@@ -9,10 +9,10 @@ import { Tilt } from "react-tilt";
 const Card = styled.div`
   width: 350px;
   height: 400px;
-  background-color: ${({ theme }) => theme.card};
+
   cursor: pointer;
   border-radius: 10px;
-  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   padding: 26px 20px;
   display: flex;
@@ -26,7 +26,7 @@ const Image = styled.img`
   height: 150px;
   background-color: ${({ theme }) => theme.white};
   border-radius: 10px;
-  box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
 `;
 const Tags = styled.div`
   width: 100%;

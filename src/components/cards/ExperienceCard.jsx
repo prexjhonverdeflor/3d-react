@@ -102,12 +102,12 @@ const ExperienceCard = ({ experience }) => {
         display: "flex",
         flexDirection: "column",
         gap: "12px",
-        background: "#1d1836",
-        color: "#fff",
-        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-        backgroundColor: "rgba(17, 25, 40, 0.83)",
+    
+        boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)",
+        backgroundColor: "#f5f0ec",
         border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "6px",
+        borderRadius: "15px",
+        fontWeight: "900",
       }}
       contentArrowStyle={{
         borderRight: "7px solid  rgba(255, 255, 255, 0.3)",

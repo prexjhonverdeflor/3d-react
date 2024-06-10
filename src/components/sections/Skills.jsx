@@ -125,6 +125,7 @@ const SkillImage = styled.img`
 
 
 const Skills = () => {
+  const repeatedSkills = Array(10).fill(skills).flat();
   return (
     <Container id="Skills"
       style={{
@@ -142,21 +143,24 @@ const Skills = () => {
         </Desc>
         </Reveal>
         
-        <Marquee style={{ width: '120%', height: '200px', display: 'flex',alignItems: 'center',justifyContent: 'center', }} 
-          gradientWidth={100} 
-          gradient={true} 
-          gradientColor={[245,240,236]} 
-          >
-          {skills.map(category =>
-            category.skills.map(skill => (
-              <div key={skill.name} style={{ margin: '0 40px', display: 'inline-block' }}>
-                <Tilt>
-                    <img src={skill.image} alt={skill.name} style={{ width: '120px', height: 'auto' }} />
-                </Tilt>
-              </div>
-            ))
-          )}
-        </Marquee>
+        <Marquee
+        style={{ width: '110%', height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        gradientWidth={100}
+        gradient={true}
+        gradientColor={[245, 240, 236]}
+        speed={60}
+        pauseOnHover={true}
+
+      >
+        {repeatedSkills.map((skill, index) => (
+          <div key={`${skill.name}-${index}`} style={{ margin: '0 30px', display: 'inline-block' }}>
+            <Tilt>
+              <img src={skill.image} alt={skill.name} style={{ width: '120px', height: 'auto' }} />
+            </Tilt>
+          </div>
+        ))}
+      </Marquee>
+
 
       </Wrapper>
     </Container>

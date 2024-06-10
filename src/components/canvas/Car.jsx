@@ -65,10 +65,10 @@ const CarCanvas = () => {
         <Car />
         <Environment preset="sunset" /> {/* Use a preset environment */}
       </Suspense>
-      <OrbitControls autoRotate enableZoom={false} />
+      <OrbitControls autoRotate enableZoom={false} rotateSpeed={0.2}/>
 
       {/* Add a ground plane to receive shadows */}
-      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0]}>
+      <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.5, 0] }>
         <planeGeometry args={[500, 500]} />
         <shadowMaterial opacity={0.5} />
       </mesh>

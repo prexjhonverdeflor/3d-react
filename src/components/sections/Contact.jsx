@@ -2,8 +2,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import CarCanvas from "../canvas/Car";
-import {Reveal} from "../../utils/Reveal";
-
+import { Reveal } from "../../utils/Reveal";
 
 const Container = styled.div`
   display: flex;
@@ -53,15 +52,14 @@ const Desc = styled.div`
 const ContactForm = styled.form`
   display: flex;
   flex-direction: column;
-  background-color: rgba(17, 25, 40, 0.83);
+  background: ${({ theme }) => theme.bg};
   border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 32px;
-  border-radius: 12px;
+  border-radius: 15px;
   box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
-  margin-top: 28px;
   gap: 12px;
   width: 100%;
-  max-width: 600px; /* Ensure it doesn’t get too wide */
+  max-width: 400px;
 `;
 
 const ContactTitle = styled.div`
@@ -103,18 +101,19 @@ const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;
   border: none;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.bg};
+  background: ${({ theme }) => theme.text_primary};
+  border: 1px solid ${({ theme }) => theme.text_secondary + 50};
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   &:hover {
-    background: ${({ theme }) => theme.bg};
-    color: ${({ theme }) => theme.text_primary};
+    background: ${({ theme }) => theme.text_secondary};
+    color: ${({ theme }) => theme.bg};
     transition: 0.5s;
   }
 `;
@@ -126,7 +125,7 @@ const HeroInnerContainer = styled.div`
   align-items: center;
   width: 100%;
   max-width: 1100px;
-  margin: 0 auto; /* Center the container */
+  margin: 0;
   @media (max-width: 960px) {
     flex-direction: column;
   }
@@ -134,39 +133,36 @@ const HeroInnerContainer = styled.div`
 
 const HeroLeftContainer = styled.div`
   color: ${({ theme }) => theme.primary};
+  justify-content: end;
+  margin-left: -100px;
   font-size: 30px;
-  width: 80%;
-  order: 1;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 24px; /* Adjust the gap between text and form */
   @media (max-width: 960px) {
-    order: 1;
-    margin-bottom: 30px;
-    display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left:0;
   }
 `;
 
 const HeroRightContainer = styled.div`
   width: 100%;
   height: 500px;
-  order: 1;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   @media (max-width: 960px) {
-    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
   }
   @media (max-width: 640px) {
-    order: 2;
     height: 400px;
   }
 `;
-
-
-
 
 const Contact = () => {
   const form = useRef();
@@ -194,31 +190,27 @@ const Contact = () => {
   return (
     <Container id="Education">
       <Wrapper>
-      <Reveal>
-      <Title
-       style={{
-        marginTop: "100px",
-      }}
-      >Contact</Title>
-      </Reveal>
-      <Reveal>
-        <Desc
-        >
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
-      </Reveal>
-      <HeroInnerContainer>
-        <HeroLeftContainer>
-          <ContactForm ref={form} onSubmit={handleSubmit}>
-            <ContactTitle>Email Me</ContactTitle>
-            <ContactInput placeholder="Your Email" name="from_email" />
-            <ContactInput placeholder="Your Name" name="from_name" />
-            <ContactInputMessage placeholder="Message" name="message" rows={4} />
-            <ContactButton type="submit" value="Send" />
-          </ContactForm>
-        </HeroLeftContainer>
+        <Reveal>
+          <Title style={{ marginTop: "100px" }}>Contact</Title>
+        </Reveal>
+        <Reveal>
+          <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
+        </Reveal>
+        <HeroInnerContainer>
+            
+          <HeroLeftContainer>
+            <ContactForm ref={form} onSubmit={handleSubmit}>
+            <div style={{ flex: 1, textAlign: "left" }}>
+              <ContactTitle>Email Me</ContactTitle>
+            </div>
+              <ContactInput placeholder="Your Email" name="from_email" />
+              <ContactInput placeholder="Your Name" name="from_name" />
+              <ContactInputMessage placeholder="Message" name="message" rows={4} />
+              <ContactButton type="submit" value="Send" />
+            </ContactForm>
+          </HeroLeftContainer>
           <HeroRightContainer>
-            <CarCanvas/>
+            <CarCanvas autoRotate autoRotateSpeed={2} enableZoom={false} />
           </HeroRightContainer>
         </HeroInnerContainer>
       </Wrapper>

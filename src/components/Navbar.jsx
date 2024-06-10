@@ -39,7 +39,7 @@ const NavbarContainer = styled.div`
   
 `;
 const NavLogo = styled(LinkR)`
-  margin-left: -100px;
+  margin-left: -50px;
   width: 80%;
   padding: 0 6px;
   font-weight:900;
@@ -92,7 +92,7 @@ const ButtonContainer = styled.div`
 `;
 
 const GithubButton = styled.a`
-  margin-right: -100px;
+  margin-right: -50px;
   color: ${({ theme }) => theme.primary};
   justify-content: center;
   display: flex;

@@ -18,146 +18,89 @@ export const Bio = {
 };
 
 export const skills = [
-  {
-    title: "Front-End",
-    skills: [
-      {
-        name: "React Js",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
-      },
-  
-      {
-        name: "HTML",
-        image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
-      },
-      {
-        name: "CSS",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png",
-      },
-      {
-        name: "JavaScript",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
-      },
-      {
-        name: "Bootstrap",
-        image:
-          "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png",
-      },
-      
-      {
-        name: "Material UI",
-        image:
-          "https://mui.com/static/logo.png",
-      },
-      
-  
-    ],
-  },
-  {
-    title: "Back-End",
-    skills: [
-
-      {
-        name: "Python",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg",
-      },
-
-      {
-        name: "Django",
-        image:
-          "https://1000logos.net/wp-content/uploads/2020/08/Django-Logo.png",
-      },
-
-      {
-        name: "PHP",
-        image:
-          "https://seeklogo.com/images/P/php-logo-91EFDB12E1-seeklogo.com.png",
-      },
-
-      {
-        name: "C#",
-        image:
-          "https://assets-global.website-files.com/6047a9e35e5dc54ac86ddd90/63065002cd563e1cd1cead28_eaadfe64.png",
-      },
-
-      {
-        name: "Java",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-      },
-
-      {
-        name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-
-      {
-        name: "MongoDB",
-        image:
-          "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png",
-      },
-
-    ],
-  },
-  
   
   {
-    title: "UI/UX",
-    skills: [
-      {
-        name: "Figma",
-        image:
-          "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png",
-      },
-      {
-        name: "Adobe XD",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/2101px-Adobe_XD_CC_icon.svg.png",
-      },
-      
-      {
-        name: "Canva",
-        image:
-          "https://builtin.com/sites/www.builtin.com/files/2021-11/CIRCLE%20LOGO%20-%20GRADIENT%20-%20RGB_0.png",
-      },
-      {
-        name: "Sketch",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1200px-Sketch_Logo.svg.png",
-      },
-
-    
-    ],
+    name: "HTML",
+    image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
   },
   {
-    title: "Version Control",
-    skills: [
-      {
-        name: "Git",
-        image:
-          "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
-      },
-      {
-        name: "GitHub",
-        image:
-          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png",
-      },
-
-      {
-        name: "VS Code",
-        image:
-          "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png",
-      },
-
-      
-    ],
+    name: "CSS",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/2048px-CSS3_logo.svg.png"
   },
+  {
+    name: "Bootstrap",
+    image: "https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png"
+  },
+  {
+    name: "React Js",
+    image: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K"
+  },
+  {
+    name: "JavaScript",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png"
+  },
+  {
+    name: "Material UI",
+    image: "https://mui.com/static/logo.png"
+  },
+  {
+    name: "Python",
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg"
+  },
+  {
+    name: "Django",
+    image: "https://1000logos.net/wp-content/uploads/2020/08/Django-Logo.png"
+  },
+  {
+    name: "PHP",
+    image: "https://seeklogo.com/images/P/php-logo-91EFDB12E1-seeklogo.com.png"
+  },
+  {
+    name: "C#",
+    image: "https://assets-global.website-files.com/6047a9e35e5dc54ac86ddd90/63065002cd563e1cd1cead28_eaadfe64.png"
+  },
+  {
+    name: "Java",
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg"
+  },
+  {
+    name: "MySQL",
+    image: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg"
+  },
+  {
+    name: "MongoDB",
+    image: "https://1000logos.net/wp-content/uploads/2020/08/MongoDB-Logo.png"
+  },
+  {
+    name: "Figma",
+    image: "https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/3000/figma-logo-512.png"
+  },
+  {
+    name: "Adobe XD",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Adobe_XD_CC_icon.svg/2101px-Adobe_XD_CC_icon.svg.png"
+  },
+  {
+    name: "Canva",
+    image: "https://builtin.com/sites/www.builtin.com/files/2021-11/CIRCLE%20LOGO%20-%20GRADIENT%20-%20RGB_0.png"
+  },
+  {
+    name: "Sketch",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Sketch_Logo.svg/1200px-Sketch_Logo.svg.png"
+  },
+  {
+    name: "Git",
+    image: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png"
+  },
+  {
+    name: "GitHub",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Github-desktop-logo-symbol.svg/2048px-Github-desktop-logo-symbol.svg.png"
+  },
+  {
+    name: "VS Code",
+    image: "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/visual-studio-code-icon.png"
+  }
 ];
+
 
 export const experiences = [
   {
@@ -185,9 +128,8 @@ export const experiences = [
     date: "2020",
     desc: " Implemented and managed secure network infrastructure, configuring routers, switches, firewalls, and VPNs to ensure efficient communication between servers and applications. Ensured compliance with security best practices and regulatory requirements by implementing encryption, access controls, and conducting regular security audits. ",
     skills: [
-      "Network Management & Security",
-      "Hardware Configuration and Maintenance",
-      "Technical Documentation",
+      "Network Security",
+      "Hardware Maintenance",
       "Collaboration and Communication",
       
     ],

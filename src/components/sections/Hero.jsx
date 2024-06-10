@@ -8,10 +8,9 @@ import Typewriter from "typewriter-effect";
 import { Reveal } from "../../utils/Reveal";
 import StateCanvas from "../canvas/Statue";
 import {
-  headContainerAnimation,
   headContentAnimation,
-  headContentAnimationRight,
-  headContainerAnimationRight,
+  headContentAnimationBottom,
+
 } from "../../utils/motion";
 import { motion } from "framer-motion";
 import './Hero.css';
@@ -32,13 +31,16 @@ const HeroContainer = styled.div`
 const Title = styled.div`
     position: relative; /* Needed to position HaloCanvas behind */
     z-index: 1;
-    margin-top:120px;
+    margin-top: 120px;
     font-size: 11vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: 1000;
     font-family: 'Syncopate', sans-serif;
-  color: ${({ theme }) => theme.text_primary};
+    line-height: 1;
+    color: ${({ theme }) => theme.text_primary};
+    user-select: none;
+
 `;
 
 const TextLoop = styled.div`
@@ -48,11 +50,9 @@ const TextLoop = styled.div`
   font-weight: 1000;
   font-family: 'Syncopate', sans-serif;
   color: ${({ theme }) => theme.text_primary};
-  position: absolute;
-  bottom: 0;
-  left: 50%;
   width: 100%;
-  transform: translateX(-50%);
+  margin-top: 510px;
+  user-select: none;
 `;
 
 const Span = styled.div`
@@ -63,19 +63,23 @@ const Span = styled.div`
 
 const ResumeButton = styled.a`
   position: absolute;
-  font-size: 20px;
-  bottom: -60px;
+  z-index: 1000; // Ensure it's on top of other elements
+  font-size: 15px;
+  bottom: -80px; // Adjust to ensure it's within the view
   left: 50%;
   transform: translateX(-50%);
   text-transform: uppercase;
   font-weight: 900;
   text-align: center;
-  align-items: center;
+  display: flex; // Changed from align-items to display flex for centering
+  justify-content: center; // Ensure text is centered
+  align-items: center; // Ensure text is centered
   border-radius: 50px;
   cursor: pointer;
-  padding: 10px 20px;
-  transition: all 0.6s ease-in-out;
+  padding: 15px 30px;
+  transition: all 0.4s ease-in-out;
   text-decoration: none;
+  font-family: "Syncopate", sans-serif;
   border: 1px solid ${({ theme }) => theme.primary};
   color: ${({ theme }) => theme.primary};
   &:hover {
@@ -83,6 +87,7 @@ const ResumeButton = styled.a`
     color: ${({ theme }) => theme.bg};
   }
 `;
+
 
 
 const HaloCanvasContainer = styled.div`
@@ -113,19 +118,19 @@ const HeadlineContainer = styled.div`
 const Hero = () => {
   return (
     <div id="Home">
+       <motion.div {...headContentAnimationBottom}>
       <HeroContainer>
         <HaloCanvasContainer>
           <StatueCanvas />
         </HaloCanvasContainer>
-        <motion.div {...headContentAnimation}>
-
+       
         <HeadlineContainer>
           <Title id="text-behind" >{Bio.name}</Title>
           <Title id="text-behind-blur">{Bio.name}</Title>
           <Title id="text-front">{Bio.name}</Title>
         </HeadlineContainer>
-
-            <TextLoop>
+        
+        <TextLoop>
               <Span>
                 <Typewriter
                   options={{
@@ -134,14 +139,15 @@ const Hero = () => {
                     loop: true,
                   }}
                 />
-              </Span>
+              </Span>   
             </TextLoop>
       
           <ResumeButton href={Bio.resume} target="_blank">
             Resume
           </ResumeButton>
-        </motion.div>
+        
       </HeroContainer>
+      </motion.div>
     </div>
   );
 };

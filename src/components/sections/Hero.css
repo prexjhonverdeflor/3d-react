@@ -33,6 +33,7 @@
   /* Define your CSS variables */
   :root {
     --headline-color: #111111;
+    --black-color: black;
     --background-color: #11151c;
     --text-color: rgba(255, 255, 255, 0.5);
   }

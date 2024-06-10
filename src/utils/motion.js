@@ -84,4 +84,17 @@ export const headContentAnimationTop = {
   },
 };
 
+export const headContentAnimationBottom = {
+  initial: { y: 100, opacity: 0 }, // Move from the bottom, initial position is off-screen below
+  animate: { y: 0, opacity: 1 }, // Animate to its original position
+  transition: {
+    type: "spring",
+    damping: 7,
+    stiffness: 30,
+    restDelta: 0.001,
+    duration: 0.6,
+    delayChildren: 0.2,
+    delay: 5.5,
+  },
+};
 
