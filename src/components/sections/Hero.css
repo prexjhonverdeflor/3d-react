@@ -22,6 +22,12 @@
   z-index: 1;
 }
 
+#text-behind-blur {
+  color: var(--headline-color);
+  filter: blur(7.5px);
+  -webkit-filter: blur(7.5px);
+  z-index: 0;
+}
 
 #text-front {
   color: transparent;

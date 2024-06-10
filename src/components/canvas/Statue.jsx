@@ -48,7 +48,7 @@ const StatueCanvas = () => {
           <shadowMaterial opacity={0.5} />
         </mesh>
       </Suspense>
-      <OrbitControls autoRotate autoRotateSpeed={5} enableZoom={false} rotateSpeed={0.2} />
+      <OrbitControls autoRotate  enableZoom={false} rotateSpeed={0.2} />
     </Canvas>
   );
 };
