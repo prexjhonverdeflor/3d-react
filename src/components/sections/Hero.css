@@ -15,11 +15,13 @@
   position: absolute;
   text-align: center;
   line-height: 0.9;
+  font-family: "Bai Jamjuree", sans-serif;
 }
 
 #text-behind {
   color: var(--headline-color);
   z-index: 1;
+  
 }
 
 #text-behind-blur {
@@ -38,9 +40,7 @@
   
   /* Define your CSS variables */
   :root {
-    --headline-color: #111111;
-    --black-color: black;
-    --background-color: #11151c;
-    --text-color: rgba(255, 255, 255, 0.5);
+    --headline-color: #222222;
+
   }
   

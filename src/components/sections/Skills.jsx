@@ -8,118 +8,36 @@ import { Tilt } from "react-tilt";
 
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-contnet: center;
-  position: rlative;
-  z-index: 1;
-  align-items: center;
+  z-index: 10;
+  position: relative;
 `;
 
 const Wrapper = styled.div`
-  position: relative;
+  width: 95%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 1100px;
-  gap: 12px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
+  gap: 14px;
+  color: ${({ theme }) => theme.text_primary};
 `;
 const Title = styled.div`
-  font-size: 52px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-    margin-top: 12px;
-    font-size: 32px;
-  }
+  font-family: "Syncopate", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #626262;
+  margin-bottom: 20px;
+  padding-left: 5rem;
 `;
 const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
-`;
-
-const SkillsContainer = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-  gap: 50px;
-  justify-content: center;
-`;
-
-const Skill = styled.div`
-  width: 100%;
-  max-width: 500px;
-  background-color: rgba(17, 25, 40, 0.83);
-  border: 1px solid rgba(255, 255, 255, 0.125);
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
-  @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
-  }
-
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
-`;
-
-const SkillTitle = styled.div`
-  font-size: 28px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  text-align: center;
-  color: ${({ theme }) => theme.text_secondary};
-`;
-
-const SkillList = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
-`;
-const SkillItem = styled.div`
-  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  line-height: 1;
+  padding-left: 5rem;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
-  border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
+  width: 100%; /* Ensure full width */
+  color: ${({ theme }) => theme.text_primary};
 `;
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-`;
-
-
 
 
 
@@ -127,35 +45,37 @@ const SkillImage = styled.img`
 const Skills = () => {
   const repeatedSkills = Array(10).fill(skills).flat();
   return (
-    <Container id="Skills"
+    <Container 
       style={{
         marginBottom: "100px",
         marginTop: "50px",
       }}
       >
-      <Wrapper>
-        <Reveal>
-        <Title style={{ marginTop: "200px" }}>Skills</Title>
+      <Wrapper >
+        <Reveal >
+        <Title id="Skills"  style={{ marginTop: "200px" }}>SKILLS</Title>
         </Reveal>
         <Reveal>
         <Desc style={{ marginBottom: "40px" }}>
-          Here are some of my skills on which I have been working on for the past 4 years.
+        Combining my passion for design with my coding skills allows me to create modern websites that seamlessly 
+        integrate aesthetic appeal with functional excellence. 
+        I strive to deliver web experiences that captivate and engage users.
         </Desc>
         </Reveal>
-        
+        <Title>TECH STACK</Title>
         <Marquee
-        style={{ width: '110%', height: '150px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        style={{ width: '95%', marginLeft: '70px', height: '150px',alignItems: 'center', justifyContent: 'center' }}
         gradientWidth={100}
         gradient={true}
         gradientColor={[245, 240, 236]}
-        speed={60}
+        speed={80}
         pauseOnHover={true}
 
       >
         {repeatedSkills.map((skill, index) => (
-          <div key={`${skill.name}-${index}`} style={{ margin: '0 30px', display: 'inline-block' }}>
+          <div key={`${skill.name}-${index}`} style={{ margin: '0 40px', display: 'inline-block' }}>
             <Tilt>
-              <img src={skill.image} alt={skill.name} style={{ width: '120px', height: 'auto' }} />
+              <img src={skill.image} alt={skill.name} style={{ width: '120px', height: 'auto', }} />
             </Tilt>
           </div>
         ))}

@@ -59,9 +59,6 @@ const Experience = () => {
       <Wrapper>
         <Reveal>
         <Title
-        style={{
-          marginTop: "150px",
-        }}
         >Experience</Title>
         </Reveal>
         <Reveal>

@@ -7,9 +7,9 @@ import Skills from "./components/sections/Skills";
 import Experience from "./components/sections/Experience";
 import Education from "./components/sections/Education";
 import Project from "./components/sections/Project";
-import Contact from "./components/sections/Contact";
 import Footer from "./components/sections/Footer";
 import Preloader from "./components/Preloader";
+import CustomCursor from "./components/CustomCursor";
 
 
 const Body = styled.div`
@@ -38,25 +38,10 @@ const Wrapper = styled.div`
 
 
 
-
-const WrapperFooter = styled.div`
-  background: linear-gradient(
-      38.73deg,
-      rgba(204, 0, 187, 0.15) 0%,
-      rgba(201, 32, 184, 0) 50%
-    ),
-    linear-gradient(
-      141.27deg,
-      rgba(0, 70, 209, 0) 50%,
-      rgba(0, 70, 209, 0.15) 100%
-    );
-  width: 100%;
-`;
-
-
 function App() {
   return (
     <>
+  <CustomCursor/>
   <Preloader/>
     <ThemeProvider theme={lightTheme} >
       <BrowserRouter>
@@ -71,10 +56,8 @@ function App() {
             <Wrapper>
               <Education/>
               </Wrapper>
-              <Contact/>
-              <WrapperFooter>
-            <Footer/>
-            </WrapperFooter>
+              
+              <Footer/>
         </Body>
       </BrowserRouter>
      

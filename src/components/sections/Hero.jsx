@@ -31,13 +31,11 @@ const HeroContainer = styled.div`
 const Title = styled.div`
     position: relative; /* Needed to position HaloCanvas behind */
     z-index: 1;
-    margin-top: 120px;
-    font-size: 11vw;
+    margin-top: 50px;
+    font-size: 15vw;
     text-transform: uppercase;
     text-align: center;
     font-weight: 1000;
-    font-family: 'Syncopate', sans-serif;
-    line-height: 1;
     color: ${({ theme }) => theme.text_primary};
     user-select: none;
 
@@ -51,7 +49,7 @@ const TextLoop = styled.div`
   font-family: 'Syncopate', sans-serif;
   color: ${({ theme }) => theme.text_primary};
   width: 100%;
-  margin-top: 510px;
+  margin-top: 610px;
   user-select: none;
 `;
 
@@ -65,7 +63,7 @@ const ResumeButton = styled.a`
   position: absolute;
   z-index: 1000; // Ensure it's on top of other elements
   font-size: 15px;
-  bottom: -80px; // Adjust to ensure it's within the view
+  bottom: -100px; // Adjust to ensure it's within the view
   left: 50%;
   transform: translateX(-50%);
   text-transform: uppercase;

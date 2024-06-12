@@ -45,8 +45,10 @@ const NavLogo = styled(LinkR)`
   font-weight:900;
   font-size: 24px;
   text-decoration: none;
-
   color: ${({ theme }) => theme.primary};
+  @media screen and (max-width: 768px) {
+    margin:0;
+  }
 `;
 
 const NavItems = styled.ul`
@@ -107,7 +109,12 @@ const GithubButton = styled.a`
   padding: 0 6px;
   font-weight:900;
   font-size: 24px;
-  
+  @media screen and (max-width: 640px) {
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: ${({ theme }) => theme.text_secondary};
+  }
 `;
 
 const MobileIcon = styled.div`
@@ -133,7 +140,7 @@ const MobileMenu = styled.ul`
   list-style: none;
   width: 100%;
   padding: 12px 40px 24px 40px;
-  background: ${({ theme }) => theme.card_light + 99};
+  background: ${({ theme }) => theme.bg };
   position: absolute;
   top: 80px;
   right: 0;
@@ -177,7 +184,7 @@ const Navbar = () => {
             <NavLink href="#Projects">Projects</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Education">Contact</NavLink>
+            <NavLink href="#Contact">Contact</NavLink>
           </motion.div>
         </NavItems>
 
@@ -201,10 +208,7 @@ const Navbar = () => {
             <GithubButton
               href={Bio.github}
               target="_Blank"
-              style={{
-                background: theme.primary,
-                color: theme.text_primary,
-              }}
+
             >
               Github
             </GithubButton>

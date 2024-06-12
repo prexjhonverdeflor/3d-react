@@ -26,72 +26,45 @@ const FooterWrapper = styled.div`
   padding: 1rem;
   color: ${({ theme }) => theme.text_primary};
 `;
+
+const Contact = styled.div`
+  margin:30px;
+  font-family: "Syncopate", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  color: #626262;
+`;
+
 const Logo = styled.div`
-  font-weight: 600;
-  font-size: 20px;
-  color: ${({ theme }) => theme.primary};
-`;
-const Nav = styled.ul`
-  width: 100%;
-  max-width: 800px;
-  margin-top: 0.5rem;
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  justify-content: center;
-  @media (max-width: 768px) {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    text-align: center;
-    font-size: 12px;
-  }
-`;
-const NavLink = styled.a`
+  font-family: "Bodoni Moda", sans-serif;
+  font-size: 286px;
+  line-height: 1;
+  text-align:center;
   color: ${({ theme }) => theme.text_primary};
-  text-decoration: none;
-  font-size: 1.2rem;
-  transition: color 0.2s ease-in-out;
-  &:hover {
-    color: ${({ theme }) => theme.primary};
-  }
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  user-select:none;
 `;
+
 const SocialMediaIcons = styled.div`
   display: flex;
-  margin-top: 1rem;
+  margin: 2rem;
 `;
 const SocialMediaIcon = styled.a`
   display: inline-block;
-  margin: 0 1rem;
-  font-size: 1.5rem;
+  margin: 1rem;
   color: ${({ theme }) => theme.text_primary};
   transition: color 0.2s ease-in-out;
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
-`;
-const Copyright = styled.p`
-  margin-top: 1.5rem;
-  font-size: 0.9rem;
-  color: ${({ theme }) => theme.soft2};
-  text-align: center;
 `;
 
 const Footer = () => {
   return (
-    <FooterContainer>
+    <FooterContainer id="Contact">
       <FooterWrapper>
-        <Logo>Prex Verdeflor</Logo>
-        <Nav>
-          <NavLink href="">Home</NavLink>
-          <NavLink href="#Skills">Skills</NavLink>
-          <NavLink href="#Experience">Experience</NavLink>
-          <NavLink href="#Projects">Projects</NavLink>
-          <NavLink href="#Education">Education</NavLink>
-        </Nav>
+        <Contact>CONTACT ME</Contact>
+        <Logo>LET'S CONNECT</Logo>
+        
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.facebook} target="display">
             <FacebookRounded />
@@ -106,7 +79,6 @@ const Footer = () => {
             <Instagram />
           </SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>&copy; 2024 Prex Verdeflor. All rights reserved.</Copyright>
       </FooterWrapper>
     </FooterContainer>
   );

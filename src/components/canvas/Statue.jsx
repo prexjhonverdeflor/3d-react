@@ -19,7 +19,7 @@ const Statue = () => {
 
   return (
     <group ref={group} position={[0, 0, 0]}>
-      <primitive object={scene} scale={1.04} position={[0, 13.5, 0]} rotation={[0, 2.5, 0]} />
+      <primitive object={scene} scale={1.1} position={[0, 14.2, 0]} rotation={[0, 2.5, 0]} />
     </group>
   );
 };
@@ -31,13 +31,13 @@ const StatueCanvas = () => {
       camera={{ position: [0, 0, 40], fov: 50, near: 0.1, far: 100 }}
       gl={{ preserveDrawingBuffer: true }}
     >
-      <ambientLight intensity={0.1} />
+      <ambientLight intensity={1} />
       <directionalLight
         castShadow
-        intensity={4}
+        intensity={5}
         position={[10, 20, 10]}
       />
-      <pointLight intensity={0.5} position={[-10, -10, -10]} color="#ffd700" />
+      <pointLight intensity={1.5} position={[-10, -10, -10]} color="#ffd700" />
       <Suspense fallback={
       <Html>Loading...</Html>
       }>
