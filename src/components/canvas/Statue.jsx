@@ -10,7 +10,7 @@ const Statue = () => {
   // Ensure the scene receives and casts shadows
   useEffect(() => {
     scene.traverse((child) => {
-      if (child.isMesh) {
+      if (child.isMesh) {  
         child.castShadow = true;
         child.receiveShadow = true;
       }

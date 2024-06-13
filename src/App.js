@@ -10,6 +10,7 @@ import Project from "./components/sections/Project";
 import Footer from "./components/sections/Footer";
 import Preloader from "./components/Preloader";
 import CustomCursor from "./components/CustomCursor";
+import './Grain.css';
 
 
 const Body = styled.div`
@@ -39,8 +40,10 @@ const Wrapper = styled.div`
 
 
 function App() {
+  
   return (
     <>
+   <div className="grain-overlay"></div> 
   <CustomCursor/>
   <Preloader/>
     <ThemeProvider theme={lightTheme} >
@@ -62,6 +65,7 @@ function App() {
       </BrowserRouter>
      
     </ThemeProvider>
+
     </>
   );
 }

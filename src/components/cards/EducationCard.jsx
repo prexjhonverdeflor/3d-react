@@ -9,14 +9,7 @@ const Top = styled.div`
   gap: 12px;
 
 `;
-const Image = styled.img`
-  height: 50px;
-  border-radius: 10px;
-  margin-top: 4px;
-  @media only screen and (max-width: 768px) {
-    height: 40px;
-  }
-`;
+
 const Body = styled.div`
   width: 100%;
   display: flex;
@@ -24,25 +17,25 @@ const Body = styled.div`
   
 `;
 const School = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600px;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
 `;
 const Degree = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500px;
-  color: ${({ theme }) => theme.text_secondary + 99};
+  color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
 `;
 const Date = styled.div`
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400px;
-  color: ${({ theme }) => theme.text_secondary + 80};
+  color: ${({ theme }) => theme.text_secondary};
 
   @media only screen and (max-width: 768px) {
     font-size: 10px;
@@ -51,7 +44,7 @@ const Date = styled.div`
 
 const Description = styled.div`
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
   margin-bottom: 10px;
@@ -87,7 +80,7 @@ const EducationCard = ({ education }) => {
         boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1)",
         backgroundColor: "#f5f0ec",
         border: "1px solid rgba(255, 255, 255, 0.125)",
-        borderRadius: "15px",
+        borderRadius: "0",
       }}
       contentArrowStyle={{
         borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
@@ -95,7 +88,7 @@ const EducationCard = ({ education }) => {
       date={education?.date}
     >
       <Top>
-        <Image src={education?.img} />
+        
         <Body>
           <School>{education?.school}</School>
           <Degree>{education?.degree}</Degree>

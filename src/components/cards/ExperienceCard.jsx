@@ -17,7 +17,7 @@ const Body = styled.div`
   
 `;
 const Role = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600px;
   color: ${({ theme }) => theme.text_primary};
   @media only screen and (max-width: 768px) {
@@ -25,7 +25,7 @@ const Role = styled.div`
   }
 `;
 const Company = styled.div`
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500px;
   color: ${({ theme }) => theme.text_secondary};
   @media only screen and (max-width: 768px) {
@@ -33,7 +33,7 @@ const Company = styled.div`
   }
 `;
 const Date = styled.div`
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400px;
   color: ${({ theme }) => theme.text_secondary};
 
@@ -44,7 +44,7 @@ const Date = styled.div`
 
 const Description = styled.div`
   width: 100%;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 99};
   margin-bottom: 10px;
