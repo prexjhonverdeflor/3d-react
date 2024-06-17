@@ -1,93 +1,134 @@
-import React from 'react'
-import styled from 'styled-components'
-import { useState } from 'react';
-import ProjectCard from '../cards/ProjectCard';
-import { projects } from "../../data/constants";
-import { Reveal } from "../../utils/Reveal";
+// App.js or a similar file
 
-
-
+import React from 'react';
+import styled from 'styled-components';
+import globeImage from '../../images/globe.png';
 
 const Container = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-contnet: center;
-  margin-top: 50px;
-  padding: 0 16px;
   position: relative;
-  z-index: 1;
-  align-items: center;
+  padding: 200px;
+  gap: 150px;
+  
 `;
 
 const Wrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
   width: 100%;
-  max-width: 1100px;
-  gap: 12px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: row;
+  gap:50px;
+  
 `;
+
+const LeftContainer = styled.div`
+  flex: ${props => props.flex};
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: flex-end; /* Align items to the end (right) */
+`;
+
+const RightContainer = styled.div`
+  flex: ${props => props.flex};
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+`;
+
+const Text = styled.p`
+  font-size: 1.5rem;
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+`;
+
+const Desc = styled.p`
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top:20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: ${({ theme }) => theme.text_secondary};
+`;
+
+const Image = styled.img`
+  width: 95%;
+  height: 160px;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  overflow: hidden; /* Hides any overflow beyond the container's bounds */
+  
+`;
+
 const Title = styled.div`
-  font-size: 52px;
+  font-size: 120px;
   text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
+  font-family: 'Monument Extended', sans-serif;
+  font-weight: 400;
+  z-index: 1; // Ensures the title appears on top of the background
+
   @media (max-width: 768px) {
-    margin-top: 12px;
     font-size: 32px;
   }
 `;
-const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    font-size: 16px;
-  }
+
+const GlobeImage = styled.img`
+  width: 50%;
+  height: 50%;
+  margin-top:-400px;
+  margin-left: -500px;
+  position: absolute;
+  opacity: 10%;
 `;
 
-
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 48px;
-  flex-wrap: wrap;
-`;
-
-
-const Project = () => {
-  const [toggle] = useState("all");
-
+const App = () => {
   return (
     <Container id="Projects">
+      <div  >
+      <GlobeImage src={globeImage} alt="Globe Image" />
+      <Title>selected_<br />works</Title>
+      </div>
       <Wrapper>
-        <Reveal>
-          <Title>Projects</Title>
-        </Reveal>
-        <Reveal>
-          <Desc
-            style={{
-              marginBottom: "40px",
-            }}
-          >
-            This is the projects i created so far
-          </Desc>
-        </Reveal>
-        <CardContainer>
-          {toggle === "all" && projects.map((project) =>
-            <ProjectCard project={project} />)}
-        </CardContainer>
+        <LeftContainer flex="0.3">
+          <Text>3D_ <br />Portfolio</Text>
+          <Desc style={{ marginLeft: '200px'}}>This is the left container with some text.</Desc>
+        </LeftContainer>
+        <RightContainer flex="0.7">
+          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
+        </RightContainer>
+      </Wrapper>
+
+      <Wrapper>
+        <LeftContainer flex="0.7">
+          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
+        </LeftContainer>
+        <RightContainer flex="0.3">
+        <Text>3D_ <br />Portfolio</Text>
+        <Desc style={{ marginRight: '200px'}}>This is the left container with some text.</Desc>
+        </RightContainer>
+      </Wrapper>
+
+      <Wrapper>
+        <LeftContainer flex="0.3">
+          <Text>3D_ <br />Portfolio</Text>
+          <Desc style={{ marginLeft: '200px'}}>This is the left container with some text.</Desc>
+        </LeftContainer>
+        <RightContainer flex="0.7">
+          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
+        </RightContainer>
+      </Wrapper>
+
+      <Wrapper>
+        <LeftContainer flex="0.7">
+          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
+        </LeftContainer>
+        <RightContainer flex="0.3">
+        <Text>3D_ <br />Portfolio</Text>
+        <Desc style={{ marginRight: '200px'}}>This is the left container with some text.</Desc>
+        </RightContainer>
       </Wrapper>
     </Container>
-  )
-}
+  );
+};
 
-export default Project
+export default App;

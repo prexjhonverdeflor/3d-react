@@ -23,7 +23,7 @@ const Nav = styled.div`
   letter-spacing: 1px;
   color: #464646;
   font-weight: 900;
-  text-transform: uppercase;
+
 `;
 
 const NavbarContainer = styled.div`
@@ -42,10 +42,10 @@ const NavLogo = styled(LinkR)`
   margin-left: -50px;
   width: 80%;
   padding: 0 6px;
-  font-weight:900;
+  font-weight:400;
   font-size: 24px;
   text-decoration: none;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
   @media screen and (max-width: 768px) {
     margin:0;
   }
@@ -67,27 +67,23 @@ const NavItems = styled.ul`
 `;
 
 const NavLink = styled.a`
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
   font-weight: 900;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   padding: 0 6px;
-  font-weight:900;
-  font-size: 18px;
-  
-  &:hover {
-    color: ${({ theme }) => theme.text_primary};
-  }
+  font-weight:400;
+  font-size: 16px;
 `;
 
 const ButtonContainer = styled.div`
-  width: 80%;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: end;
   align-items: center;
-  padding: 0 6px;
+  padding: 0;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -95,25 +91,23 @@ const ButtonContainer = styled.div`
 
 const GithubButton = styled.a`
   margin-right: -50px;
-  color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.text_primary};
   justify-content: center;
   display: flex;
   align-items: center;
   border-radius: 50px;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 0;
   font-size: 20px;
-  font-weight: 900;
+  font-weight: 400;
   transition: all 0.6s ease-in-out;
   text-decoration: none;
-  padding: 0 6px;
-  font-weight:900;
-  font-size: 24px;
+
   @media screen and (max-width: 640px) {
     border: none;
     background: none;
     font-size: 18px;
-    color: ${({ theme }) => theme.text_secondary};
+
   }
 `;
 
@@ -136,9 +130,8 @@ const MobileMenu = styled.ul`
   flex-direction: column;
   align-items: start;
   gap: 16px;
-  padding: 0 6px;
+  padding: 0;
   list-style: none;
-  width: 100%;
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.bg };
   position: absolute;
@@ -159,11 +152,11 @@ const Navbar = () => {
   const theme = useTheme();
   return (
 
-    <Nav>
+    <Nav >
 
       <NavbarContainer>
         <motion.div {...headContentAnimationTop}>
-          <NavLogo href="" >Prex</NavLogo>
+          <NavLogo href="" >prex</NavLogo>
         </motion.div>
         <motion.div {...headContentAnimationTop}>
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
@@ -172,45 +165,45 @@ const Navbar = () => {
         </motion.div>
         <NavItems>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Home">Home</NavLink>
+            <NavLink href="#Home">home</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Skills">Skills</NavLink>
+            <NavLink href="#Skills">skills</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Experience">Experience</NavLink>
+            <NavLink href="#Experience">experience</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Projects">Projects</NavLink>
+            <NavLink href="#Projects">projects</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Contact">Contact</NavLink>
+            <NavLink href="#Contact">contact</NavLink>
           </motion.div>
         </NavItems>
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Home">
-              Home
+              home
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
-              Skills
+              skills
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
-              Experience
+              experience
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
-              Projects
+              projects
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Footer">
-              Contact
+              contact
             </NavLink>
             <GithubButton
               href={Bio.github}
               target="_Blank"
 
             >
-              Github
+              github
             </GithubButton>
           </MobileMenu>
         )}
@@ -218,7 +211,7 @@ const Navbar = () => {
         <motion.div {...headContentAnimationTop}>
           <ButtonContainer>
             <GithubButton href={Bio.github} target="_Blank">
-              Github
+              github
             </GithubButton>
           </ButtonContainer>
         </motion.div>

@@ -13,7 +13,6 @@ const FooterContainer = styled.div`
   padding: 2rem 0;
   display: flex;
   justify-content: center;
-  z-index: 10;
   position: relative;
 `;
 const FooterWrapper = styled.div`

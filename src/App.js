@@ -1,7 +1,8 @@
+import React from 'react';
 import styled, { ThemeProvider } from "styled-components";
-import { lightTheme } from "./utils/Themes"
+import { darkTheme } from "./utils/Themes";
 import Navbar from './components/Navbar';
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
 import Experience from "./components/sections/Experience";
@@ -11,7 +12,7 @@ import Footer from "./components/sections/Footer";
 import Preloader from "./components/Preloader";
 import CustomCursor from "./components/CustomCursor";
 import './Grain.css';
-
+import bgm from './images/bgm.mp3';
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -19,53 +20,33 @@ const Body = styled.div`
   width: 100%;
   height: 90vh;  
   overflow-x: hidden; 
-  position: relative ;
+  position: relative;
 `;
-const Wrapper = styled.div`
-  padding-bottom: 100px;
-  background: linear-gradient(
-      38.73deg,
-      rgba(255, 153, 153, 0.15) 0%,
-      rgba(255, 153, 153, 0) 50%
-    ),
-    linear-gradient(
-      141.27deg,
-      rgba(153, 204, 255, 0) 50%,
-      rgba(153, 204, 255, 0.15) 100%
-    );
-  width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 98%, 0 100%);
-`;
-
-
 
 function App() {
-  
   return (
     <>
-   <div className="grain-overlay"></div> 
-  <CustomCursor/>
-  <Preloader/>
-    <ThemeProvider theme={lightTheme} >
-      <BrowserRouter>
-        <Navbar />
-        <Body>
-            <Hero/>
-            <Wrapper>
-              <Skills/>
-              <Experience/>
-            </Wrapper>
-              <Project/>
-            <Wrapper>
-              <Education/>
-              </Wrapper>
-              
-              <Footer/>
-        </Body>
-      </BrowserRouter>
-     
-    </ThemeProvider>
-
+      <div className="grain-overlay"></div>
+      <CustomCursor />
+      <Preloader />
+      <ThemeProvider theme={darkTheme} >
+        <BrowserRouter>
+          <Navbar />
+          <Body>
+            <Hero />
+            <Skills />
+            <Project />
+            <Experience />
+            <Education />
+            <Footer />
+          </Body>
+        </BrowserRouter>
+      </ThemeProvider>
+      {/* Background Music */}
+      <audio autoPlay loop>
+        <source src={bgm} type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
     </>
   );
 }

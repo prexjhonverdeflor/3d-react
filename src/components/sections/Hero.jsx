@@ -29,24 +29,18 @@ const HeroContainer = styled.div`
 `;
 
 const Title = styled.div`
-    position: relative; /* Needed to position HaloCanvas behind */
+    position: relative; 
     z-index: 1;
     margin-top: 50px;
-    font-size: 15vw;
-    text-transform: uppercase;
     text-align: center;
-    font-weight: 1000;
     color: ${({ theme }) => theme.text_primary};
     user-select: none;
-
 `;
 
 const TextLoop = styled.div`
-  font-size: 8vw;
-  text-transform: uppercase;
+  font-size: 5vw;
   text-align: center;
-  font-weight: 1000;
-  font-family: 'Syncopate', sans-serif;
+  font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
   width: 100%;
   margin-top: 610px;
@@ -78,15 +72,13 @@ const ResumeButton = styled.a`
   transition: all 0.4s ease-in-out;
   text-decoration: none;
   font-family: "Syncopate", sans-serif;
-  border: 1px solid ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.primary};
+  border: 1px solid ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.text_primary};
   &:hover {
-    background: ${({ theme }) => theme.primary};
+    background: ${({ theme }) => theme.text_primary};
     color: ${({ theme }) => theme.bg};
   }
 `;
-
-
 
 const HaloCanvasContainer = styled.div`
   position: absolute;
@@ -117,7 +109,7 @@ const Hero = () => {
   return (
     <div id="Home">
        <motion.div {...headContentAnimationBottom}>
-      <HeroContainer>
+      <HeroContainer >
         <HaloCanvasContainer>
           <StatueCanvas />
         </HaloCanvasContainer>

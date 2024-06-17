@@ -19,7 +19,7 @@ const Statue = () => {
 
   return (
     <group ref={group} position={[0, 0, 0]}>
-      <primitive object={scene} scale={1.1} position={[0, 14.2, 0]} rotation={[0, 2.5, 0]} />
+      <primitive object={scene} scale={1} position={[0, 13, 0]} rotation={[0, 0, 0]} />
     </group>
   );
 };
@@ -33,8 +33,7 @@ const StatueCanvas = () => {
     >
       <ambientLight intensity={1} />
       <directionalLight
-        castShadow
-        intensity={5}
+        intensity={1}
         position={[10, 20, 10]}
       />
       <pointLight intensity={1.5} position={[-10, -10, -10]} color="#ffd700" />
@@ -42,13 +41,13 @@ const StatueCanvas = () => {
       <Html>Loading...</Html>
       }>
         <Statue />
-        <Environment preset="sunset" />
+        <Environment preset="sunset"/>
         <mesh receiveShadow rotation={[-Math.PI / 2, 0, 0]} position={[0, -13.5, 0]}>
-          <planeGeometry args={[500, 500]} />
+          <planeGeometry args={[500, 500]}/>
           <shadowMaterial opacity={0.5} />
         </mesh>
       </Suspense>
-      <OrbitControls autoRotate  enableZoom={false} rotateSpeed={0.2} />
+      <OrbitControls autoRotate enableZoom={false} rotateSpeed={0.2} />
     </Canvas>
   );
 };

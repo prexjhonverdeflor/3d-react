@@ -19,7 +19,7 @@ const Body = styled.div`
 const Role = styled.div`
   font-size: 20px;
   font-weight: 600px;
-  color: ${({ theme }) => theme.text_primary};
+  color: ${({ theme }) => theme.bg};
   @media only screen and (max-width: 768px) {
     font-size: 14px;
   }
@@ -27,7 +27,7 @@ const Role = styled.div`
 const Company = styled.div`
   font-size: 16px;
   font-weight: 500px;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.bg};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
@@ -35,7 +35,7 @@ const Company = styled.div`
 const Date = styled.div`
   font-size: 16px;
   font-weight: 400px;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.bg};
 
   @media only screen and (max-width: 768px) {
     font-size: 10px;
@@ -46,7 +46,7 @@ const Description = styled.div`
   width: 100%;
   font-size: 16px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ theme }) => theme.bg};
   margin-bottom: 10px;
   @media only screen and (max-width: 768px) {
     font-size: 12px;
@@ -66,7 +66,7 @@ const Span = styled.div`
 const Skill = styled.div`
   font-size: 15px;
   font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
+  color: ${({ theme }) => theme.bg};
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }

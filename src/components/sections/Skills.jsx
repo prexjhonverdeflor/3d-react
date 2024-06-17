@@ -10,7 +10,6 @@ import { Tilt } from "react-tilt";
 const Container = styled.div`
   width: 100%;
   display: flex;
-  z-index: 10;
   position: relative;
 `;
 
@@ -25,7 +24,7 @@ const Title = styled.div`
   font-family: "Syncopate", sans-serif;
   font-weight: 900;
   font-size: 16px;
-  color: #626262;
+  color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 20px;
   padding-left: 5rem;
 `;
@@ -67,7 +66,7 @@ const Skills = () => {
         style={{ width: '95%', marginLeft: '70px', height: '150px',alignItems: 'center', justifyContent: 'center' }}
         gradientWidth={100}
         gradient={true}
-        gradientColor={[245, 240, 236]}
+        gradientColor={[0, 0, 0]}
         speed={80}
         pauseOnHover={true}
 
