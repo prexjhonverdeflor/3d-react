@@ -3,13 +3,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import globeImage from '../../images/globe.png';
+import Reveal from '../../utils/Reveal';
 
 const Container = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 200px;
+  padding: 300px;
   gap: 150px;
   
 `;
@@ -52,7 +53,7 @@ const Desc = styled.p`
 `;
 
 const Image = styled.img`
-  width: 95%;
+  width: 100%;
   height: 160px;
   object-fit: cover; /* Ensures the image covers the entire container */
   overflow: hidden; /* Hides any overflow beyond the container's bounds */
@@ -62,10 +63,11 @@ const Image = styled.img`
 const Title = styled.div`
   font-size: 120px;
   text-align: center;
+  margin-left: 50px;
   color: ${({ theme }) => theme.text_primary};
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
-  z-index: 1; // Ensures the title appears on top of the background
+  z-index: 1; 
 
   @media (max-width: 768px) {
     font-size: 32px;
@@ -75,60 +77,65 @@ const Title = styled.div`
 const GlobeImage = styled.img`
   width: 50%;
   height: 50%;
-  margin-top:-400px;
+  margin-top:-500px;
   margin-left: -500px;
   position: absolute;
   opacity: 10%;
 `;
-
 const App = () => {
   return (
     <Container id="Projects">
-      <div  >
       <GlobeImage src={globeImage} alt="Globe Image" />
-      <Title>selected_<br />works</Title>
-      </div>
-      <Wrapper>
-        <LeftContainer flex="0.3">
-          <Text>3D_ <br />Portfolio</Text>
-          <Desc style={{ marginLeft: '200px'}}>This is the left container with some text.</Desc>
-        </LeftContainer>
-        <RightContainer flex="0.7">
-          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
-        </RightContainer>
-      </Wrapper>
-
-      <Wrapper>
-        <LeftContainer flex="0.7">
-          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
-        </LeftContainer>
-        <RightContainer flex="0.3">
-        <Text>3D_ <br />Portfolio</Text>
-        <Desc style={{ marginRight: '200px'}}>This is the left container with some text.</Desc>
-        </RightContainer>
-      </Wrapper>
-
-      <Wrapper>
-        <LeftContainer flex="0.3">
-          <Text>3D_ <br />Portfolio</Text>
-          <Desc style={{ marginLeft: '200px'}}>This is the left container with some text.</Desc>
-        </LeftContainer>
-        <RightContainer flex="0.7">
-          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
-        </RightContainer>
-      </Wrapper>
-
-      <Wrapper>
-        <LeftContainer flex="0.7">
-          <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
-        </LeftContainer>
-        <RightContainer flex="0.3">
-        <Text>3D_ <br />Portfolio</Text>
-        <Desc style={{ marginRight: '200px'}}>This is the left container with some text.</Desc>
-        </RightContainer>
-      </Wrapper>
+      <Reveal>
+        <Title>selected_<br />works</Title>
+      </Reveal>
+      <Reveal>
+        <Wrapper>
+          <LeftContainer flex="0.3">
+            <Text>3D_ <br />Portfolio</Text>
+            <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
+          </LeftContainer>
+          <RightContainer flex="0.7">
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
+          </RightContainer>
+        </Wrapper>
+      </Reveal>
+      <Reveal>
+        <Wrapper>
+          <LeftContainer flex="0.7">
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG" alt="Placeholder" />
+          </LeftContainer>
+          <RightContainer flex="0.3">
+            <Text>Payment_<br />Portal</Text>
+            <Desc style={{ marginRight: '120px' }}>Built with Python, and Django for Camalig Bank.</Desc>
+          </RightContainer>
+        </Wrapper>
+      </Reveal>
+      <Reveal>
+        <Wrapper>
+          <LeftContainer flex="0.3">
+            <Text>Church_<br />Management System</Text>
+            <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
+          </LeftContainer>
+          <RightContainer flex="0.7">
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church.png" alt="Placeholder" />
+          </RightContainer>
+        </Wrapper>
+      </Reveal>
+      <Reveal>
+        <Wrapper>
+          <LeftContainer flex="0.7">
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png" alt="Placeholder" />
+          </LeftContainer>
+          <RightContainer flex="0.3">
+            <Text>Inventory_<br />System</Text>
+            <Desc style={{ marginRight: '120px' }}>Built with pure C#, and SQL for database management. </Desc>
+          </RightContainer>
+        </Wrapper>
+      </Reveal>
     </Container>
   );
 };
 
 export default App;
+

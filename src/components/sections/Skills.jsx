@@ -47,12 +47,12 @@ const Skills = () => {
     <Container 
       style={{
         marginBottom: "100px",
-        marginTop: "50px",
+        marginTop: "250px",
       }}
       >
       <Wrapper >
         <Reveal >
-        <Title id="Skills"  style={{ marginTop: "200px" }}>SKILLS</Title>
+        <Title id="Skills" >SKILLS</Title>
         </Reveal>
         <Reveal>
         <Desc style={{ marginBottom: "40px" }}>

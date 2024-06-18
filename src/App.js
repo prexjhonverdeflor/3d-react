@@ -41,12 +41,11 @@ function App() {
             <Project />
             <Experience />
             <Education />
-            <Footer />
+            <Footer/>
           </Body>
         </BrowserRouter>
       </ThemeProvider>
-      {/* Background Music */}
-      <ReactHowler src={bgm} playing={true} loop={true} volume={0.4} />
+      <ReactHowler src={bgm} playing={true} loop={true} volume={0.1} />
     </>
   );
 }
