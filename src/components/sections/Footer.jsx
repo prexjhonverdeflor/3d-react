@@ -66,9 +66,10 @@ const Contact = styled.div`
 
 const Logo = styled.div`
   font-family: "Bodoni Moda", sans-serif;
-  font-size: 33vh;
+  font-size: 36vh;
   line-height: 1;
   text-align: center;
+  margin-bottom: 50px;
   color: ${({ theme }) => theme.text_primary};
   user-select: none;
 `;

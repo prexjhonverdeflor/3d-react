@@ -4,6 +4,7 @@ import { skills } from "../../data/constants";
 import { Reveal } from "../../utils/Reveal";
 import Marquee from 'react-fast-marquee'
 import { Tilt } from "react-tilt";
+import image1 from '../../images/hands.png';
 
 
 
@@ -38,6 +39,11 @@ const Desc = styled.div`
   color: ${({ theme }) => theme.text_primary};
 `;
 
+const Image = styled.img`
+  width: 100%;
+  position: absolute;
+  opacity: 20%;
+`;
 
 
 
@@ -49,16 +55,16 @@ const Skills = () => {
         marginBottom: "100px",
         marginTop: "250px",
       }}
-      >
-      <Wrapper >
-        <Reveal >
-        <Title id="Skills" >SKILLS</Title>
+      > 
+      <Wrapper >  
+        <Image src={image1} alt="IMG"/>
+        <Reveal>
+        <Title id="Skills" >INTRO</Title>
         </Reveal>
         <Reveal>
         <Desc style={{ marginBottom: "40px" }}>
-        Combining my passion for design with my coding skills allows me to create modern websites that seamlessly 
-        integrate aesthetic appeal with functional excellence. 
-        I strive to deliver web experiences that captivate and engage users.
+        I am a Developer and UI/UX Designer based in Philippines. I love combining my passion for design with my coding skills, allowing me to create modern websites that seamlessly 
+        integrate aesthetic appeal with functional excellence. I love pizza and art.
         </Desc>
         </Reveal>
         <Title>TECH STACK</Title>

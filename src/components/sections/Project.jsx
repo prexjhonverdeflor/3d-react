@@ -80,7 +80,7 @@ const GlobeImage = styled.img`
   margin-top:-500px;
   margin-left: -500px;
   position: absolute;
-  opacity: 10%;
+  opacity: 20%;
 `;
 const App = () => {
   return (
