@@ -11,6 +11,7 @@ const Container = styled.div`
   flex-direction: column;
   position: relative;
   padding: 300px;
+  padding-bottom: 200px;
   gap: 150px;
   
 `;
@@ -82,6 +83,9 @@ const GlobeImage = styled.img`
   position: absolute;
   opacity: 20%;
 `;
+
+
+
 const App = () => {
   return (
     <Container id="Projects">

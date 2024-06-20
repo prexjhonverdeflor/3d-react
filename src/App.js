@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './utils/Themes';
 import Navbar from './components/Navbar';
@@ -14,8 +14,12 @@ import CustomCursor from './components/CustomCursor';
 import './Grain.css';
 import ReactHowler from 'react-howler';
 import bgm from './images/bgm.mp3';
+import Projects from './components/projects';
+
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
+
+
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -25,6 +29,7 @@ const Body = styled.div`
   overflow-x: hidden;
   position: relative;
 `;
+
 
 function App() {
   return (
@@ -39,13 +44,15 @@ function App() {
             <Hero />
             <Skills />
             <Project />
-            <Experience />
-            <Education />
+
+            <Projects />
+
             <Footer/>
           </Body>
         </BrowserRouter>
       </ThemeProvider>
       <ReactHowler src={bgm} playing={true} loop={true} volume={0.1} />
+      
     </>
   );
 }
