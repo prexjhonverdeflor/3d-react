@@ -1,18 +1,18 @@
 import React, { Suspense, lazy } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './utils/Themes';
-import Navbar from './components/Navbar';
+import Navbar from './components/sections/Navbar';
 import { BrowserRouter } from 'react-router-dom';
 import Hero from './components/sections/Hero';
 import Skills from './components/sections/Skills';
 import Project from './components/sections/Project';
 import Footer from './components/sections/Footer';
-import Preloader from './components/Preloader';
+import Preloader from './components/sections/Preloader';
 import CustomCursor from './components/CustomCursor';
 import './Grain.css';
 import ReactHowler from 'react-howler';
 import bgm from './images/bgm.mp3';
-import Projects from './components/projects';
+import Experience from './components/sections/Experience';
 
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
@@ -42,9 +42,7 @@ function App() {
             <Hero />
             <Skills />
             <Project />
-
-            <Projects />
-
+            <Experience />
             <Footer/>
           </Body>
         </BrowserRouter>

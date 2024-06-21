@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import styles from './style.module.scss';
 import Titles from './titles';
 import Descriptions from './descriptions';
-import Reveal from '../../utils/Reveal';
+import Reveal from '../../../utils/Reveal';
 import styled from 'styled-components';
-import { data, newData} from '../../data/constants';
+import { data, newData} from '../../../data/constants';
 
 const Container = styled.div`
     width: 100%;
