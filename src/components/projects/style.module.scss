@@ -6,3 +6,33 @@
     width: 100%;
     //to add spaces between   margin-bottom: 200px;
 }
+
+
+.text {
+  height: 300px;
+  width: 300px;
+  position: relative;
+  animation: effect 8s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes effect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.span {
+  position: absolute;
+  transform-origin: 0 150px; // Adjust to position letters correctly
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 800;
+  text-transform: capitalize;
+  color: white;
+  font-size: 30px;
+}

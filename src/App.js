@@ -5,8 +5,6 @@ import Navbar from './components/Navbar';
 import { BrowserRouter } from 'react-router-dom';
 import Hero from './components/sections/Hero';
 import Skills from './components/sections/Skills';
-import Experience from './components/sections/Experience';
-import Education from './components/sections/Education';
 import Project from './components/sections/Project';
 import Footer from './components/sections/Footer';
 import Preloader from './components/Preloader';

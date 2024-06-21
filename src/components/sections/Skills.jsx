@@ -8,6 +8,7 @@ import image1 from '../../images/hands.png';
 
 
 
+
 const Container = styled.div`
   width: 100%;
   display: flex;

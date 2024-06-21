@@ -1,11 +1,11 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './style.module.scss';
 import Titles from './titles';
 import Descriptions from './descriptions';
 import Reveal from '../../utils/Reveal';
 import styled from 'styled-components';
-
+import { data, newData} from '../../data/constants';
 
 const Container = styled.div`
     width: 100%;
@@ -26,52 +26,56 @@ const Title = styled.div`
   }
 `;
 
-const data = [
-    {
-        title: "CAMALIG BANK",
-        description: "Working on the Next-Generation HMI Experience without no driving experience.",
-        speed: 0.5
-    },
-    {
-        title: "DENR 5",
-        description: "Developed the Future of UFC Sports Ecosystem despite not being a sports fan.",
-        speed: 0.5
-    },
-];
+const Title2 = styled.div`
+  padding-left: 150px;
+  color: ${({ theme }) => theme.text_secondary};
+  margin-bottom: 10px;
+`;
 
-const newData = [
-    {
-        title: "STI COLLEGE",
-        description: "Description for Project A.",
-        speed: 1.0
-    },
-    {
-        title: "STI SENIOR HIGH",
-        description: "Description for Project B.",
-        speed: 1.5
-    },
-    {
-        title: "BICOL COLLEGE",
-        description: "Description for Project B.",
-        speed: 1.5
-    }
-    
-];
+
+const Title3 = styled.div`
+  padding: 10px 150px 0;
+  
+  color: ${({ theme }) => theme.text_secondary};
+  margin-bottom: 10px;
+`;
+
+
 
 export default function Projects() {
     const [selectedProject, setSelectedProject] = useState(null);
     const [selectedNewProject, setSelectedNewProject] = useState(null);
 
+
+    const str = "SAMPLE TEXT";
+
+    useEffect(() => {
+        const text = document.getElementById("text");
+        for (let i = 0; i < str.length; i++) {
+        let span = document.createElement("span");
+        span.innerHTML = str[i];
+        span.className = styles.span; // Apply the span class from the CSS module
+        text.appendChild(span);
+        span.style.transform = `rotate(${11 * i}deg)`;
+        }
+    }, [str]);
+
+
     return (
     <Container>
+         <div className={styles.container}>
+      <div id="text" className={styles.text}></div>
+    </div>
         <Reveal>
         <Title>experience_<br />& education</Title>
         </Reveal>
+        <Title2>work exp :</Title2>
         <div className={styles.mainContainer}>
             <div className={styles.container}>
                 <Titles data={data} setSelectedProject={setSelectedProject} />
                 <Descriptions data={data} selectedProject={selectedProject} />
             </div>
+            <Title3>education :</Title3> 
             <div className={styles.container}>
                 <Titles data={newData} setSelectedProject={setSelectedNewProject} />
                 <Descriptions data={newData} selectedProject={selectedNewProject} />
