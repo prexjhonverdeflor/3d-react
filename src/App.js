@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { useState } from 'react';
 import styled, { ThemeProvider } from 'styled-components';
 import { darkTheme } from './utils/Themes';
 import Navbar from './components/sections/Navbar';
@@ -30,6 +30,12 @@ const Body = styled.div`
 
 
 function App() {
+  const [isMuted, setIsMuted] = useState(false);
+
+  const toggleMute = () => {
+    setIsMuted(!isMuted);
+  };
+
   return (
     <>
       <div className="grain-overlay"></div>
@@ -47,7 +53,26 @@ function App() {
           </Body>
         </BrowserRouter>
       </ThemeProvider>
-      <ReactHowler src={bgm} playing={true} loop={true} volume={0.1} />
+      <ReactHowler src={bgm} playing={true} loop={true} volume={0.3} mute={isMuted} />
+      <button 
+        className="mute-button" 
+        onClick={toggleMute} 
+        style={{
+          position: 'fixed',
+          bottom: '20px',
+          right: '20px',
+          padding: '10px',
+          height: '40px',
+          borderRadius: '50%',
+          backgroundColor: 'rgba(255, 255, 255, 0.7)',
+          border: 'none',
+          cursor: 'pointer',
+          fontSize: '20px', 
+          zIndex: '100',
+        }}
+      >
+        {isMuted ? <VolumeOffIcon fontSize="inherit" /> : <VolumeUpIcon fontSize="inherit" />}
+      </button>
       
     </>
   );

@@ -2,8 +2,12 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import globeImage from '../../images/globe.png';
 import Reveal from '../../utils/Reveal';
+import globeImage from '../../images/zawarudo.gif';
+import starImage from '../../images/star.png';
+
+
+
 
 const Container = styled.div`
   width: 100%;
@@ -76,14 +80,22 @@ const Title = styled.div`
 `;
 
 const GlobeImage = styled.img`
-  width: 50%;
-  height: 50%;
-  margin-top:-500px;
-  margin-left: -500px;
+  width: 120%;
+  margin-top:-580px;
+  margin-left: -900px;
   position: absolute;
-  opacity: 20%;
+
 `;
 
+const StarImage = styled.img`
+  width: 60%;
+  margin-top:400px;
+  margin-left: 600px;
+  position: absolute;
+  opacity: 10%;
+  z-index:1;
+
+`;
 
 
 const App = () => {
@@ -137,6 +149,7 @@ const App = () => {
           </RightContainer>
         </Wrapper>
       </Reveal>
+      <StarImage src={starImage} />
     </Container>
   );
 };
