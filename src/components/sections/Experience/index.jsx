@@ -53,12 +53,12 @@ const Image = styled.img`
 `;
 
 const Image2 = styled.img`
-  height: 600px;
-  weight:600px;
+  height: 400px;
+  weight:400px;
   opacity: 10%;
   position: absolute;
-  margin-left: 1200px;
-  margin-top: -450px;
+  margin-left: 1250px;
+  margin-top: -250px;
   `;
 
 
