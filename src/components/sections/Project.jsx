@@ -134,7 +134,7 @@ const App = () => {
             <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
           </LeftContainer>
           <RightContainer flex="0.7">
-            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church.png" alt="Placeholder" />
+            <Image src="" alt="Placeholder" />
           </RightContainer>
         </Wrapper>
       </Reveal>
