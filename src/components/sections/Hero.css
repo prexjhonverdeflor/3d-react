@@ -19,6 +19,14 @@
   font-size: 11rem;
   letter-spacing: 10px;
   font-weight: 800;
+
+}
+
+@media (max-width: 768px) {
+  #text-behind, #text-front, #text-behind-blur {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+  }
 }
 
 #text-behind {

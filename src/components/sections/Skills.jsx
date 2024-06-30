@@ -29,6 +29,9 @@ const Title = styled.div`
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 20px;
   padding-left: 5rem;
+  @media (max-width: 768px) {
+    padding-left: 3rem;
+  }
 `;
 const Desc = styled.div`
   font-family: "Poppins", sans-serif;
@@ -38,12 +41,20 @@ const Desc = styled.div`
   font-weight: 400;
   width: 100%; /* Ensure full width */
   color: ${({ theme }) => theme.text_primary};
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    padding-left: 3rem;
+  }
 `;
 
 const Image = styled.img`
   width: 100%;
   position: absolute;
   opacity: 20%;
+  @media (max-width: 768px) {
+    margin-top: 150px;
+  }
 `;
 
 

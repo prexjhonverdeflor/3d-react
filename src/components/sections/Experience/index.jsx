@@ -27,6 +27,7 @@ const Title = styled.div`
 
   @media (max-width: 768px) {
     font-size: 32px;
+    padding:150px;
   }
 `;
 
@@ -34,6 +35,9 @@ const Title2 = styled.div`
   padding-left: 150px;
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 10px;
+  @media (max-width: 768px) {
+    padding:0;
+  }
 `;
 
 
@@ -41,15 +45,23 @@ const Title3 = styled.div`
   padding: 10px 150px 0;
   color: ${({ theme }) => theme.text_secondary};
   margin-bottom: 10px;
+  @media (max-width: 768px) {
+      padding-left:0;
+    }
+  
 `;
 
 const Image = styled.img`
-  height: 700px;
-  weight: 700px;
-  opacity: 30%;
+  width: 700px;
+  opacity: 20%;
   position: absolute;
   margin-left: 850px;
   margin-top: -90px;
+  @media (max-width: 768px) {
+    width: 70%;
+    margin-left:200px;
+    margin-top: -10px;
+  }
 `;
 
 const Image2 = styled.img`
@@ -59,16 +71,23 @@ const Image2 = styled.img`
   position: absolute;
   margin-left: 1250px;
   margin-top: -250px;
+  @media (max-width: 768px) {
+    width: 50%;
+  }
   `;
 
 
 const Image3 = styled.img`
-  height: 500px;
-  weight: 500px;
+  width: 500px;
   opacity: 15%;
   position: absolute;
   margin-left: -50px;
   margin-top: 250px;
+  @media (max-width: 768px) {
+    width: 50%;
+    margin-left: -50px;
+    margin-top: 120px;
+  }
 `;
 
 export default function Projects() {
@@ -80,7 +99,7 @@ export default function Projects() {
         <Image src={Img} />
         <Image3 src={Img3} />
         <Reveal>
-        <Title>experience_<br />& education</Title>
+        <Title id='Experience'>experience_<br />& education</Title>
         </Reveal>
         <Title2>work exp :</Title2>
         <div className={styles.mainContainer}>

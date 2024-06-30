@@ -35,6 +35,7 @@ const Title = styled.div`
     text-align: center;
     color: ${({ theme }) => theme.text_primary};
     user-select: none;
+
 `;
 
 const TextLoop = styled.div`
@@ -89,6 +90,11 @@ const HaloCanvasContainer = styled.div`
   width: 100%;
   height: 100%;
   pointer-events: none; /* Allow clicks to pass through */
+
+  @media (max-width: 768px) {
+    width: 70%;
+    height: 70%;
+  }
 `;
 
 

@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import {
-  FacebookRounded,
   Instagram,
   LinkedIn,
-  Twitter,
+  EmailOutlined,
+  X,
 } from "@mui/icons-material";
 import Reveal from "../../utils/Reveal";
 
@@ -72,6 +72,10 @@ const Logo = styled.div`
   margin-bottom: 50px;
   color: ${({ theme }) => theme.text_primary};
   user-select: none;
+
+  @media (max-width: 768px) {
+    font-size: 13vh;
+  }
 `;
 
 const SocialMediaIcons = styled.div`
@@ -135,6 +139,7 @@ const Footer = () => {
         <Reveal>
           <Logo>LET'S CONNECT</Logo>
         </Reveal>
+        
         <Reveal>
           <RowContainer>
             <LeftColumn>
@@ -155,11 +160,8 @@ const Footer = () => {
             </LeftColumn>
             <CenterColumn>
               <SocialMediaIcons>
-                <SocialMediaIcon href={Bio.facebook} target="_blank">
-                  <FacebookRounded fontSize="large" />
-                </SocialMediaIcon>
-                <SocialMediaIcon href={Bio.twitter} target="_blank">
-                  <Twitter fontSize="large" />
+                <SocialMediaIcon href={Bio.email} target="_blank">
+                  <EmailOutlined fontSize="large" />
                 </SocialMediaIcon>
                 <SocialMediaIcon href={Bio.linkedin} target="_blank">
                   <LinkedIn fontSize="large" />
@@ -167,7 +169,12 @@ const Footer = () => {
                 <SocialMediaIcon href={Bio.insta} target="_blank">
                   <Instagram fontSize="large" />
                 </SocialMediaIcon>
+                
+                <SocialMediaIcon href={Bio.twitter} target="_blank">
+                  <X fontSize="large" />
+                </SocialMediaIcon>
               </SocialMediaIcons>
+              
             </CenterColumn>
             <RightColumn>
               <Text>@Prex Verdeflor</Text>

@@ -8,10 +8,10 @@ export const Bio = {
   ],   
   github: "https://github.com/prexjhonverdeflor",
   resume: "https://drive.google.com/file/d/1h2SsgiQbNPxg5SJcWIk7rR53khBu4P22/view?usp=sharing",
-  linkedin: "https://www.linkedin.com/in/prex-verdeflor-586a46200?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
-  twitter: "https://twitter.com",
-  insta: "https://www.instagram.com/prexverdeflor?igsh=MTdqNDJ6NTVwYmo4bw%3D%3D&utm_source=qr",
-  facebook: "https://www.facebook.com/preksdyan",
+  linkedin: "https://www.linkedin.com/in/prex-jhon-verdeflor-586a46200/",
+  twitter: "https://x.com/PVerdeflor12404",
+  insta: "https://www.instagram.com/prexverdeflor/",
+  email: "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRnZFQCGmNPkSxbcHhlVqxlkPfRvPFTRkcbxPFqbgzdCsSSvLhkRjpmSNCjLmBxqqwmvSsB",
 };
 
 export const skills = [

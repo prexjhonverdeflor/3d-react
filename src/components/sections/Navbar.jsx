@@ -67,14 +67,30 @@ const NavItems = styled.ul`
 `;
 
 const NavLink = styled.a`
+  position: relative;
   color: ${({ theme }) => theme.text_primary};
-  font-weight: 900;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
   text-decoration: none;
   padding: 0 6px;
-  font-weight:400;
+  font-weight: 400;
   font-size: 16px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -5px; /* Adjust as needed */
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background-color: currentColor;
+    transition: width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  &:hover::after {
+    width: 100%;
+    left: 0;
+  }
 `;
 
 const ButtonContainer = styled.div`
