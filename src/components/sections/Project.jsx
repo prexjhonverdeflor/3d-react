@@ -14,38 +14,48 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 300px;
-  padding-bottom: 200px;
+  padding: 250px;
   gap: 150px;
-  
-`;
 
+  @media (max-width: 768px) {
+    padding:50px;
+  }
+`;
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: row;
-  gap:50px;
+  gap: 50px;
   
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftContainer = styled.div`
   flex: ${props => props.flex};
   display: flex;
-  flex-direction: column; /* Stack items vertically */
-  align-items: flex-end; /* Align items to the end (right) */
+  flex-direction: column;
+  align-items: flex-end;
 `;
 
 const RightContainer = styled.div`
   flex: ${props => props.flex};
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
 `;
+
 
 const Text = styled.p`
   font-size: 1.5rem;
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
+
+  @media (max-width: 768px) {
+    font-size: 32px;
+    padding:0;
+  }
 `;
 
 const Desc = styled.p`
@@ -76,6 +86,7 @@ const Title = styled.div`
 
   @media (max-width: 768px) {
     font-size: 32px;
+    margin-left:100px;
   }
 `;
 
@@ -108,7 +119,7 @@ const App = () => {
       <Reveal>
         <Wrapper>
           <LeftContainer flex="0.3">
-            <Text>3D_ <br />Portfolio</Text>
+            <Text>3D Portfolio_ <br />Website</Text>
             <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
           </LeftContainer>
           <RightContainer flex="0.7">
@@ -134,7 +145,7 @@ const App = () => {
             <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
           </LeftContainer>
           <RightContainer flex="0.7">
-            <Image src="" alt="Placeholder" />
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png" alt="Placeholder" />
           </RightContainer>
         </Wrapper>
       </Reveal>

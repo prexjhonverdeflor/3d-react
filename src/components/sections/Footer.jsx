@@ -26,12 +26,15 @@ const FooterWrapper = styled.div`
   padding: 1rem;
   color: ${({ theme }) => theme.text_primary};
 `;
-
 const RowContainer = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const LeftColumn = styled.div`
@@ -40,20 +43,35 @@ const LeftColumn = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-right:150px;
+  margin-right: 150px;
+
+  @media (max-width: 768px) {
+    order: 2;
+    margin: 20px;
+  }
 `;
 
 const CenterColumn = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    order: 1;
+    
+  }
 `;
 
 const RightColumn = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  margin-left:150px;
+  margin-left: 150px;
+
+  @media (max-width: 768px) {
+    order: 3;
+    margin: 20px;
+  }
 `;
 
 const Contact = styled.div`

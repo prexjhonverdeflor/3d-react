@@ -46,6 +46,10 @@ const TextLoop = styled.div`
   width: 100%;
   margin-top: 610px;
   user-select: none;
+
+  @media (max-width: 768px) {
+    margin-top:400px;
+  }
 `;
 
 const Span = styled.div`
@@ -78,6 +82,10 @@ const ResumeButton = styled.a`
   &:hover {
     background: ${({ theme }) => theme.text_primary};
     color: ${({ theme }) => theme.bg};
+  }
+
+  @media (max-width: 768px) {
+    margin-bottom:150px;
   }
 `;
 
