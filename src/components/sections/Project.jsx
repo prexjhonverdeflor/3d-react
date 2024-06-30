@@ -112,7 +112,7 @@ const App = () => {
             <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
           </LeftContainer>
           <RightContainer flex="0.7">
-            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d.PNG" alt="Placeholder" />
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" alt="Placeholder" />
           </RightContainer>
         </Wrapper>
       </Reveal>
