@@ -22,9 +22,24 @@
 
 }
 
+
+@media (max-width: 1300px) {
+  #text-behind, #text-front, #text-behind-blur {
+    font-size: 6rem;
+    letter-spacing: 4px;
+  }
+}
+
+@media (max-width: 992px) {
+  #text-behind, #text-front, #text-behind-blur {
+    font-size: 6rem;
+    letter-spacing: 4px;
+  }
+}
+
 @media (max-width: 768px) {
   #text-behind, #text-front, #text-behind-blur {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 4px;
   }
 }

@@ -17,7 +17,7 @@ const Container = styled.div`
     margin-bottom: 200px;
 `;
 const Title = styled.div`
-  padding: 200px;
+  padding: 300px;
   font-size: 110px;
   text-align: center;
   color: ${({ theme }) => theme.text_primary};
@@ -25,8 +25,18 @@ const Title = styled.div`
   font-weight: 400;
   z-index: 1; 
 
+   @media (max-width: 1150px) {
+    font-size: 5rem;
+    padding:150px;
+  }
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 3rem;
+    padding:150px;
+  }
+
+  @media (max-width: 668px) {
+    font-size: 2.5rem;
+    margin-left:-70px;
     padding:150px;
   }
 `;
@@ -48,7 +58,6 @@ const Title3 = styled.div`
   @media (max-width: 768px) {
       padding-left:0;
     }
-  
 `;
 
 const Image = styled.img`

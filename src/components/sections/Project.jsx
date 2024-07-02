@@ -20,6 +20,15 @@ const Container = styled.div`
   @media (max-width: 768px) {
     padding:50px;
   }
+
+   @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
 `;
 const Wrapper = styled.div`
   width: 100%;
@@ -29,6 +38,15 @@ const Wrapper = styled.div`
   
   @media (max-width: 768px) {
     flex-direction: column;
+  }
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 850px) {
+    flex-direction: column;
+    padding:0px;
   }
 `;
 

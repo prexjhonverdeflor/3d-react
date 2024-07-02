@@ -28,18 +28,16 @@ const Nav = styled.div`
 
 const NavbarContainer = styled.div`
   color: ${({ theme }) => theme.black};
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 24px;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-  
-  
+
 `;
+
 const NavLogo = styled(LinkR)`
-  margin-left: -50px;
+  
   width: 80%;
   padding: 0 6px;
   font-weight:400;
@@ -58,10 +56,9 @@ const NavItems = styled.ul`
   justify-content: center;
   gap: 32px;
   padding: 0 6px;
-  
   list-style: none;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 952px) {
     display: none;
   }
 `;
@@ -84,13 +81,14 @@ const NavLink = styled.a`
     width: 0;
     height: 3px;
     background-color: currentColor;
-    transition: width 0.4s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: width 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), left 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   }
 
   &:hover::after {
     width: 100%;
     left: 0;
   }
+
 `;
 
 const ButtonContainer = styled.div`
@@ -106,7 +104,6 @@ const ButtonContainer = styled.div`
 `;
 
 const GithubButton = styled.a`
-  margin-right: -50px;
   color: ${({ theme }) => theme.text_primary};
   justify-content: center;
   display: flex;
@@ -118,25 +115,33 @@ const GithubButton = styled.a`
   font-weight: 400;
   transition: all 0.6s ease-in-out;
   text-decoration: none;
+  margin-left: auto; /* This will push the button to the right end */
 
   @media screen and (max-width: 640px) {
     border: none;
     background: none;
     font-size: 18px;
-
   }
+
+  @media screen and (max-width: 952px) {
+    display:none;
+  }
+
 `;
+
 
 const MobileIcon = styled.div`
   cursor: pointer;
-  height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
   color: ${({ theme }) => theme.text_primary};
-  display: none;
-  @media screen and (max-width: 640px) {
+  position: fixed;
+  right: 0;
+  top:40px;
+  margin-right: 30px;
+
+  @media screen and (max-width: 952px) {
     display: flex;
-    margin-left: 340px;
   }
 `;
 
@@ -161,6 +166,8 @@ const MobileMenu = styled.ul`
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
+
+  
 `;
 
 const Navbar = () => {
@@ -214,11 +221,12 @@ const Navbar = () => {
             <NavLink onClick={() => setIsOpen(!isOpen)} href="#Footer">
               contact
             </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href={Bio.github} target="_Blank">
+              github
+            </NavLink>
             <GithubButton
               href={Bio.github}
-              target="_Blank"
-
-            >
+              target="_Blank">
               github
             </GithubButton>
           </MobileMenu>

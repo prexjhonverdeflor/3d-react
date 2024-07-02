@@ -7,7 +7,7 @@ export const Bio = {
     "Programmer",
   ],   
   github: "https://github.com/prexjhonverdeflor",
-  resume: "https://drive.google.com/file/d/1h2SsgiQbNPxg5SJcWIk7rR53khBu4P22/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1I3ihXquDMCIFjondoP74ItfOkAalfTZO/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/prex-jhon-verdeflor-586a46200/",
   twitter: "https://x.com/PVerdeflor12404",
   insta: "https://www.instagram.com/prexverdeflor/",
