@@ -44,31 +44,32 @@ body {
   overflow: hidden; /* Hide overflow on body */
 }
 
-/* Hide scrollbars */
+
+/* width */
 ::-webkit-scrollbar {
-  width: 0;
-  height: 0;
+  width: 4px;
+  height: 80px;
 }
 
-/* Optional: Handle track and thumb styles */
+/* Track */
 ::-webkit-scrollbar-track {
-  background: none;
+  background: #222a35;
 }
 
+/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: none;
+  background: #575c66;
+  border-radius: 6px;
 }
 
+/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: none;
+  background: #626970;
 }
 
 ::-webkit-backdrop-filter {
   blur: 3px saturate(106%);
 }
-
-
-
 
 
 .underline-text::after {

@@ -23,13 +23,8 @@ const ModalContent = styled(motion.div)`
   border-radius: 5px;
   max-width: 80%; /* Adjust width as needed */
   max-height: 80%; /* Adjust height as needed */
-  overflow-y: auto; /* Enable scrolling within the modal content */
+  overflow-y: auto;
 
-   scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE 10+ */
-  ::-webkit-scrollbar {
-    display: none; /* Safari and Chrome */
-  }
 
   @media (max-width: 768px) {
     padding:0;

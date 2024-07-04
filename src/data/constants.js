@@ -126,7 +126,7 @@ export const newData = [
   },
   {
       title: "BICOL COLLEGE",
-      description: "Provided me with a strong foundation of knowledge and skills, preparing me for future academic and career endeavors.",
+      description: "Provided me with a strong foundation of knowledge and skills, preparing me for future academic and career endeavors, ensuring to excel in my chosen field.",
       speed: 1.5
   }
   
