@@ -80,6 +80,11 @@ const Contact = styled.div`
   font-weight: 900;
   font-size: 16px;
   color: #626262;
+
+   @media (max-width: 768px) {
+    font-size: 14px;
+    
+  }
 `;
 
 const Logo = styled.div`
@@ -92,7 +97,7 @@ const Logo = styled.div`
   user-select: none;
 
   @media (max-width: 768px) {
-    font-size: 13vh;
+    font-size: 10vh;
     
   }
 `;

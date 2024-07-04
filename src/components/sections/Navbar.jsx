@@ -6,7 +6,6 @@ import { MenuRounded } from "@mui/icons-material";
 import { headContentAnimationTop } from "../../utils/motion";
 import { motion } from "framer-motion";
 
-
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
   height: 80px;
@@ -23,7 +22,6 @@ const Nav = styled.div`
   letter-spacing: 1px;
   color: #464646;
   font-weight: 900;
-
 `;
 
 const NavbarContainer = styled.div`
@@ -33,11 +31,11 @@ const NavbarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-
+  
 `;
 
+
 const NavLogo = styled(LinkR)`
-  
   width: 80%;
   padding: 0 6px;
   font-weight:400;
@@ -135,15 +133,18 @@ const MobileIcon = styled.div`
   display: none;
   align-items: center;
   color: ${({ theme }) => theme.text_primary};
-  position: fixed;
-  right: 0;
-  top:40px;
-  margin-right: 30px;
-
+  position: fixed; // Fix position relative to the viewport
+  right: 30px;
+  transform: translateY(-50%); // Adjust for vertical center
+  
   @media screen and (max-width: 952px) {
     display: flex;
   }
 `;
+
+
+
+
 
 const MobileMenu = styled.ul`
   width: 100%;

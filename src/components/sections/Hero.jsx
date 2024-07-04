@@ -5,8 +5,6 @@ import Typewriter from "typewriter-effect";
 //import HeroImg from "../../images/Hero1.png";
 //import HeroBgAnimation from "../HeroBgAnimation";
 //import gsap from 'gsap';
-import { Reveal } from "../../utils/Reveal";
-import StateCanvas from "../canvas/Statue";
 import {
   headContentAnimation,
   headContentAnimationBottom,
@@ -100,8 +98,8 @@ const HaloCanvasContainer = styled.div`
   pointer-events: none; /* Allow clicks to pass through */
 
   @media (max-width: 768px) {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 50%;
   }
 `;
 

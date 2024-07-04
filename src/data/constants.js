@@ -133,3 +133,60 @@ export const newData = [
 ];
 
 
+
+export const project1 = [
+  
+  {
+    name: "1",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png"
+  },
+  {
+    name: "2",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png"
+  }
+]
+
+
+export const project2 = [
+  
+  {
+    name: "1",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG"
+  },
+  {
+    name: "2",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG"
+  },
+  {
+    name: "3",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG"
+  },
+  {
+    name: "4",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG"
+  },
+]
+
+export const project3 = [
+  
+  {
+    name: "1",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png"
+  },
+  {
+    name: "2",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png"
+  }
+]
+
+export const project4 = [
+  
+  {
+    name: "1",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png"
+  },
+  {
+    name: "2",
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png"
+  }
+]

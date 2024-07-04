@@ -1,11 +1,10 @@
-// App.js or a similar file
-
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Reveal from '../../utils/Reveal';
 import globeImage from '../../images/zawarudo.gif';
 import starImage from '../../images/star.png';
-
+import Modal from './Modal';
+import { project1, project2, project3, project4 } from '../../data/constants'; 
 
 
 
@@ -90,7 +89,7 @@ const Image = styled.img`
   height: 160px;
   object-fit: cover; /* Ensures the image covers the entire container */
   overflow: hidden; /* Hides any overflow beyond the container's bounds */
-  
+  cursor: pointer;
 `;
 
 const Title = styled.div`
@@ -103,7 +102,7 @@ const Title = styled.div`
   z-index: 1; 
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 45px;
     margin-left:100px;
   }
 `;
@@ -114,20 +113,46 @@ const GlobeImage = styled.img`
   margin-left: -900px;
   position: absolute;
 
+  @media (max-width: 768px) {
+    margin-left:-200px;
+    margin-top:-2250px;
+ 
+  }
 `;
 
 const StarImage = styled.img`
   width: 60%;
-  margin-top:400px;
+  margin-top: 400px;
   margin-left: 600px;
   position: absolute;
   opacity: 10%;
-  z-index:1;
+  z-index: 1;
+  user-select: none; /* Prevents text selection */
+  pointer-events: none; /* Prevents clicking and dragging */
 
+  @media (max-width: 768px) {
+    margin-left: 150px;
+    margin-top: 150px;
+    width: 100%;
+  }
 `;
 
 
+
 const App = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
+
+  const handleImageClick = (images) => {
+    setSelectedImages(images);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImages([]);
+  };
+  
   return (
     <Container id="Projects">
       <GlobeImage src={globeImage} alt="Globe Image" />
@@ -135,20 +160,20 @@ const App = () => {
         <Title>selected_<br />works</Title>
       </Reveal>
       <Reveal>
-        <Wrapper>
+      <Wrapper>
           <LeftContainer flex="0.3">
             <Text>3D Portfolio_ <br />Website</Text>
             <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
           </LeftContainer>
-          <RightContainer flex="0.7">
-            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" alt="Placeholder" />
+          <RightContainer flex="0.7" onClick={() => handleImageClick(project1)}>
+            <Image  src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" />
           </RightContainer>
         </Wrapper>
       </Reveal>
       <Reveal>
-        <Wrapper>
-          <LeftContainer flex="0.7">
-            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG" alt="Placeholder" />
+      <Wrapper>
+          <LeftContainer flex="0.7" onClick={() => handleImageClick(project2)}>
+            <Image src={project2[0].image} alt="Placeholder" />
           </LeftContainer>
           <RightContainer flex="0.3">
             <Text>Payment_<br />Portal</Text>
@@ -162,14 +187,14 @@ const App = () => {
             <Text>Church_<br />Management System</Text>
             <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
           </LeftContainer>
-          <RightContainer flex="0.7">
+          <RightContainer flex="0.7"  onClick={() => handleImageClick(project3)}>
             <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png" alt="Placeholder" />
           </RightContainer>
         </Wrapper>
       </Reveal>
       <Reveal>
         <Wrapper>
-          <LeftContainer flex="0.7">
+          <LeftContainer flex="0.7"  onClick={() => handleImageClick(project4)}>
             <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png" alt="Placeholder" />
           </LeftContainer>
           <RightContainer flex="0.3">
@@ -179,6 +204,8 @@ const App = () => {
         </Wrapper>
       </Reveal>
       <StarImage src={starImage} />
+      <Modal isOpen={modalOpen} onClose={closeModal} images={selectedImages} />
+
     </Container>
   );
 };

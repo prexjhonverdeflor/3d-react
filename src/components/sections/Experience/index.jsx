@@ -35,7 +35,7 @@ const Title = styled.div`
   }
 
   @media (max-width: 668px) {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-left:-70px;
     padding:150px;
   }
