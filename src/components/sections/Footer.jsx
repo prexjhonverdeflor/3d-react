@@ -96,8 +96,13 @@ const Logo = styled.div`
   color: ${({ theme }) => theme.text_primary};
   user-select: none;
 
+
   @media (max-width: 768px) {
-    font-size: 10vh;
+    font-size: 20vh;
+    
+  }
+  @media (max-width: 648px) {
+    font-size: 8vh;
     
   }
 `;
