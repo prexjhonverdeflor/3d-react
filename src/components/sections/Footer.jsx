@@ -160,7 +160,7 @@ const Footer = () => {
   }, []); // Empty dependency array ensures effect runs only once on mount
 
   return (
-    <FooterContainer id="Contact">
+    <FooterContainer id="Footer">
       <FooterWrapper>
         <Reveal>
           <Contact>CONTACT ME</Contact>

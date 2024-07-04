@@ -201,7 +201,7 @@ const Navbar = () => {
             <NavLink href="#Projects">projects</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#Contact">contact</NavLink>
+            <NavLink href="#Footer">contact</NavLink>
           </motion.div>
         </NavItems>
 
