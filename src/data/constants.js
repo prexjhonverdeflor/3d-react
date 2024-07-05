@@ -100,6 +100,23 @@ export const skills = [
 
 
 
+export const Links = {
+  link1: "https://prexverdeflor.vercel.app/",
+  github1: "https://github.com/prexjhonverdeflor/3d-react",
+
+  link2: "",
+  github2: "https://github.com/prexjhonverdeflor/DjangoCRUD",
+
+  link3: "https://saintdominicdeguzmanparish.sticapstone.com/",
+  github3: "https://github.com/prexjhonverdeflor",
+  
+  link4: "",
+  github4: "https://github.com/prexjhonverdeflor",
+  
+};
+
+
+
 export const data = [
   {
       title: "CAMALIG BANK",

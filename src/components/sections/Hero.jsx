@@ -2,11 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
 import Typewriter from "typewriter-effect";
-//import HeroImg from "../../images/Hero1.png";
-//import HeroBgAnimation from "../HeroBgAnimation";
-//import gsap from 'gsap';
 import {
-  headContentAnimation,
   headContentAnimationBottom,
 
 } from "../../utils/motion";

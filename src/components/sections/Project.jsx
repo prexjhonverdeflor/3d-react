@@ -5,7 +5,11 @@ import globeImage from '../../images/zawarudo.gif';
 import starImage from '../../images/star.png';
 import Modal from './Modal';
 import { project1, project2, project3, project4 } from '../../data/constants'; 
-
+import {
+  GitHub,
+  Launch
+} from "@mui/icons-material";
+import { Links } from "../../data/constants";
 
 
 const Container = styled.div`
@@ -136,7 +140,21 @@ const StarImage = styled.img`
     width: 100%;
   }
 `;
+const SocialMediaIconsContainer = styled.div`
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Align items vertically in the center */
+  z-index:1000;
 
+`;
+
+const SocialMediaIcon = styled.a`
+  display: flex; /* Use flex to arrange items in a row */
+  align-items: center; /* Optional: Align items vertically in the center */
+  margin: 15px;
+  color: ${({ theme }) => theme.text_primary};
+  z-index:1000;
+  cursor: pointer;
+`;
 
 
 const App = () => {
@@ -164,6 +182,14 @@ const App = () => {
           <LeftContainer flex="0.3">
             <Text>3D Portfolio_ <br />Website</Text>
             <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link1} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github1} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </LeftContainer>
           <RightContainer flex="0.7" onClick={() => handleImageClick(project1)}>
             <Image  src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" />
@@ -178,6 +204,14 @@ const App = () => {
           <RightContainer flex="0.3">
             <Text>Payment_<br />Portal</Text>
             <Desc style={{ marginRight: '120px' }}>Built with Python, and Django for Camalig Bank.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link2} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github2} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </RightContainer>
         </Wrapper>
       </Reveal>
@@ -186,6 +220,14 @@ const App = () => {
           <LeftContainer flex="0.3">
             <Text>Church_<br />Management System</Text>
             <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link3} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github3} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </LeftContainer>
           <RightContainer flex="0.7"  onClick={() => handleImageClick(project3)}>
             <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png" alt="Placeholder" />
@@ -199,7 +241,15 @@ const App = () => {
           </LeftContainer>
           <RightContainer flex="0.3">
             <Text>Inventory_<br />System</Text>
-            <Desc style={{ marginRight: '120px' }}>Built with pure C#, and SQL for database management. </Desc>
+            <Desc style={{ marginRight: '120px' }}>Built with pure C#, and SQL for database management.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link4} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github4} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </RightContainer>
         </Wrapper>
       </Reveal>

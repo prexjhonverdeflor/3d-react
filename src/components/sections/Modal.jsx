@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion'; // Import motion from Framer Motion
 
+
 const ModalWrapper = styled(motion.div)`
   position: fixed;
   top: 0;
@@ -55,46 +56,6 @@ const CloseButton = styled.button`
   }
 `;
 
-const ButtonContainer = styled.div`
-  margin: 20px;
-  
-`;
-
-const LiveViewButton = styled.a`
-  background-color: #333; /* Dark gray */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin-right: 10px;
-  cursor: pointer;
-  @media (max-width: 768px) {
-    font-size: 10px;
-    padding: 10px 22px;
-  }
-`;
-
-const GitHubButton = styled.a`
-  background-color: #333; /* Dark gray */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-
-  @media (max-width: 768px) {
-    font-size: 10px;
-    padding: 10px 22px;
-  }
-`;
-
-
 
 const Modal = ({ isOpen, onClose, images }) => {
     if (!isOpen || !images || images.length === 0) return null;
@@ -115,10 +76,7 @@ const Modal = ({ isOpen, onClose, images }) => {
           {images.map((image, index) => (
             <ModalImage key={index} src={image.image} alt={`Modal ${index}`} />
           ))}
-          <ButtonContainer>
-            <LiveViewButton href="https://example.com" target="_blank">Live View</LiveViewButton>
-            <GitHubButton href="https://github.com/example" target="_blank">GitHub</GitHubButton>
-          </ButtonContainer>
+     
         </ModalContent>
       </ModalWrapper>
     );
