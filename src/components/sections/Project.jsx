@@ -205,7 +205,7 @@ const App = () => {
             <Text>Payment_<br />Portal</Text>
             <Desc style={{ marginRight: '120px' }}>Built with Python, and Django for Camalig Bank.</Desc>
             <SocialMediaIconsContainer>
-                <SocialMediaIcon href={Links.link2} target="_blank">
+                <SocialMediaIcon target="_blank">
                   <Launch fontSize="medium" />
                 </SocialMediaIcon>
                 <SocialMediaIcon href={Links.github2} target="_blank">
@@ -243,7 +243,7 @@ const App = () => {
             <Text>Inventory_<br />System</Text>
             <Desc style={{ marginRight: '120px' }}>Built with pure C#, and SQL for database management.</Desc>
             <SocialMediaIconsContainer>
-                <SocialMediaIcon href={Links.link4} target="_blank">
+                <SocialMediaIcon  target="_blank">
                   <Launch fontSize="medium" />
                 </SocialMediaIcon>
                 <SocialMediaIcon href={Links.github4} target="_blank">
