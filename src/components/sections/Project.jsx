@@ -74,7 +74,7 @@ const Text = styled.p`
   font-weight: 400;
 
   @media (max-width: 768px) {
-    font-size: 32px;
+    font-size: 22px;
     padding:0;
   }
 `;
@@ -119,7 +119,7 @@ const GlobeImage = styled.img`
 
   @media (max-width: 768px) {
     margin-left:-200px;
-    margin-top:-2250px;
+    margin-top:-2350px;
  
   }
 `;
