@@ -186,7 +186,7 @@ const App = () => {
                 <SocialMediaIcon href={Links.link1} target="_blank">
                   <Launch fontSize="medium" />
                 </SocialMediaIcon>
-                <SocialMediaIcon href={Links.github1} target="_blank">
+                <SocialMediaIcon >
                   <GitHub fontSize="medium" />
                 </SocialMediaIcon>
             </SocialMediaIconsContainer>
