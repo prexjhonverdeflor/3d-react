@@ -102,7 +102,7 @@ export const skills = [
 
 export const Links = {
   link1: "https://prexverdeflor.vercel.app/",
-  github1: "https://github.com/prexjhonverdeflor/3d-react",
+  github1: "https://github.com/prexjhonverdeflor",
 
   link2: "example.com",
   github2: "https://github.com/prexjhonverdeflor/DjangoCRUD",
@@ -240,6 +240,6 @@ export const project4 = [
   
   {
     name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png"
+    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/toyota1.png"
   },
 ]
