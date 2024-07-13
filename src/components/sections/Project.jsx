@@ -10,6 +10,7 @@ import {
   Launch
 } from "@mui/icons-material";
 import { Links } from "../../data/constants";
+import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
@@ -237,13 +238,13 @@ const App = () => {
       <Reveal>
         <Wrapper>
           <LeftContainer flex="0.7"  onClick={() => handleImageClick(project4)}>
-            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/inventory.png" alt="Placeholder" />
+            <Image src={Toyota} alt="Placeholder" />
           </LeftContainer>
           <RightContainer flex="0.3">
-            <Text>Inventory_<br />System</Text>
-            <Desc style={{ marginRight: '120px' }}>Built with pure C#, and SQL for database management.</Desc>
+            <Text>Toyota_<br />AE86</Text>
+            <Desc style={{ marginRight: '120px' }}>Built with React JS, Three JS, HTML, CSS, and JavaScript.</Desc>
             <SocialMediaIconsContainer>
-                <SocialMediaIcon  target="_blank">
+                <SocialMediaIcon href={Links.link4} target="_blank">
                   <Launch fontSize="medium" />
                 </SocialMediaIcon>
                 <SocialMediaIcon href={Links.github4} target="_blank">

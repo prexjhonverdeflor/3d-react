@@ -110,8 +110,8 @@ export const Links = {
   link3: "https://saintdominicdeguzmanparish.sticapstone.com/",
   github3: "https://github.com/prexjhonverdeflor",
   
-  link4: "example.com",
-  github4: "https://github.com/prexjhonverdeflor",
+  link4: "https://3d-toyota.vercel.app/",
+  github4: "https://github.com/prexjhonverdeflor/3d-toyota",
   
 };
 
