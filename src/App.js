@@ -51,14 +51,14 @@ function App() {
             <Skills />
             <Project />
             <Experience />
-            <Footer/>
+            <Footer />
           </Body>
         </BrowserRouter>
       </ThemeProvider>
       <ReactHowler src={bgm} playing={true} loop={true} volume={0.3} mute={isMuted} />
-      <button 
-        className="mute-button" 
-        onClick={toggleMute} 
+      <button
+        className="mute-button"
+        onClick={toggleMute}
         style={{
           position: 'fixed',
           bottom: '20px',
@@ -69,13 +69,13 @@ function App() {
           backgroundColor: 'rgba(255, 255, 255, 0.7)',
           border: 'none',
           cursor: 'pointer',
-          fontSize: '20px', 
+          fontSize: '20px',
           zIndex: '100',
         }}
       >
         {isMuted ? <VolumeOffIcon fontSize="inherit" /> : <VolumeUpIcon fontSize="inherit" />}
       </button>
-      
+
     </>
   );
 }
