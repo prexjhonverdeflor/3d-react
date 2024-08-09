@@ -17,8 +17,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0.1;
-  animation: animateGrain 8s steps(10) infinite;
+  opacity: 0.06; /* Reduced opacity for a subtler effect */
+  animation: animateGrain 12s steps(10) infinite; /* Slower animation for smoother effect */
 }
 
 @keyframes animateGrain {

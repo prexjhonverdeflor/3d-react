@@ -5,9 +5,9 @@ export const Bio = {
     "Web Developer",
     "UI/UX Designer",
     "Programmer",
-  ],   
+  ],
   github: "https://github.com/prexjhonverdeflor",
-  resume: "https://drive.google.com/file/d/1I3ihXquDMCIFjondoP74ItfOkAalfTZO/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1cfJnvIqdBjBfKX7spEcFnxAYnoVFTovm/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/prex-jhon-verdeflor-586a46200/",
   twitter: "https://x.com/PVerdeflor12404",
   insta: "https://www.instagram.com/prexverdeflor/",
@@ -15,7 +15,7 @@ export const Bio = {
 };
 
 export const skills = [
-  
+
   {
     name: "HTML",
     image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png"
@@ -109,10 +109,10 @@ export const Links = {
 
   link3: "https://saintdominicdeguzmanparish.sticapstone.com/",
   github3: "https://github.com/prexjhonverdeflor",
-  
+
   link4: "https://3d-toyota.vercel.app/",
   github4: "https://github.com/prexjhonverdeflor/3d-toyota",
-  
+
 };
 
 
@@ -146,13 +146,13 @@ export const newData = [
       description: "Provided me with a strong foundation of knowledge and skills, preparing me for future academic and career endeavors, ensuring to excel in my chosen field.",
       speed: 1.5
   }
-  
+
 ];
 
 
 
 export const project1 = [
-  
+
   {
     name: "1",
     image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d1.png"
@@ -181,7 +181,7 @@ export const project1 = [
 
 
 export const project2 = [
-  
+
   {
     name: "1",
     image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG"
@@ -209,7 +209,7 @@ export const project2 = [
 ]
 
 export const project3 = [
-  
+
   {
     name: "1",
     image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church1.png"
@@ -237,7 +237,7 @@ export const project3 = [
 ]
 
 export const project4 = [
-  
+
   {
     name: "1",
     image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/toyota1.png"

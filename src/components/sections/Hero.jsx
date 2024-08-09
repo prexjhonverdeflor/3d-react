@@ -23,7 +23,7 @@ const HeroContainer = styled.div`
 `;
 
 const Title = styled.div`
-    position: relative; 
+    position: relative;
     z-index: 1;
     margin-top: 50px;
     text-align: center;
@@ -121,13 +121,13 @@ const Hero = () => {
         <HaloCanvasContainer>
           <StatueCanvas />
         </HaloCanvasContainer>
-       
+
         <HeadlineContainer>
           <Title id="text-behind" >{Bio.name}</Title>
           <Title id="text-behind-blur">{Bio.name}</Title>
           <Title id="text-front">{Bio.name}</Title>
         </HeadlineContainer>
-        
+
         <TextLoop>
               <Span>
                 <Typewriter
@@ -137,13 +137,13 @@ const Hero = () => {
                     loop: true,
                   }}
                 />
-              </Span>   
+              </Span>
             </TextLoop>
-      
+
           <ResumeButton href={Bio.resume} target="_blank">
             Resume
           </ResumeButton>
-        
+
       </HeroContainer>
       </motion.div>
     </div>
