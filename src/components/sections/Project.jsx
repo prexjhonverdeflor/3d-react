@@ -14,19 +14,20 @@ import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
-display: flex;
+//always use to center in any sizes
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  width: 100%;
+
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 250px;
   gap: 150px;
 
   @media (max-width: 768px) {
-    padding:50px;
+    padding:0px;
+    margin:0;
   }
 
    @media (max-width: 1200px) {
@@ -34,7 +35,7 @@ display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 50px;
+    padding: 20px;
 }
 
 `;
@@ -54,7 +55,8 @@ const Wrapper = styled.div`
 
   @media (max-width: 850px) {
     flex-direction: column;
-    padding:0px;
+    padding:0;
+    margin:0;
   }
 `;
 
