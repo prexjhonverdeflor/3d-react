@@ -4,7 +4,7 @@ import Reveal from '../../utils/Reveal';
 import globeImage from '../../images/zawarudo.gif';
 import starImage from '../../images/star.png';
 import Modal from './Modal';
-import { project1, project2, project3, project4 } from '../../data/constants'; 
+import { project1, project2, project3, project4 } from '../../data/constants';
 import {
   GitHub,
   Launch
@@ -14,6 +14,10 @@ import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
+display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -39,7 +43,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: row;
   gap: 50px;
-  
+
   @media (max-width: 768px) {
     flex-direction: column;
   }
@@ -100,11 +104,11 @@ const Image = styled.img`
 const Title = styled.div`
   font-size: 120px;
   text-align: center;
-  margin-left: 50px;
+  align-items: center;
   color: ${({ theme }) => theme.text_primary};
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
-  z-index: 1; 
+  z-index: 1;
 
   @media (max-width: 768px) {
     font-size: 45px;
@@ -121,7 +125,7 @@ const GlobeImage = styled.img`
   @media (max-width: 768px) {
     margin-left:-200px;
     margin-top:-2350px;
- 
+
   }
 `;
 
@@ -171,7 +175,7 @@ const App = () => {
     setModalOpen(false);
     setSelectedImages([]);
   };
-  
+
   return (
     <Container id="Projects">
       <GlobeImage src={globeImage} alt="Globe Image" />
@@ -262,4 +266,3 @@ const App = () => {
 };
 
 export default App;
-
