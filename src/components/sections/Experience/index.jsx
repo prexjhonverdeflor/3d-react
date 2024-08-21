@@ -19,11 +19,12 @@ const Container = styled.div`
 const Title = styled.div`
   padding: 300px;
   font-size: 110px;
+  margin-left: 100px;
   text-align: center;
   color: ${({ theme }) => theme.text_primary};
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
-  z-index: 1; 
+  z-index: 1;
 
    @media (max-width: 1150px) {
     font-size: 5rem;
@@ -116,7 +117,7 @@ export default function Projects() {
                 <Titles data={data} setSelectedProject={setSelectedProject} />
                 <Descriptions data={data} selectedProject={selectedProject} />
             </div>
-            <Title3>education :</Title3> 
+            <Title3>education :</Title3>
             <div className={styles.container}>
                 <Titles data={newData} setSelectedProject={setSelectedNewProject} />
                 <Descriptions data={newData} selectedProject={selectedNewProject} />
