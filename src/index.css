@@ -9,7 +9,7 @@
   font-family: 'Monument Extended';
   font-style: normal;
   font-weight: 300;
-  src: local('Monument Extended'),
+  src: local('Monument Extended'), 
        url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Light.woff') format('woff');
 }
 
@@ -17,7 +17,7 @@
     font-family: 'Monument Extended';
     font-style: normal;
     font-weight: 400;
-    src: local('Monument Extended'),
+    src: local('Monument Extended'), 
          url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Regular.woff') format('woff');
 }
 
@@ -25,7 +25,7 @@
     font-family: 'Monument Extended';
     font-style: normal;
     font-weight: 800;
-    src: local('Monument Extended'),
+    src: local('Monument Extended'), 
          url('https://fonts.cdnfonts.com/s/19595/MonumentExtended-Ultrabold.woff') format('woff');
 }
 
@@ -34,14 +34,15 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
   font-family: 'Monument Extended', sans-serif;
 }
 
 body {
-  overflow-x: hidden; /* Prevent horizontal overflow */
-  overflow-y: auto; /* Allow vertical scrolling */
+  margin: 0 !important;
+  padding: 0;
+  overflow: hidden; /* Hide overflow on body */
 }
-
 
 
 /* width */

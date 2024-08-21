@@ -5,11 +5,10 @@ import { Bio } from "../../data/constants";
 import { MenuRounded } from "@mui/icons-material";
 import { headContentAnimationTop } from "../../utils/motion";
 import { motion } from "framer-motion";
-import { useLenis } from '@studio-freight/react-lenis';
 
 const Nav = styled.div`
   background-color: ${({ theme }) => theme.bg};
-  height: 0;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,7 +16,7 @@ const Nav = styled.div`
   top: 0;
   z-index: 10;
   color: white;
-
+  
   padding: 50px 0;
   font-size: 24px;
   letter-spacing: 1px;
@@ -32,7 +31,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-
+  
 `;
 
 
@@ -137,11 +136,14 @@ const MobileIcon = styled.div`
   position: fixed; // Fix position relative to the viewport
   right: 30px;
   transform: translateY(-50%); // Adjust for vertical center
-
+  
   @media screen and (max-width: 952px) {
     display: flex;
   }
 `;
+
+
+
 
 
 const MobileMenu = styled.ul`
@@ -166,80 +168,82 @@ const MobileMenu = styled.ul`
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 
-
+  
 `;
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const lenis = useLenis(); // Get the Lenis instance
-
-  const handleScroll = (target) => {
-    lenis.scrollTo(target);
-    setIsOpen(false); // Close the mobile menu after clicking
-  };
-
+  const theme = useTheme();
   return (
-    <Nav>
+
+    <Nav >
+
       <NavbarContainer>
         <motion.div {...headContentAnimationTop}>
-          <NavLogo href="#home" onClick={(e) => { e.preventDefault(); handleScroll('#Home'); }}>
-            PREX
-          </NavLogo>
+          <NavLogo href="" >prex</NavLogo>
         </motion.div>
         <motion.div {...headContentAnimationTop}>
-          <MobileIcon onClick={() => setIsOpen(!isOpen)}>
-            <MenuRounded style={{ color: "inherit" }} />
-          </MobileIcon>
+        <MobileIcon onClick={() => setIsOpen(!isOpen)}>
+          <MenuRounded style={{ color: "inherit" }} />
+        </MobileIcon>
         </motion.div>
         <NavItems>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#home" onClick={(e) => { e.preventDefault(); handleScroll('#Home'); }}>
-              home
-            </NavLink>
+            <NavLink href="#Home">home</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#skills" onClick={(e) => { e.preventDefault(); handleScroll('#Skills'); }}>
-              skills
-            </NavLink>
+            <NavLink href="#Skills">skills</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#experience" onClick={(e) => { e.preventDefault(); handleScroll('#Experience'); }}>
-              experience
-            </NavLink>
+            <NavLink href="#Experience">experience</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#projects" onClick={(e) => { e.preventDefault(); handleScroll('#Projects'); }}>
-              projects
-            </NavLink>
+            <NavLink href="#Projects">projects</NavLink>
           </motion.div>
           <motion.div {...headContentAnimationTop}>
-            <NavLink href="#footer" onClick={(e) => { e.preventDefault(); handleScroll('#Footer'); }}>
-              contact
-            </NavLink>
+            <NavLink href="#Footer">contact</NavLink>
           </motion.div>
         </NavItems>
 
         {isOpen && (
           <MobileMenu isOpen={isOpen}>
-            <NavLink onClick={(e) => { e.preventDefault(); handleScroll('#Home'); }}>home</NavLink>
-            <NavLink onClick={(e) => { e.preventDefault(); handleScroll('#Skills'); }}>skills</NavLink>
-            <NavLink onClick={(e) => { e.preventDefault(); handleScroll('#Experience'); }}>experience</NavLink>
-            <NavLink onClick={(e) => { e.preventDefault(); handleScroll('#Projects'); }}>projects</NavLink>
-            <NavLink onClick={(e) => { e.preventDefault(); handleScroll('#Footer'); }}>contact</NavLink>
-            <NavLink href={Bio.github} target="_blank">GITHUB</NavLink>
-            <GithubButton href={Bio.github} target="_blank">GITHUB</GithubButton>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Home">
+              home
+            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Skills">
+              skills
+            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Experience">
+              experience
+            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Projects">
+              projects
+            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href="#Footer">
+              contact
+            </NavLink>
+            <NavLink onClick={() => setIsOpen(!isOpen)} href={Bio.github} target="_Blank">
+              github
+            </NavLink>
+            <GithubButton
+              href={Bio.github}
+              target="_Blank">
+              github
+            </GithubButton>
           </MobileMenu>
         )}
 
         <motion.div {...headContentAnimationTop}>
           <ButtonContainer>
-            <GithubButton href={Bio.github} target="_blank">
-              GITHUB
+            <GithubButton href={Bio.github} target="_Blank">
+              github
             </GithubButton>
           </ButtonContainer>
         </motion.div>
       </NavbarContainer>
+
     </Nav>
+
   );
 };
 

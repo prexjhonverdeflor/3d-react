@@ -26,11 +26,10 @@ const FooterWrapper = styled.div`
   padding: 1rem;
   color: ${({ theme }) => theme.text_primary};
 `;
-
-
 const RowContainer = styled.div`
   display: flex;
   width: 100%;
+  justify-content: space-between;
   align-items: center;
 
   @media (max-width: 768px) {
@@ -44,7 +43,7 @@ const LeftColumn = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin-right: 250px;
+  margin-right: 150px;
 
   @media (max-width: 768px) {
     order: 2;
@@ -59,7 +58,7 @@ const CenterColumn = styled.div`
 
   @media (max-width: 768px) {
     order: 1;
-
+    
   }
 `;
 
@@ -67,7 +66,7 @@ const RightColumn = styled.div`
   flex: 1;
   display: flex;
   justify-content: flex-end;
-  margin-left: 250px;
+  margin-left: 150px;
 
   @media (max-width: 768px) {
     order: 3;
@@ -84,7 +83,7 @@ const Contact = styled.div`
 
    @media (max-width: 768px) {
     font-size: 14px;
-
+    
   }
 `;
 
@@ -100,11 +99,11 @@ const Logo = styled.div`
 
   @media (max-width: 768px) {
     font-size: 20vh;
-
+    
   }
   @media (max-width: 648px) {
-    font-size: 10vh;
-
+    font-size: 8vh;
+    
   }
 `;
 
@@ -134,9 +133,6 @@ const Text = styled.div`
   font-size: 14px;
   color: #626262;
 `;
-
-
-
 
 const Footer = () => {
   // Array of Spotify track URIs to rotate daily
@@ -172,7 +168,7 @@ const Footer = () => {
         <Reveal>
           <Logo>LET'S CONNECT</Logo>
         </Reveal>
-
+        
         <Reveal>
           <RowContainer>
             <LeftColumn>
@@ -202,12 +198,12 @@ const Footer = () => {
                 <SocialMediaIcon href={Bio.insta} target="_blank">
                   <Instagram fontSize="large" />
                 </SocialMediaIcon>
-
+                
                 <SocialMediaIcon href={Bio.twitter} target="_blank">
                   <X fontSize="large" />
                 </SocialMediaIcon>
               </SocialMediaIcons>
-
+              
             </CenterColumn>
             <RightColumn>
               <Text>@Prex Verdeflor</Text>
