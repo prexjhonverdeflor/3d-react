@@ -47,7 +47,7 @@
 #text-behind {
   color: var(--headline-color);
   z-index: 1;
-  
+
 }
 
 #text-behind-blur {
@@ -68,4 +68,3 @@
     --headline-color: #f5f0ec;
 
   }
-  

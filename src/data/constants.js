@@ -7,7 +7,7 @@ export const Bio = {
     "Programmer",
   ],
   github: "https://github.com/prexjhonverdeflor",
-  resume: "https://drive.google.com/file/d/1cfJnvIqdBjBfKX7spEcFnxAYnoVFTovm/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1cF9Ba0BUL5RwXCPWeWY6fvfwefJZp2Vt/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/prex-jhon-verdeflor-586a46200/",
   twitter: "https://x.com/PVerdeflor12404",
   insta: "https://www.instagram.com/prexverdeflor/",
@@ -101,18 +101,10 @@ export const skills = [
 
 
 export const Links = {
-  link1: "https://prexverdeflor.vercel.app/",
-  github1: "https://github.com/prexjhonverdeflor",
-
-  link2: "example.com",
-  github2: "https://github.com/prexjhonverdeflor/DjangoCRUD",
-
-  link3: "https://saintdominicdeguzmanparish.sticapstone.com/",
-  github3: "https://github.com/prexjhonverdeflor",
-
-  link4: "https://3d-toyota.vercel.app/",
-  github4: "https://github.com/prexjhonverdeflor/3d-toyota",
-
+  behance1: 'https://www.behance.net/your-project1-link',
+  behance2: 'https://www.behance.net/your-project2-link',
+  behance3: 'https://www.behance.net/your-project3-link',
+  behance4: 'https://www.behance.net/your-project4-link',
 };
 
 
@@ -148,98 +140,3 @@ export const newData = [
   }
 
 ];
-
-
-
-export const project1 = [
-
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d1.png"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d2.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d3.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d4.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d5.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3d6.png"
-  },
-]
-
-
-export const project2 = [
-
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb.PNG"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb1.png"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb2.png"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb3.png"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb4.png"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/cb5.png"
-  },
-]
-
-export const project3 = [
-
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church1.png"
-  },
-  {
-    name: "2",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church2.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church3.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church4.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church5.png"
-  },
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/church6.png"
-  },
-]
-
-export const project4 = [
-
-  {
-    name: "1",
-    image: "https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/toyota1.png"
-  },
-]

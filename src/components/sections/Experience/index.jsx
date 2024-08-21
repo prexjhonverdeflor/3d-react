@@ -6,7 +6,7 @@ import Descriptions from './descriptions';
 import Reveal from '../../../utils/Reveal';
 import styled from 'styled-components';
 import { data, newData} from '../../../data/constants';
-import Img from '../../../images/error.gif';
+
 import Img2 from '../../../images/circle.gif';
 import Img3 from '../../../images/face.png';
 
@@ -106,7 +106,7 @@ export default function Projects() {
 
     return (
     <Container>
-        <Image src={Img} />
+
         <Image3 src={Img3} />
         <Reveal>
         <Title id='Experience'>experience_<br />& education</Title>

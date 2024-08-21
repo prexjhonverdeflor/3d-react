@@ -53,10 +53,10 @@ const Span = styled.div`
 
 
 const ResumeButton = styled.a`
+  z-index:5;
   position: absolute;
-  z-index: 1000; // Ensure it's on top of other elements
   font-size: 15px;
-  bottom: -100px; // Adjust to ensure it's within the view
+  bottom: -10px; // Adjust to ensure it's within the view
   left: 50%;
   transform: translateX(-50%);
   text-transform: uppercase;
@@ -79,7 +79,7 @@ const ResumeButton = styled.a`
   }
 
   @media (max-width: 768px) {
-    margin-bottom:150px;
+    margin-bottom:50px;
   }
 `;
 
