@@ -14,34 +14,18 @@ import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
-<<<<<<< HEAD
-<<<<<<< HEAD
 //always use to center in any sizes
-=======
->>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
-=======
-//always use to center in any sizes
->>>>>>> parent of dac0399 (trynew)
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   display: flex;
-=======
->>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
-=======
-  display: flex;
->>>>>>> parent of dac0399 (trynew)
   flex-direction: column;
   position: relative;
   gap: 150px;
 
   @media (max-width: 768px) {
-<<<<<<< HEAD
-<<<<<<< HEAD
     padding:0px;
     margin:0;
   }
@@ -53,29 +37,6 @@ const Container = styled.div`
     align-items: center;
     padding: 20px;
 }
-
-=======
-    padding: 0px;
-    margin: 0;
-=======
-    padding:0px;
-    margin:0;
->>>>>>> parent of dac0399 (trynew)
-  }
-
-   @media (max-width: 1200px) {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-<<<<<<< HEAD
-  }
->>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
-`;
-=======
-}
->>>>>>> parent of dac0399 (trynew)
 
 `;
 const Wrapper = styled.div`
@@ -87,10 +48,6 @@ const Wrapper = styled.div`
   @media (max-width: 768px) {
     flex-direction: column;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> parent of dac0399 (trynew)
 
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -101,11 +58,6 @@ const Wrapper = styled.div`
     padding:0;
     margin:0;
   }
-<<<<<<< HEAD
-=======
->>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
-=======
->>>>>>> parent of dac0399 (trynew)
 `;
 
 const LeftContainer = styled.div`
