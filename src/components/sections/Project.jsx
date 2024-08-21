@@ -169,13 +169,8 @@ const StarImage = styled.img`
   }
 `;
 const SocialMediaIconsContainer = styled.div`
-<<<<<<< HEAD
   display: flex;
   align-items: center;
-=======
-  display: flex; /* Arrange items in a row */
-  align-items: center; /* Align items vertically in the center */
->>>>>>> parent of dac0399 (trynew)
   z-index:1000;
 
 `;
