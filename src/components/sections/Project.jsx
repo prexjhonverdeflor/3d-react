@@ -147,7 +147,7 @@ const StarImage = styled.img`
 `;
 const SocialMediaIconsContainer = styled.div`
   display: flex; /* Arrange items in a row */
-  align-items: center; /* Align items vertically in the center */
+  align-items: center;
   z-index:1000;
 
 `;
