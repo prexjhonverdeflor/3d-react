@@ -56,7 +56,7 @@ const ResumeButton = styled.a`
   position: absolute;
   z-index: 1000; // Ensure it's on top of other elements
   font-size: 15px;
-  bottom: -100px; // Adjust to ensure it's within the view
+  bottom: 0px; // Adjust to ensure it's within the view
   left: 50%;
   transform: translateX(-50%);
   text-transform: uppercase;

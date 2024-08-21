@@ -16,7 +16,7 @@ const Nav = styled.div`
   top: 0;
   z-index: 10;
   color: white;
-  
+
   padding: 50px 0;
   font-size: 24px;
   letter-spacing: 1px;
@@ -31,7 +31,7 @@ const NavbarContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   font-size: 1rem;
-  
+
 `;
 
 
@@ -136,7 +136,7 @@ const MobileIcon = styled.div`
   position: fixed; // Fix position relative to the viewport
   right: 30px;
   transform: translateY(-50%); // Adjust for vertical center
-  
+
   @media screen and (max-width: 952px) {
     display: flex;
   }
@@ -168,7 +168,7 @@ const MobileMenu = styled.ul`
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
 
-  
+
 `;
 
 const Navbar = () => {
@@ -180,7 +180,7 @@ const Navbar = () => {
 
       <NavbarContainer>
         <motion.div {...headContentAnimationTop}>
-          <NavLogo href="" >prex</NavLogo>
+          <NavLogo href="" >PREX</NavLogo>
         </motion.div>
         <motion.div {...headContentAnimationTop}>
         <MobileIcon onClick={() => setIsOpen(!isOpen)}>
@@ -223,12 +223,12 @@ const Navbar = () => {
               contact
             </NavLink>
             <NavLink onClick={() => setIsOpen(!isOpen)} href={Bio.github} target="_Blank">
-              github
+            GITHUB
             </NavLink>
             <GithubButton
               href={Bio.github}
               target="_Blank">
-              github
+              GITHUB
             </GithubButton>
           </MobileMenu>
         )}
@@ -236,7 +236,7 @@ const Navbar = () => {
         <motion.div {...headContentAnimationTop}>
           <ButtonContainer>
             <GithubButton href={Bio.github} target="_Blank">
-              github
+              GITHUB
             </GithubButton>
           </ButtonContainer>
         </motion.div>

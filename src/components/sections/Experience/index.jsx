@@ -18,9 +18,11 @@ const Container = styled.div`
 `;
 const Title = styled.div`
   padding: 300px;
+  margin-left: 150px;
   font-size: 110px;
-  margin-left: 100px;
   text-align: center;
+  align-items: center;
+
   color: ${({ theme }) => theme.text_primary};
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
@@ -37,7 +39,7 @@ const Title = styled.div`
 
   @media (max-width: 668px) {
     font-size: 2rem;
-    margin-left:-70px;
+    margin-left:-100px;
     padding:150px;
   }
 `;

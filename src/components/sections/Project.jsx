@@ -5,26 +5,15 @@ import globeImage from '../../images/zawarudo.gif';
 import starImage from '../../images/star.png';
 import Modal from './Modal';
 import { project1, project2, project3, project4 } from '../../data/constants';
-import {
-  GitHub,
-  Launch
-} from "@mui/icons-material";
-import { Links } from "../../data/constants";
+
 import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
-<<<<<<< HEAD
 display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-=======
-//always use to center in any sizes
-  display: flex;
-  justify-content: center;
-  align-items: center;
->>>>>>> 226282d3307b0dd9cb69c32190e3ed94a14f21ed
   width: 100%;
 
   display: flex;
@@ -118,22 +107,23 @@ const Title = styled.div`
   font-family: 'Monument Extended', sans-serif;
   font-weight: 400;
   z-index: 1;
+  padding: 150px;
 
   @media (max-width: 768px) {
     font-size: 45px;
-    margin-left:100px;
+    padding: 0px;
   }
 `;
 
 const GlobeImage = styled.img`
   width: 120%;
-  margin-top:-580px;
+  margin-top:-1200px;
   margin-left: -900px;
   position: absolute;
 
   @media (max-width: 768px) {
     margin-left:-200px;
-    margin-top:-2350px;
+    margin-top:-2050px;
 
   }
 `;
@@ -154,21 +144,7 @@ const StarImage = styled.img`
     width: 100%;
   }
 `;
-const SocialMediaIconsContainer = styled.div`
-  display: flex; /* Arrange items in a row */
-  align-items: center; /* Align items vertically in the center */
-  z-index:1000;
 
-`;
-
-const SocialMediaIcon = styled.a`
-  display: flex; /* Use flex to arrange items in a row */
-  align-items: center; /* Optional: Align items vertically in the center */
-  margin: 15px;
-  color: ${({ theme }) => theme.text_primary};
-  z-index:1000;
-  cursor: pointer;
-`;
 
 
 const App = () => {
@@ -196,14 +172,7 @@ const App = () => {
           <LeftContainer flex="0.3">
             <Text>3D Portfolio_ <br />Website</Text>
             <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
-            <SocialMediaIconsContainer>
-                <SocialMediaIcon href={Links.link1} target="_blank">
-                  <Launch fontSize="medium" />
-                </SocialMediaIcon>
-                <SocialMediaIcon href={Links.github1} target="_blank">
-                  <GitHub fontSize="medium" />
-                </SocialMediaIcon>
-            </SocialMediaIconsContainer>
+
           </LeftContainer>
           <RightContainer flex="0.7" onClick={() => handleImageClick(project1)}>
             <Image  src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" />
@@ -218,14 +187,7 @@ const App = () => {
           <RightContainer flex="0.3">
             <Text>Payment_<br />Portal</Text>
             <Desc style={{ marginRight: '120px' }}>Built with Python, and Django for Camalig Bank.</Desc>
-            <SocialMediaIconsContainer>
-                <SocialMediaIcon target="_blank">
-                  <Launch fontSize="medium" />
-                </SocialMediaIcon>
-                <SocialMediaIcon href={Links.github2} target="_blank">
-                  <GitHub fontSize="medium" />
-                </SocialMediaIcon>
-            </SocialMediaIconsContainer>
+
           </RightContainer>
         </Wrapper>
       </Reveal>
@@ -234,14 +196,7 @@ const App = () => {
           <LeftContainer flex="0.3">
             <Text>Church_<br />Management System</Text>
             <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
-            <SocialMediaIconsContainer>
-                <SocialMediaIcon href={Links.link3} target="_blank">
-                  <Launch fontSize="medium" />
-                </SocialMediaIcon>
-                <SocialMediaIcon href={Links.github3} target="_blank">
-                  <GitHub fontSize="medium" />
-                </SocialMediaIcon>
-            </SocialMediaIconsContainer>
+
           </LeftContainer>
           <RightContainer flex="0.7"  onClick={() => handleImageClick(project3)}>
             <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png" alt="Placeholder" />
@@ -256,14 +211,7 @@ const App = () => {
           <RightContainer flex="0.3">
             <Text>Toyota_<br />AE86</Text>
             <Desc style={{ marginRight: '120px' }}>Built with React JS, Three JS, HTML, CSS, and JavaScript.</Desc>
-            <SocialMediaIconsContainer>
-                <SocialMediaIcon href={Links.link4} target="_blank">
-                  <Launch fontSize="medium" />
-                </SocialMediaIcon>
-                <SocialMediaIcon href={Links.github4} target="_blank">
-                  <GitHub fontSize="medium" />
-                </SocialMediaIcon>
-            </SocialMediaIconsContainer>
+
           </RightContainer>
         </Wrapper>
       </Reveal>
