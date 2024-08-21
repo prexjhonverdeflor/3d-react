@@ -51,9 +51,11 @@ const Desc = styled.div`
 const Image = styled.img`
   width: 100%;
   position: absolute;
+  margin-top: -200px;
   opacity: 20%;
   @media (max-width: 768px) {
     margin-top: 150px;
+    width: 150%;
   }
 `;
 
@@ -62,20 +64,20 @@ const Image = styled.img`
 const Skills = () => {
   const repeatedSkills = Array(10).fill(skills).flat();
   return (
-    <Container 
+    <Container
       style={{
         marginBottom: "100px",
         marginTop: "250px",
       }}
-      > 
-      <Wrapper >  
+      >
+      <Wrapper >
         <Image src={image1} alt="IMG"/>
         <Reveal>
         <Title id="Skills" >INTRO</Title>
         </Reveal>
         <Reveal>
         <Desc style={{ marginBottom: "40px" }}>
-        I am a Developer and UI/UX Designer based in Philippines. I love combining my passion for design with my coding skills, allowing me to create modern websites that seamlessly 
+        I am a Developer and UI/UX Designer based in Philippines. I love combining my passion for design with my coding skills, allowing me to create modern websites that seamlessly
         integrate aesthetic appeal with functional excellence. I love pizza and art.
         </Desc>
         </Reveal>

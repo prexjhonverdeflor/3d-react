@@ -17,6 +17,8 @@ import Experience from './components/sections/Experience';
 import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 
+import { ReactLenis } from '@studio-freight/react-lenis';
+
 
 
 
@@ -24,11 +26,9 @@ import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
   color: ${({ theme }) => theme.text_primary};
-  width: 100%;
-  height: 90vh;
-  overflow-x: hidden;
-  position: relative;
+  overflow-x: hidden; // Prevent horizontal scroll
 `;
+
 
 
 function App() {
@@ -45,6 +45,7 @@ function App() {
       <Preloader />
       <ThemeProvider theme={darkTheme}>
         <BrowserRouter>
+        <ReactLenis root>
           <Navbar />
           <Body>
             <Hero />
@@ -53,6 +54,7 @@ function App() {
             <Experience />
             <Footer />
           </Body>
+        </ReactLenis>
         </BrowserRouter>
       </ThemeProvider>
       <ReactHowler src={bgm} playing={true} loop={true} volume={0.3} mute={isMuted} />
@@ -71,6 +73,7 @@ function App() {
           cursor: 'pointer',
           fontSize: '20px',
           zIndex: '100',
+
         }}
       >
         {isMuted ? <VolumeOffIcon fontSize="inherit" /> : <VolumeUpIcon fontSize="inherit" />}
