@@ -14,11 +14,20 @@ import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
+<<<<<<< HEAD
 display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   width: 100%;
+=======
+//always use to center in any sizes
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+>>>>>>> parent of dac0399 (trynew)
   display: flex;
   flex-direction: column;
   position: relative;
@@ -26,7 +35,12 @@ display: flex;
   gap: 150px;
 
   @media (max-width: 768px) {
+<<<<<<< HEAD
     padding:50px;
+=======
+    padding:0px;
+    margin:0;
+>>>>>>> parent of dac0399 (trynew)
   }
 
    @media (max-width: 1200px) {
@@ -34,7 +48,11 @@ display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+<<<<<<< HEAD
     padding: 50px;
+=======
+    padding: 20px;
+>>>>>>> parent of dac0399 (trynew)
 }
 
 `;
@@ -54,7 +72,12 @@ const Wrapper = styled.div`
 
   @media (max-width: 850px) {
     flex-direction: column;
+<<<<<<< HEAD
     padding:0px;
+=======
+    padding:0;
+    margin:0;
+>>>>>>> parent of dac0399 (trynew)
   }
 `;
 
@@ -146,8 +169,13 @@ const StarImage = styled.img`
   }
 `;
 const SocialMediaIconsContainer = styled.div`
+<<<<<<< HEAD
   display: flex;
   align-items: center;
+=======
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Align items vertically in the center */
+>>>>>>> parent of dac0399 (trynew)
   z-index:1000;
 
 `;
