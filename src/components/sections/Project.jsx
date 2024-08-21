@@ -3,31 +3,44 @@ import styled from 'styled-components';
 import Reveal from '../../utils/Reveal';
 import globeImage from '../../images/zawarudo.gif';
 import starImage from '../../images/star.png';
+import Modal from './Modal';
+import { project1, project2, project3, project4 } from '../../data/constants';
+import {
+  GitHub,
+  Launch
+} from "@mui/icons-material";
+import { Links } from "../../data/constants";
 import Toyota from '../../images/toyota.png';
-import Church from '../../images/churches.png';
-import CB from '../../images/cbs.png';
-
 
 
 const Container = styled.div`
 <<<<<<< HEAD
+<<<<<<< HEAD
 //always use to center in any sizes
 =======
 >>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
+=======
+//always use to center in any sizes
+>>>>>>> parent of dac0399 (trynew)
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   display: flex;
 =======
 >>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
+=======
+  display: flex;
+>>>>>>> parent of dac0399 (trynew)
   flex-direction: column;
   position: relative;
   gap: 150px;
 
   @media (max-width: 768px) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     padding:0px;
     margin:0;
@@ -44,14 +57,27 @@ const Container = styled.div`
 =======
     padding: 0px;
     margin: 0;
+=======
+    padding:0px;
+    margin:0;
+>>>>>>> parent of dac0399 (trynew)
   }
 
-  @media (max-width: 1200px) {
+   @media (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+<<<<<<< HEAD
   }
 >>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
 `;
+=======
+}
+>>>>>>> parent of dac0399 (trynew)
 
+`;
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
@@ -62,6 +88,9 @@ const Wrapper = styled.div`
     flex-direction: column;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of dac0399 (trynew)
 
   @media (max-width: 1200px) {
     flex-direction: column;
@@ -72,8 +101,11 @@ const Wrapper = styled.div`
     padding:0;
     margin:0;
   }
+<<<<<<< HEAD
 =======
 >>>>>>> dac0399fb2f1fe7abdf90fcc40104b5f6f8fe609
+=======
+>>>>>>> parent of dac0399 (trynew)
 `;
 
 const LeftContainer = styled.div`
@@ -90,6 +122,7 @@ const RightContainer = styled.div`
   align-items: flex-start;
 `;
 
+
 const Text = styled.p`
   font-size: 1.5rem;
   font-family: 'Monument Extended', sans-serif;
@@ -97,34 +130,28 @@ const Text = styled.p`
 
   @media (max-width: 768px) {
     font-size: 22px;
+    padding:0;
   }
 `;
 
 const Desc = styled.p`
   font-size: 16px;
   line-height: 1.5;
-  margin-top: 20px;
+  margin-top:20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   color: ${({ theme }) => theme.text_secondary};
 `;
 
-const ImageWrapper = styled.a`
+const Image = styled.img`
   width: 100%;
   height: 160px;
-  display: block;
-  overflow: hidden;
+  object-fit: cover; /* Ensures the image covers the entire container */
+  overflow: hidden; /* Hides any overflow beyond the container's bounds */
   cursor: pointer;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 `;
 
 const Title = styled.div`
-  padding: 150px;
   font-size: 120px;
   text-align: center;
   align-items: center;
@@ -135,19 +162,20 @@ const Title = styled.div`
 
   @media (max-width: 768px) {
     font-size: 45px;
-    padding: 50px;
+    margin-left:100px;
   }
 `;
 
 const GlobeImage = styled.img`
   width: 120%;
-  margin-top: -1200px;
+  margin-top:-580px;
   margin-left: -900px;
   position: absolute;
 
   @media (max-width: 768px) {
-    margin-left: -200px;
-    margin-top: -2050px;
+    margin-left:-200px;
+    margin-top:-2350px;
+
   }
 `;
 
@@ -158,8 +186,8 @@ const StarImage = styled.img`
   position: absolute;
   opacity: 10%;
   z-index: 1;
-  user-select: none;
-  pointer-events: none;
+  user-select: none; /* Prevents text selection */
+  pointer-events: none; /* Prevents clicking and dragging */
 
   @media (max-width: 768px) {
     margin-left: 150px;
@@ -167,7 +195,12 @@ const StarImage = styled.img`
     width: 100%;
   }
 `;
+const SocialMediaIconsContainer = styled.div`
+  display: flex; /* Arrange items in a row */
+  align-items: center; /* Align items vertically in the center */
+  z-index:1000;
 
+`;
 
 const SocialMediaIcon = styled.a`
   display: flex; /* Use flex to arrange items in a row */
@@ -178,7 +211,21 @@ const SocialMediaIcon = styled.a`
   cursor: pointer;
 `;
 
+
 const App = () => {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedImages, setSelectedImages] = useState([]);
+
+  const handleImageClick = (images) => {
+    setSelectedImages(images);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+    setSelectedImages([]);
+  };
+
   return (
     <Container id="Projects">
       <GlobeImage src={globeImage} alt="Globe Image" />
@@ -186,29 +233,40 @@ const App = () => {
         <Title>selected_<br />works</Title>
       </Reveal>
       <Reveal>
-        <Wrapper>
+      <Wrapper>
           <LeftContainer flex="0.3">
             <Text>3D Portfolio_ <br />Website</Text>
             <Desc style={{ marginLeft: '120px' }}>Built with React js, Three js, GSAP, and Framer motion.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link1} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github1} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </LeftContainer>
-          <RightContainer flex="0.7">
-            <ImageWrapper href="https://www.behance.net/gallery/206017195/Portfolio-Website" target="_blank" rel="noopener noreferrer">
-              <img src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" alt="3D Portfolio" />
-            </ImageWrapper>
+          <RightContainer flex="0.7" onClick={() => handleImageClick(project1)}>
+            <Image  src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/3ds.png" />
           </RightContainer>
         </Wrapper>
       </Reveal>
       <Reveal>
-        <Wrapper>
-          <LeftContainer flex="0.7">
-            <ImageWrapper href="https://www.behance.net/gallery/206017461/CB-Payment-Portal" target="_blank" rel="noopener noreferrer">
-              <img src={CB} alt="Payment Portal" />
-            </ImageWrapper>
+      <Wrapper>
+          <LeftContainer flex="0.7" onClick={() => handleImageClick(project2)}>
+            <Image src={project2[0].image} alt="Placeholder" />
           </LeftContainer>
           <RightContainer flex="0.3">
             <Text>Payment_<br />Portal</Text>
             <Desc style={{ marginRight: '120px' }}>Built with Python, and Django for Camalig Bank.</Desc>
-
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github2} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </RightContainer>
         </Wrapper>
       </Reveal>
@@ -217,28 +275,42 @@ const App = () => {
           <LeftContainer flex="0.3">
             <Text>Church_<br />Management System</Text>
             <Desc style={{ marginLeft: '120px' }}>Our Capstone. Built with PHP, Javascript, and MySQL.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link3} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github3} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </LeftContainer>
-          <RightContainer flex="0.7">
-            <ImageWrapper href="https://www.behance.net/gallery/206017621/Church-Management-System" target="_blank" rel="noopener noreferrer">
-              <img src={Church} alt="Church Management System" />
-            </ImageWrapper>
+          <RightContainer flex="0.7"  onClick={() => handleImageClick(project3)}>
+            <Image src="https://raw.githubusercontent.com/prexjhonverdeflor/3d-react/new-branch/src/images/churchs.png" alt="Placeholder" />
           </RightContainer>
         </Wrapper>
       </Reveal>
       <Reveal>
         <Wrapper>
-          <LeftContainer flex="0.7">
-            <ImageWrapper href="https://www.behance.net/gallery/206017701/Toyota" target="_blank" rel="noopener noreferrer">
-              <img src={Toyota} alt="Toyota AE86" />
-            </ImageWrapper>
+          <LeftContainer flex="0.7"  onClick={() => handleImageClick(project4)}>
+            <Image src={Toyota} alt="Placeholder" />
           </LeftContainer>
           <RightContainer flex="0.3">
             <Text>Toyota_<br />AE86</Text>
             <Desc style={{ marginRight: '120px' }}>Built with React JS, Three JS, HTML, CSS, and JavaScript.</Desc>
+            <SocialMediaIconsContainer>
+                <SocialMediaIcon href={Links.link4} target="_blank">
+                  <Launch fontSize="medium" />
+                </SocialMediaIcon>
+                <SocialMediaIcon href={Links.github4} target="_blank">
+                  <GitHub fontSize="medium" />
+                </SocialMediaIcon>
+            </SocialMediaIconsContainer>
           </RightContainer>
         </Wrapper>
       </Reveal>
       <StarImage src={starImage} />
+      <Modal isOpen={modalOpen} onClose={closeModal} images={selectedImages} />
+
     </Container>
   );
 };
