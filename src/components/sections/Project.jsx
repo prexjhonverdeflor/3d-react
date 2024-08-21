@@ -146,7 +146,7 @@ const StarImage = styled.img`
   }
 `;
 const SocialMediaIconsContainer = styled.div`
-  display: flex; /* Arrange items in a row */
+  display: flex;
   align-items: center;
   z-index:1000;
 
