@@ -56,7 +56,7 @@ const ResumeButton = styled.a`
   position: absolute;
   z-index: 1000; // Ensure it's on top of other elements
   font-size: 15px;
-  bottom: 0px; // Adjust to ensure it's within the view
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   text-transform: uppercase;
@@ -79,7 +79,7 @@ const ResumeButton = styled.a`
   }
 
   @media (max-width: 768px) {
-    margin-bottom:150px;
+    margin-bottom:50px;
   }
 `;
 
