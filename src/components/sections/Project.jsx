@@ -10,10 +10,9 @@ import Toyota from '../../images/toyota.png';
 
 
 const Container = styled.div`
-display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
   width: 100%;
 
   display: flex;
